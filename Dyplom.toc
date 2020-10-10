@@ -1,0 +1,12 @@
+\babel@toc {polish}{}
+\contentsline {chapter}{\chapternumberline {1}Wst\k ep}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Wprowadzenie w tematyk\k e}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Przegl\k ad istniej\k acych rozwi\k aza\'n}{4}{section.1.2}%
+\contentsline {chapter}{\chapternumberline {2}Cel pracy}{6}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Zakres pracy}{7}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Cz\k e\'s\'c teoretyczna}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}technologie itd, konkretne komponenty}{8}{section.4.1}%
+\contentsline {chapter}{\chapternumberline {5}Cz\k e\'s\'c praktyczna}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Rysunki}{9}{section.5.1}%
+\contentsline {chapter}{\chapternumberline {6}Podsumowanie}{10}{chapter.6}%
+\contentsline {chapter}{Indeks rzeczowy}{11}{section*.3}%
