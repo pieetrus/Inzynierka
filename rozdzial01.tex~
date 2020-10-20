@@ -68,7 +68,7 @@ Na rysunku \ref{fig:dalkhomepage} widoczna jest górna czêœæ strony internetowej 
 \end{figure}
 
 ZnaleŸæ mo¿na tutaj tabele wraz ze statystykami, które mo¿na filtrowaæ po sezonie oraz dywizji.
-Statystyki s¹ przejrzyste i wygodnie siê je przegl¹da. Jednak mo¿na znaleŸæ tutaj b³¹d - po klikniêciu na nazwisko zawodnika strona nie przekieruje nas na jego profil, lecz na stronê g³ówn¹. Podobne b³êdy mo¿na znaleŸæ w wielu miejscach, strona internetowa jest niedopracowana.
+Statystyki s¹ przejrzyste i wygodnie siê je przegl¹da. Jednak mo¿na znaleŸæ tutaj b³¹d - po klikniêciu na nazwisko zawodnika strona nie przekieruje nas na jego profil, lecz na stronê g³ówn¹. Podobne b³êdy mo¿na znaleŸæ w wielu miejscach, strona internetowa jest bardzo niedopracowana.
 
 \begin{figure}[h]
 	\centering
@@ -76,15 +76,6 @@ Statystyki s¹ przejrzyste i wygodnie siê je przegl¹da. Jednak mo¿na znaleŸæ tuta
 	\caption{Tabela ze statystykami zawodników z ca³ego sezonu}
 	\label{fig:dalkstatystykizawodnikow}
 \end{figure}
-
-
-Dzieñ dobry,
-
-poni¿ej notatki:
-- proszê rozwa¿yæ dodanie roli pozwalaj¹cej na dostêp tylko do odczytu,
-- walidacja liczby graczy w dru¿ynie dla meczu,
-- problem submitting data,
-- zmiana zawodników na boisku - do rozwa¿enia,
 
 
 

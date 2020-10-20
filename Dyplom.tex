@@ -203,7 +203,12 @@ Listing \thelstlisting: #1\hfill%\hfill%
 
 \renewcommand*{\lstlistlistingname}{Spis listingów} \newlistof{lstlistoflistings}{lol}{\lstlistlistingname}
 
-
+%%modyfikacja odstêpów miêdzy pozycjami w~bibliografii
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+	\oldbibliography{#1}%
+	\setlength{\itemsep}{0pt plus 0.3ex}%
+}
 
 % Choæ mo¿liwe jest zastosowanie ró¿nych pakietów formatuj¹cych tabele, zaleca siê tego nie robiæ.
 %\usepackage{longtable}
@@ -722,8 +727,8 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 %       Nazwê przygotowanej biblioteki wpisuje siê poni¿ej bez rozszerzenia 
 %       (w tym przypadku jest to "dokumentacja.bib")
 \setlength{\bibitemsep}{2pt} % - by zacieœniæ wykaz literatury
-%\bibliography{dokumentacja}
-%\appendix
+\bibliography{dokumentacja}
+\appendix
 %\include{dodatekA}
 %\include{dodatekB}
 

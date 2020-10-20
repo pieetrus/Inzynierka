@@ -1,4 +1,56 @@
-\chapter{Czêœæ teoretyczna}
-\section{technologie itd, konkretne komponenty}
+\chapter{Narzêdzia i Technologie}
+Wymienione technologie zosta³y wybrane ze wzglêdu na ich najwiêksz¹ znajomoœæ oraz chêæ rozwoju w ich kierunku przez autora. U¿yto najnowszych dostêpnych wersji platform programistycznych, które ci¹gle s¹ rozwijane co umo¿liwia w przysz³oœci ci¹g³y rozwój aplikacji.
 
-.net co to jest, do czego to s³u¿y, jakie s¹ wersje, sk¹d mo¿na to wzi¹æ, bez pisania o tym co siê zrobi³o
+\section{.NET Core 3.1}
+.NET Core to œrodowisko wieloplatformowe, którego najnowsz¹ wersjê udostêpniono stosunkowo niedawno, bo na pocz¹tku grudnia 2019 roku. Jest ono udostêpniane na zasadach otwartego oprogramowania przez firmê Microsoft i ca³y kod Ÿród³owy mo¿na znaleŸæ na platformie Github. .NET Core mo¿e wykorzystane do budowania ró¿nych typów aplikacji tj. mobilne, desktopowe, webowe, chmurowe, IoT, do machine learningu, gier lub mikroserwisów. Framework zawiera podstawowe funkcje potrzebne do napisania aplikacji, jednak mo¿na je w ka¿dej chwili rozszerzyæ korzystaj¹c z pakietu paczek NuGet. Wspierane jêzyki to C\#, F\# oraz Visual Basic. 
+
+ród³o : Opracowano na podstawie \cite{MarkPrice}
+
+\section{C\#}
+C\# jest jêzykiem programowania stworzonym przez firmê Microsoft. Pierwotnie kod Ÿród³owy by³ chroniony, jednak w 2014 roku zosta³ udostêpniony, a propozycje nowych funkcji s¹ na bie¿¹co publikowane na platformie GitHub, pozwalaj¹c spo³ecznoœci na wiêkszy wk³ad w rozwój jêzyka.\\
+Jêzyk oferuje mo¿liwoœæ programowania zarówno obiektowego jak i funkcjonalnego, typowania statycznego oraz dynamicznego, obs³ugê typów generycznych, tworzenia zapytañ bazodanowych bez koniecznoœci u¿ywania jêzyka SQL, dziêki LINQ(Language Integrated Query).
+Wspiera tak¿e programowanie asynchroniczne.\\
+Jak wiêkszoœæ nowoczesnych jêzyków, ten równie¿ jest wyposa¿ony w system zarz¹dzania pamiêci¹ tzw. Garbage Collector, który alokuje i zwalnia pamiêæ za programistê. Jednak w niektórych zastosowaniach jest on niewydajny i wraz z wydaniem wersji 7.2 dodano mo¿liwoœæ zarz¹dzania ni¹ na w³asn¹ rêkê w razie potrzeby.\\
+Kod napisany w C\# jest kompilowany do jêzyka CIL(Common Intermediate Language). Nastêpnie trafia do CLR(Common Language Runtime) który jest œrodowiskiem uruchomieniowym. Przed samym uruchuchomieniem jest kompilowany do kodu maszynowego( co nazywane jest Just In Time Compilation, w skrócie JIT). Patrz rys.~\ref{fig:schematdotnet} Taki mechanizm sprawia ¿e aplikacje mog¹ byæ uruchamiane na ró¿nych systemach które maj¹ zainstalowane œrodowisko uruchomieniowe.\\
+ród³o : Opracowano na podstawie \cite{IanGriffiths,KamilGrudzien}
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{rys04/ogolny-schemat-dotnet.png}
+	\caption{Proces kompilacji i uruchamiania aplikacji napisanej w jêzyku C\#, \cite{KamilGrudzien}}
+	\label{fig:schematdotnet}
+\end{figure}
+
+\section{React.JS}
+React to javascriptowa biblioteka(choæ w sieci nadal trwaj¹ spory czy nie jest to framework) s³u¿¹ca do budowania interfejsów u¿ytkownika, stworzona przez firmê Facebook. Wykorzystywana jest ona czêsto do tworzenia aplikacji typu SPA(Single Page Application). Jest to projekt typu open-source i ka¿dy mo¿e wzi¹æ udzia³ w jego budowie. Tworzenie takiej aplikacji polega na tworzeniu komponentów, a nastêpnie sk³adanie ich w ca³oœæ. Dziêki temu mo¿na tworzyæ komponenty, które mo¿na wykorzystaæ w kilku miejscach co oszczêdza czas na pisanie kodu, lub skorzystaæ z komponentu, który zosta³ ju¿ przez kogoœ wczeœniej i odpowiednio dopasowaæ go do aplikacji.\\
+Kiedy strona internetowa stworzona w Reactcie zostaje za³adowana przegl¹darka tworzy jej model obiektowy DOM(z ang.Document Object Model). Za pomoc¹ jêzyka javascript mo¿na korzystaj¹c z tego modelu wyszukiwaæ odpowiednie elementy oraz zmieniaæ ich w³aœciwoœci, co sprawia ¿e strona staje siê dynamiczna. Zazwyczaj taka zmiana wi¹¿e siê z koniecznoœci¹ prze³adowania ca³ego drzewa HTML, co obni¿a wydajnoœæ dzia³ania aplikacji. React rozwi¹zuje ten problem tworz¹c wirtualn¹ reprezentacjê tego drzewa tzw. Virtual DOM. Przy ka¿dej zmianie stanu aplikacji, React nie potrzebuje ³adowaæ ca³ego drzewa, tylko porównuje je ze stanem wczeœniejszym i zmienia jedynie elementy, których stan siê zmieni³. Pozwala to na zysk zarówno wydajnoœci po stronie u¿ytkownika jak i developera, którego zmiany w kodzie s¹ bardzo szybko gotowe do podgl¹du w przegl¹darce.\\
+
+ród³o : Opracowano na podstawie \cite{MikolajZywczok, AlexBanks}
+
+\section{TypeScript}
+Jedn¹ z najbardziej znanych cech jêzyka JavaScript jest jego dynamiczne typowanie, co potrafi przy nieuwadze programisty prowadziæ do wielu b³êdów. Aby przed tymi b³êdami siê zabezpieczyæ zastosowano jêzyk TypeScript. \\
+Jest on otwarto Ÿród³owym jêzykiem programowania bêd¹cym nadzbiorem jêzyka JavaScript, który pozwala na opcjonalne statyczne typowanie, programowanie obiektowe oraz tworzenie interfejsów. Najwiêksz¹ zalet¹ stosowania tego jêzyka jest umo¿liwienie u¿ywanemu IDE(integrated development environment) dostarczenie mo¿liwoœci na wykrywanie b³êdów podczas pisania kodu.\\
+Du¿¹ zalet¹ TypeScriptu jest wczesny dostêp do najnowszych funkcji JSa, które jeszcze nie s¹ wspierane przez wszystkie przegl¹darki, poniewa¿ kompilator przet³umaczy kod na starsz¹ wersjê jêzyka, która bêdzie zrozumia³a dla przegl¹darki.\\
+
+ród³o : Opracowano na podstawie \cite{PaulDixon}
+
+\section{REST API}
+REST API jest to uniwersalny interfejs HTTP do komunikacji miêdzy oprogramowaniem klienta i serwera za pomoc¹ sieci.
+REST(Representational State Transfer) oznacza architekturê w której zdefiniowano konkretne metody, zasoby oraz bezstanowoœæ, natomiast API(application programming interface) jest interfejsem. W tego typach interfejsach najczêœciej wykorzystuje siê metody: GET, PUT, POST, oraz DELETE, które odpowiednio pobieraj¹, aktualizuj¹, tworz¹, oraz usuwaj¹ zasoby. Dane s¹ najczêœciej wysy³ane w formacie JSON(JavaScript Object Notation).
+
+ród³o : Opracowano na podstawie \cite{RESTAPI}
+
+\section{Microsoft SQL Server}
+Do stworzenia bazy danych wykorzystano silnik bazodanowy firmy Microsoft o nazwie SQL Server w najnowszej 19 wersji.
+Wybrano j¹ z powodu wydajnego dzia³ania, niezawodnoœci oraz wygodnej integracji z platform¹ .NET.
+ 
+
+
+
+
+
+
+
+
+
+
+
