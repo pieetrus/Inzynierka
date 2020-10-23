@@ -17,49 +17,53 @@ Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: plabbrv.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: dokumentacja.bib
+Warning--to sort, need author or key in CodeFirst
+Warning--empty author in CodeFirst
+Warning--empty journal in CodeFirst
+Warning--empty year in CodeFirst
 Warning--empty booktitle in PaulDixon
 Warning--empty journal in KamilGrudzien
 Warning--empty booktitle in RESTAPI
 Warning--empty booktitle in MikolajZywczok
-You've used 7 entries,
+You've used 8 entries,
             2129 wiz_defined-function locations,
-            546 strings with 4946 characters,
-and the built_in function-call counts, 1604 in all, are:
-= -- 143
-> -- 49
+            550 strings with 5100 characters,
+and the built_in function-call counts, 1772 in all, are:
+= -- 158
+> -- 50
 < -- 0
-+ -- 21
++ -- 22
 - -- 14
-* -- 68
-:= -- 284
-add.period$ -- 25
-call.type$ -- 7
-change.case$ -- 26
+* -- 82
+:= -- 305
+add.period$ -- 27
+call.type$ -- 8
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 85
-empty$ -- 162
+cite$ -- 16
+duplicate$ -- 95
+empty$ -- 180
 format.name$ -- 14
-if$ -- 336
+if$ -- 371
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 10
-newline$ -- 42
+int.to.str$ -- 8
+missing$ -- 11
+newline$ -- 46
 num.names$ -- 14
-pop$ -- 52
+pop$ -- 59
 preamble$ -- 1
-purify$ -- 21
+purify$ -- 23
 quote$ -- 0
-skip$ -- 46
+skip$ -- 52
 stack$ -- 0
-substring$ -- 35
+substring$ -- 40
 swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 22
-warning$ -- 4
+type$ -- 26
+warning$ -- 8
 while$ -- 14
-width$ -- 8
-write$ -- 77
-(There were 4 warnings)
+width$ -- 9
+write$ -- 84
+(There were 8 warnings)

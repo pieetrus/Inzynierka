@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  20 OCT 2020 22:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  20 OCT 2020 22:53
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -1071,12 +1071,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial01.aux'.
 
  (rozdzial01.tex
-<rys01/ligspace.png, id=134, 454.69875pt x 220.57407pt>
+<rys01/ligspace.png, id=139, 454.69875pt x 220.57407pt>
 File: rys01/ligspace.png Graphic file (type png)
 <use rys01/ligspace.png>
 Package pdftex.def Info: rys01/ligspace.png  used on input line 12.
 (pdftex.def)             Requested size: 318.49861pt x 154.50511pt.
-<rys01/ligspaceopis.png, id=138, 457.71pt x 353.82187pt>
+<rys01/ligspaceopis.png, id=143, 457.71pt x 353.82187pt>
 File: rys01/ligspaceopis.png Graphic file (type png)
 <use rys01/ligspaceopis.png>
 Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 26.
@@ -1089,7 +1089,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys01/ligspace.png>]
-<rys01/ligspacebrzeskaliga.png, id=147, 741.52031pt x 703.87968pt>
+<rys01/ligspacebrzeskaliga.png, id=152, 741.52031pt x 703.87968pt>
 File: rys01/ligspacebrzeskaliga.png Graphic file (type png)
 <use rys01/ligspacebrzeskaliga.png>
 Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 32.
@@ -1099,12 +1099,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<rys01/fibalivestats.png, id=150, 674.52pt x 380.17032pt>
+<rys01/fibalivestats.png, id=155, 674.52pt x 380.17032pt>
 File: rys01/fibalivestats.png Graphic file (type png)
 <use rys01/fibalivestats.png>
 Package pdftex.def Info: rys01/fibalivestats.png  used on input line 44.
 (pdftex.def)             Requested size: 409.49722pt x 230.80138pt.
-<rys01/fibalivestatsfeatures.png, id=151, 679.78969pt x 191.9672pt>
+<rys01/fibalivestatsfeatures.png, id=156, 679.78969pt x 191.9672pt>
 File: rys01/fibalivestatsfeatures.png Graphic file (type png)
 <use rys01/fibalivestatsfeatures.png>
 Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 51
@@ -1122,12 +1122,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [6 <./rys01/fibalivestats.png> <./rys01/fibalivestatsfeatures.png>]
-<rys01/dalkstronaglowna.png, id=169, 1444.64719pt x 395.22656pt>
+<rys01/dalkstronaglowna.png, id=174, 1444.64719pt x 395.22656pt>
 File: rys01/dalkstronaglowna.png Graphic file (type png)
 <use rys01/dalkstronaglowna.png>
 Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 65.
 (pdftex.def)             Requested size: 455.0pt x 124.47893pt.
-<rys01/dalkstatystykizawodnikow.png, id=170, 877.77937pt x 292.84406pt>
+<rys01/dalkstatystykizawodnikow.png, id=175, 877.77937pt x 292.84406pt>
 File: rys01/dalkstatystykizawodnikow.png Graphic file (type png)
 <use rys01/dalkstatystykizawodnikow.png>
 Package pdftex.def Info: rys01/dalkstatystykizawodnikow.png  used on input line
@@ -1166,7 +1166,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial04.aux'.
 
  (rozdzial04.tex
-<rys04/ogolny-schemat-dotnet.png, id=192, 371.3875pt x 493.845pt>
+<rys04/ogolny-schemat-dotnet.png, id=197, 371.3875pt x 493.845pt>
 File: rys04/ogolny-schemat-dotnet.png Graphic file (type png)
 <use rys04/ogolny-schemat-dotnet.png>
 Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 18
@@ -1202,7 +1202,13 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 [12]
 \openout2 = `rozdzial05.aux'.
 
- (rozdzial05.tex)
+ (rozdzial05.tex
+<rys05/dev-workflow.png, id=226, 752.8125pt x 133.49875pt>
+File: rys05/dev-workflow.png Graphic file (type png)
+<use rys05/dev-workflow.png>
+Package pdftex.def Info: rys05/dev-workflow.png  used on input line 10.
+(pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
+)
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
@@ -1211,7 +1217,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 
-]
+ <./rys05/dev-workflow.png>]
 \openout2 = `rozdzial06.aux'.
 
  (rozdzial06.tex)
@@ -1225,47 +1231,47 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 ] (Dyplom.bbl
 bibitemlist
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
-3.
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 6
+.
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 6675) in paragraph at lines 9--15
+Underfull \hbox (badness 6675) in paragraph at lines 15--21
 []\T1/qtm/m/n/12 P. Di-xon.  What is Ty-pe-Script and why wo-uld I use it in pl
 ace of Ja-va-
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 9--15
+Underfull \hbox (badness 5217) in paragraph at lines 15--21
 \T1/qtm/m/n/12 Script?  Paz. 2012.  []$\T1/txtt/m/n/12 https : / / stackoverflo
 w . com / questions / 12694530 /
  []
 
 
-Underfull \hbox (badness 3482) in paragraph at lines 22--27
+Underfull \hbox (badness 3482) in paragraph at lines 28--33
 []\T1/qtm/m/n/12 K. Gru-dzie«.  Jak dziaªa C# ?  Mar. 2019.  []$\T1/txtt/m/n/12
  https : / / it-[]depends . dev /
  []
 
 
-Underfull \hbox (badness 3792) in paragraph at lines 35--41
+Underfull \hbox (badness 3792) in paragraph at lines 41--47
 []\T1/qtm/m/n/12 R. P. Prze-my-sªowy.pl.  In-ter-fejsy REST API w prak-tyce prz
 e-my-sªo-wej.  Luty
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--41
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
 \T1/qtm/m/n/12 2020.  []$\T1/txtt/m/n/12 https : / / portalprzemyslowy . pl / u
 trzymanie-[]ruchu-[]produkcja /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--41
+Underfull \hbox (badness 10000) in paragraph at lines 41--47
 \T1/txtt/m/n/12 utrzymanie-[]ruchu-[]lean-[]tqm-[]uslugi-[]dla-[]przemyslu /
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 35--41
+Underfull \hbox (badness 1286) in paragraph at lines 41--47
 \T1/txtt/m/n/12 interfejsy-[]rest-[]api-[]w-[]praktyce-[]przemyslowej/$[] \T1/q
 tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
  []
@@ -1307,13 +1313,13 @@ Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux) (rozdzial04.aux)
 (rozdzial05.aux) (rozdzial06.aux))
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: F816353DCC8827894CAEF48433E11723;3071.
+(rerunfilecheck)             Checksum: 1BDF23772EFF9D7821B4BCF7611A41B5;3184.
  ) 
 Here is how much of TeX's memory you used:
- 16142 strings out of 480235
- 242799 string characters out of 2879590
- 599963 words of memory out of 3000000
- 32327 multiletter control sequences out of 15000+200000
+ 16155 strings out of 480235
+ 243031 string characters out of 2879590
+ 600161 words of memory out of 3000000
+ 32335 multiletter control sequences out of 15000+200000
  628809 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,72p,897b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1330,9 +1336,9 @@ ms/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pietrus/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (16 pages, 1612857 bytes).
+Output written on Dyplom.pdf (16 pages, 1623209 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 225 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
+ 238 words of extra memory for PDF output out of 10000 (max. 10000000)
 

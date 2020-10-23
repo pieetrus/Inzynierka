@@ -1,1 +1,23 @@
 \chapter{Implementacja}
+Rozdzia³ ten poœwiêcono aby omówiæ sposób implementacji prototypu aplikacji przy pomocy wymienionych rozdzia³ wy¿ej technologii.
+
+\section{Baza danych}
+
+Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utworzone obiekty w kodzie reprezentuj¹ce poszczególne tabele, a nastêpnie zosta³y one zmapowane przy u¿yciu rozszerzenia Entity Framework Core na SQL-ow¹ bazê danych. Podejœcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziêki migracjom. Schemat tego podejœcia przedstawiono na rys.~\ref{fig:schematcodefirst}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{rys05/dev-workflow.png}
+	\caption{Schemat tworzenia bazy danych w podejœciu Code-First, \cite{CodeFirst}}
+	\label{fig:schematcodefirst}
+\end{figure}
+
+Schemat bazy danych przedstawiono na rys.
+
+
+
+
+
+
+
+

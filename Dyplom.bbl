@@ -1,5 +1,11 @@
 \begin{thebibliography}{1}
 
+\bibitem{CodeFirst}
+{What is Code-First?}
+\newblock
+  \url{https://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx}
+  [dostêp dnia 20 paŸdziernika 2020].
+
 \bibitem{AlexBanks}
 E.~P. Alex~Banks.
 \newblock {\em {Learning React, 2nd Edition}}.
