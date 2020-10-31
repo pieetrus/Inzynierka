@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  20 OCT 2020 22:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  31 OCT 2020 19:34
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -1208,6 +1208,17 @@ File: rys05/dev-workflow.png Graphic file (type png)
 <use rys05/dev-workflow.png>
 Package pdftex.def Info: rys05/dev-workflow.png  used on input line 10.
 (pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
+<rys05/databaseschema.png, id=232, 1006.51031pt x 614.295pt>
+File: rys05/databaseschema.png Graphic file (type png)
+<use rys05/databaseschema.png>
+Package pdftex.def Info: rys05/databaseschema.png  used on input line 22.
+(pdftex.def)             Requested size: 1006.50786pt x 614.29349pt.
+<rys05/playerdatabaseschema.png, id=233, 985.43156pt x 572.89032pt>
+File: rys05/playerdatabaseschema.png Graphic file (type png)
+<use rys05/playerdatabaseschema.png>
+Package pdftex.def Info: rys05/playerdatabaseschema.png  used on input line 30.
+
+(pdftex.def)             Requested size: 455.0pt x 264.52054pt.
 )
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
@@ -1218,13 +1229,21 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys05/dev-workflow.png>]
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[14 <./rys05/databaseschema.png>]
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[15 <./rys05/playerdatabaseschema.png>]
 \openout2 = `rozdzial06.aux'.
 
  (rozdzial06.tex)
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[14
+[16
 
 
 
@@ -1280,7 +1299,7 @@ tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[15
+[17
 
 
 
@@ -1295,7 +1314,7 @@ either increase the head height or redesign the header
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[16
+[18
 
 
 ]
@@ -1316,10 +1335,10 @@ Package rerunfilecheck Info: File `Dyplom.out' has not changed.
 (rerunfilecheck)             Checksum: 1BDF23772EFF9D7821B4BCF7611A41B5;3184.
  ) 
 Here is how much of TeX's memory you used:
- 16155 strings out of 480235
- 243031 string characters out of 2879590
- 600161 words of memory out of 3000000
- 32335 multiletter control sequences out of 15000+200000
+ 16173 strings out of 480235
+ 243461 string characters out of 2879590
+ 600417 words of memory out of 3000000
+ 32347 multiletter control sequences out of 15000+200000
  628809 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,72p,897b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1336,9 +1355,9 @@ ms/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pietrus/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (16 pages, 1623209 bytes).
+Output written on Dyplom.pdf (18 pages, 1657350 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 325 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
