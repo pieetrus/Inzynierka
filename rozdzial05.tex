@@ -1,6 +1,72 @@
 \chapter{Implementacja}
 Rozdzia³ ten poœwiêcono aby omówiæ sposób implementacji prototypu aplikacji przy pomocy wymienionych rozdzia³ wy¿ej technologii.
 
+\section{Architektura systemu}
+System zosta³ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu}. Strza³ki symbolizuj¹ ich zale¿noœæ od siebie. Zastosowanie tego wzorca pozwala na niezale¿noœæ bazy danych, zewnêtrznych serwisów oraz warstwy prezentacji(w tym przypadku jest to API do zewnêtrznego serwera z warstw¹ prezentacyjn¹) i ich szybk¹ oraz wygodn¹ wymianê w razie potrzeby bez ingerowania w wewnêtrzne warstwy aplikacji.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{rys05/cleanCodeDiagram.png}
+	\caption{Zale¿noœci miêdzy poszczególnymi warstwami aplikacji}
+	\label{fig:architekturasystemu}
+\end{figure}
+\newpage
+\subsection{Domain}
+
+Zawiera wszystkie klasy u¿yte w bazie danych, enumy, wyj¹tki i logikê z nimi zwi¹zan¹.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/domainTree.png}
+	\caption{Pliki i foldery znajduj¹ce siê w warstwie domain}
+	\label{fig:domainTree}
+\end{figure}
+
+\newpage
+
+\subsection{Persistence}
+to trza opisaæ ¿e to odpowiada za obiektów zwi¹zanych z baz¹
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/persistanceTree.png}
+	\caption{Pliki i foldery znajduj¹ce siê w warstwie persistence}
+	\label{fig:persistenceTree}
+\end{figure}
+
+
+\newpage
+\subsection{Application}
+Zawiera ca³¹ logikê aplikacji. Jest zale¿na od warstwy domain i nie ma zale¿noœci w innych warstwach lub projektach. W tej klasie zdefiniowane s¹ interfejsy implementowane póŸniej na zewn¹trz tej warstwy. Np. gdy aplikacja potrzebowa³a dostêpu do serwisu wysy³ania zdjêæ do chmury, nowy interfejs zosta³ dodany do aplikacji, a jego implementacja zosta³a stworzona w warstwie infrastructure.
+
+\begin{figure}[h!tp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/applicationTree.png}
+	\caption{Pliki i foldery znajduj¹ce siê w warstwie application}
+	\label{fig:applicationTree}
+\end{figure}
+
+\newpage
+\subsection{Infrastructure}
+Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do przechowywania zdjêæ, generator tokenów autoryzacyjnych.
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/infrastructureTree.png}
+	\caption{Pliki i foldery znajduj¹ce siê w warstwie infrastructure}
+	\label{fig:infrastructureTree}
+\end{figure}
+
+\subsection{API}
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/apiTree.png}
+	\caption{Pliki i foldery znajduj¹ce siê w warstwie api}
+	\label{fig:apiTree}
+\end{figure}
+
+
+
 \section{Baza danych}
 
 Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utworzone obiekty w kodzie reprezentuj¹ce poszczególne tabele, a nastêpnie zosta³y one zmapowane przy u¿yciu rozszerzenia Entity Framework Core na SQL-ow¹ bazê danych. Podejœcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziêki migracjom. Schemat tego podejœcia przedstawiono na rys.~\ref{fig:schematcodefirst}
@@ -13,13 +79,13 @@ Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utwo
 \end{figure}
 
 Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rys.~\ref{fig:schematcodefirst}.
-Z powodu du¿ej iloœci tabel i relacji w schemacie na rys.~\ref{fig:schematcodefirst} nie znalaz³a siê tabela Player.
+Jednak z powodu du¿ej iloœci tabel i relacji w nie znalaz³a siê na nim tabela Player.
 Tabelê tê wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}.
 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[angle=90, width=0.8\linewidth]{rys05/databaseschema.png}
+	\includegraphics[angle=90, width=0.95\linewidth]{rys05/databaseschema2.png}
 	\caption{Schemat bazy danych wraz z relacjami (bez tabeli Player)}
 	\label{fig:databaseschema}
 \end{figure}
@@ -27,10 +93,11 @@ Tabelê tê wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}.
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=1\linewidth]{rys05/playerdatabaseschema.png}
-	\caption{Tabla Player wraz z tabelami relacyjnymi}
+	\includegraphics[width=1\linewidth]{rys05/playerdatabaseschema2.png}
+	\caption{Tabela Player wraz z tabelami relacyjnymi}
 	\label{fig:playerdatabaseschema}
 \end{figure}
+
 
 
 
