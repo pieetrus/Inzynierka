@@ -11,6 +11,13 @@ E.~P. Alex~Banks.
 \newblock {\em {Learning React, 2nd Edition}}.
 \newblock O'Reilly Media, 2020.
 
+\bibitem{MarkDabbs}
+M.~Dabbs.
+\newblock {The Fundamentals of Web Application Architecture}.
+\newblock
+  \url{https://reinvently.com/blog/fundamentals-web-application-architecture/}
+  [dostêp dnia 07 listopada 2020].
+
 \bibitem{PaulDixon}
 P.~Dixon.
 \newblock {What is TypeScript and why would I use it in place of JavaScript?}

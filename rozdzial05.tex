@@ -1,12 +1,19 @@
-\chapter{Implementacja}
-Rozdzia≥ ten poúwiÍcono aby omÛwiÊ sposÛb implementacji prototypu aplikacji przy pomocy wymienionych rozdzia≥ wyøej technologii.
-
-\section{Architektura systemu}
-System zosta≥ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu}. Strza≥ki symbolizujπ ich zaleønoúÊ od siebie. Zastosowanie tego wzorca pozwala na niezaleønoúÊ bazy danych, zewnÍtrznych serwisÛw oraz warstwy prezentacji(w tym przypadku jest to API do zewnÍtrznego serwera z warstwπ prezentacyjnπ) i ich szybkπ oraz wygodnπ wymianÍ w razie potrzeby bez ingerowania w wewnÍtrzne warstwy aplikacji.
+\chapter{Architektura systemu}
+Rozdzia≥ ten poúwiÍcono aby omÛwiÊ sposÛb implementacji prototypu aplikacji przy pomocy wymienionych rozdzia≥ wyøej technologii. ArchitekturÍ ca≥ej aplikacji ukazano na rys.~\ref{fig:webappschema}.
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.5\linewidth]{rys05/cleanCodeDiagram.png}
+	\includegraphics[width=0.7\linewidth]{rys05/webappschema.png}
+	\caption{Schemat architektury systemu do zarzπdzania ligπ sportowπ. èrÛd≥o: Na podstawie~\cite{MarkDabbs}}
+	\label{fig:webappschema}
+\end{figure}
+
+\section{Back-end}
+System zosta≥ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu}. Strza≥ki symbolizujπ ich zaleønoúÊ od siebie. Zastosowanie tego wzorca pozwala na niezaleønoúÊ bazy danych, zewnÍtrznych serwisÛw oraz warstwy prezentacji(w tym przypadku jest to API do zewnÍtrznego serwera z warstwπ prezentacyjnπ) i ich szybkπ oraz wygodnπ wymianÍ w razie potrzeby bez ingerowania w wewnÍtrzne warstwy aplikacji.
+
+\begin{figure}[h!tp]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/cleanCodeDiagram.png}
 	\caption{Zaleønoúci miÍdzy poszczegÛlnymi warstwami aplikacji}
 	\label{fig:architekturasystemu}
 \end{figure}
@@ -15,9 +22,9 @@ System zosta≥ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu
 
 Zawiera wszystkie klasy uøyte w bazie danych. Znajdujπ siÍ tu takøe enumy oraz logika z nimi zwiπzana jak np. metoda do wydobywania opisu z obiektu typu enum.
 
-\begin{figure}[htp]
+\begin{figure}[h!tp]
 	\centering
-	\includegraphics[width=0.3\linewidth]{rys05/domainTree.png}
+	\includegraphics[width=0.2\linewidth]{rys05/domainTree.png}
 	\caption{Pliki i foldery znajdujπce siÍ w warstwie domain}
 	\label{fig:domainTree}
 \end{figure}
@@ -89,27 +96,36 @@ BazÍ danych stworzono stosujπc podejúcie Code-First, czyli najpierw zosta≥y utwo
 \end{figure}
 
 Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rys.~\ref{fig:databaseschema}.
-Jednak z powodu duøej iloúci tabel i relacji w nie znalaz≥a siÍ na nim tabela \textit{Player}.
-TabelÍ tÍ wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}.
-W bazie przechowywane sπ informacje o kaødym wydarzeniu ktÛre zosta≥o dodane przez program do statystyk. Kaøde wydarzenie jest powiπzane z tabelπ \textit{Incident} ktÛra zawiera informacje o meczu, czasie oraz kwarcie w ktÛrej zdarzenie mia≥o miejsce i typie incydentu. Tabele odpowiadajπce za gromadzenie danych o zdarzeniach to: \textit{Shot}, \textit{Substitution},  \textit{Foul}, \textit{FreeThrow}, \textit{Assist}, \textit{Rebound}, \textit{Block}, \textit{Steal}, \textit{Turnover}
+Jednak z powodu duøej iloúci tabel i relacji w nie znalaz≥a siÍ na nim tabela \textit{Player} oraz \textit{AspNetUsers}. TabelÍ \textit{Player} wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}, natomiast tabela \textit{AspNetUsers} znajduje siÍ na rys.~\ref{fig:userdatabaseschema}.
+W bazie przechowywane sπ informacje o kaødym wydarzeniu ktÛre zosta≥o dodane przez program do statystyk. Kaøde wydarzenie jest powiπzane z tabelπ \textit{Incident} ktÛra zawiera informacje o meczu, czasie oraz kwarcie w ktÛrej zdarzenie mia≥o miejsce i typie incydentu. Tabele odpowiadajπce za gromadzenie danych o zdarzeniach to: \textit{Shot}, \textit{Substitution}, \textit{Foul}, \textit{FreeThrow}, \textit{Assist}, \textit{Rebound}, \textit{Block}, \textit{Steal}, \textit{Turnover}. Z kaødym takim zdarzeniem jest zwiπzany zawodnik/zawodnicy lub druøyna/druøyny.
+W tabeli \textit{Season} gromadzone sπ informacje na temat stworzonych sezonÛw, analogicznie tabela \textit{Division} gromadzi informacje na temat stworzonych dywizji. W tabeli \textit{Season\_Division} znajdujπ siÍ dywizje dla danego sezonu.
+Z tabelπ tπ zwiπzane sπ tabele \textit{Player\_Season} oraz \textit{Team\_Season}, ktÛre magazynujπ informacje na temat zawodnika oraz druøyny w danym sezonie oraz dywizji. 
+Tabela \textit{Match} magazynuje informacje na temat meczu, czasie jego startu, koÒca, druøyn ktÛre ze sobπ grajπ (wystÍpuje tu relacja zarÛwno do tabeli \textit{Team\_Match} oraz \textit{Team\_Season}) oraz koloru koszulek. WystÍpujπ tu relacje z tabelπ \textit{Player\_Match} oraz \textit{Team\_Match} w ktÛrych magazynowane sπ statystyki z powiπzanych meczÛw.
+W tabeli \textit{AspNetUsers} gromadzone sπ informacje na temat konta uøytkownika. WystÍpuje tu relacja z tabelπ \textit{Photos} w ktÛrej mieúci siÍ link do zdjÍcia, oraz z tabelπ \textit{AspNetUserRoles} w ktÛrej gromadzona jest informacja o rolach ktÛre sπ przypisane do danego uøytkownika. Role natomiast magazynowane sπ w tabeli \textit{AspNetRoles}.
 
 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[angle=90, width=0.95\linewidth]{rys05/databaseschema2.png}
-	\caption{Schemat bazy danych wraz z relacjami (bez tabeli Player)}
+	\includegraphics[angle=90, width=0.95\linewidth]{rys05/databaseschema.png}
+	\caption{Schemat bazy danych wraz z relacjami (bez tabeli \textit{Player})}
 	\label{fig:databaseschema}
 \end{figure}
 
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=1\linewidth]{rys05/playerdatabaseschema2.png}
-	\caption{Tabela Player wraz z tabelami relacyjnymi}
+	\includegraphics[width=1\linewidth]{rys05/playerdatabaseschema.png}
+	\caption{Tabela \textit{Player} wraz z tabelami relacyjnymi}
 	\label{fig:playerdatabaseschema}
 \end{figure}
-
+\newpage
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{rys05/userdatabaseschema.png}
+	\caption{Tabela \textit{AspNetUsers} wraz z tabelami relacyjnymi}
+	\label{fig:userdatabaseschema}
+\end{figure}
 
 
 
