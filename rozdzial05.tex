@@ -13,7 +13,7 @@ System zosta³ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu
 \newpage
 \subsection{Domain}
 
-Zawiera wszystkie klasy u¿yte w bazie danych, enumy, wyj¹tki i logikê z nimi zwi¹zan¹.
+Zawiera wszystkie klasy u¿yte w bazie danych. Znajduj¹ siê tu tak¿e enumy oraz logika z nimi zwi¹zana jak np. metoda do wydobywania opisu z obiektu typu enum.
 
 \begin{figure}[htp]
 	\centering
@@ -25,7 +25,7 @@ Zawiera wszystkie klasy u¿yte w bazie danych, enumy, wyj¹tki i logikê z nimi zwi
 \newpage
 
 \subsection{Persistence}
-to trza opisaæ ¿e to odpowiada za obiektów zwi¹zanych z baz¹
+Odpowiada za konfiguracje poszczególnych obiektów bazodanowych oraz za po³¹czenie z baz¹ danych. Oddzielenie tej warstwy od warstwy domain pozwala na szybk¹ i wygodn¹ zmianê dostarczyciela bazy danych bez potrzeby edytowania samych obiektów. Znajduj¹ siê tu tak¿e migracje.
 
 \begin{figure}[htp]
 	\centering
@@ -37,7 +37,14 @@ to trza opisaæ ¿e to odpowiada za obiektów zwi¹zanych z baz¹
 
 \newpage
 \subsection{Application}
-Zawiera ca³¹ logikê aplikacji. Jest zale¿na od warstwy domain i nie ma zale¿noœci w innych warstwach lub projektach. W tej klasie zdefiniowane s¹ interfejsy implementowane póŸniej na zewn¹trz tej warstwy. Np. gdy aplikacja potrzebowa³a dostêpu do serwisu wysy³ania zdjêæ do chmury, nowy interfejs zosta³ dodany do aplikacji, a jego implementacja zosta³a stworzona w warstwie infrastructure.
+Zawiera ca³¹ logikê aplikacji. Jest zale¿na od warstwy domain i nie ma zale¿noœci w innych warstwach lub projektach. Zawiera komendy oraz zapytania (commands/queries) które s¹ obs³ugiwane przez rozszerzenie MediatR patrz rys.~\ref{fig:divisionCQRS}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys05/divisionCQRS.png}
+	\caption{Struktura komend i zapytañ dla obiektu division}
+	\label{fig:divisionCQRS}
+\end{figure}
+ Pozwala to na oddzielenie zapytañ pobieraj¹cych dane z bazy od komand które zmieniaj¹ stan bazy danych.W tej klasie zdefiniowane s¹ interfejsy implementowane póŸniej na zewn¹trz tej warstwy. Np.~gdy aplikacja potrzebowa³a dostêpu do serwisu wysy³ania zdjêæ do chmury, nowy interfejs zosta³ dodany do aplikacji, a jego implementacja zosta³a stworzona w warstwie infrastructure.
 
 \begin{figure}[h!tp]
 	\centering
@@ -48,7 +55,7 @@ Zawiera ca³¹ logikê aplikacji. Jest zale¿na od warstwy domain i nie ma zale¿noœc
 
 \newpage
 \subsection{Infrastructure}
-Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do przechowywania zdjêæ, generator tokenów autoryzacyjnych.
+Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do przechowywania zdjêæ, generator tokenów autoryzacyjnych. Klasy te s¹ nastêpnie implementowane przy pomocy dependency injection za pomoc¹ interfejsów stworzonych w warstwie application.
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{rys05/infrastructureTree.png}
@@ -57,19 +64,22 @@ Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do p
 \end{figure}
 
 \subsection{API}
+Zawiera controllery które s¹ endpointami przez które wysy³ane s¹ zapytania z aplikacji klienckiej. Znajduj¹ siê tu równie¿ klasy konfiguruj¹ce rozszerzenie SignalR s³u¿¹ce do wysy³ania wyników meczu na ¿ywo, oraz klasa poœrednicz¹ca w przechwytywaniu b³êdów. W klasie Startup znajduje siê konfiguracja obs³ugi ¿¹dañ wysy³anych do aplikacji, a tak¿e wstrzykiwane s¹ serwisy i interfejsy.
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.3\linewidth]{rys05/apiTree.png}
+	\includegraphics[width=0.25\linewidth]{rys05/apiTree.png}
 	\caption{Pliki i foldery znajduj¹ce siê w warstwie api}
 	\label{fig:apiTree}
 \end{figure}
+
+\newpage
 
 
 
 \section{Baza danych}
 
-Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utworzone obiekty w kodzie reprezentuj¹ce poszczególne tabele, a nastêpnie zosta³y one zmapowane przy u¿yciu rozszerzenia Entity Framework Core na SQL-ow¹ bazê danych. Podejœcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziêki migracjom. Schemat tego podejœcia przedstawiono na rys.~\ref{fig:schematcodefirst}
+Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utworzone obiekty w kodzie reprezentuj¹ce poszczególne tabele, a nastêpnie zosta³y one zmapowane przy u¿yciu rozszerzenia Entity Framework Core na SQL-ow¹ bazê danych. Podejœcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziêki migracjom. Schemat tego podejœcia przedstawiono na rys.~\ref{fig:schematcodefirst}.
 
 \begin{figure}[htp]
 	\centering
@@ -78,9 +88,11 @@ Bazê danych stworzono stosuj¹c podejœcie Code-First, czyli najpierw zosta³y utwo
 	\label{fig:schematcodefirst}
 \end{figure}
 
-Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rys.~\ref{fig:schematcodefirst}.
-Jednak z powodu du¿ej iloœci tabel i relacji w nie znalaz³a siê na nim tabela Player.
+Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rys.~\ref{fig:databaseschema}.
+Jednak z powodu du¿ej iloœci tabel i relacji w nie znalaz³a siê na nim tabela \textit{Player}.
 Tabelê tê wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}.
+W bazie przechowywane s¹ informacje o ka¿dym wydarzeniu które zosta³o dodane przez program do statystyk. Ka¿de wydarzenie jest powi¹zane z tabel¹ \textit{Incident} która zawiera informacje o meczu, czasie oraz kwarcie w której zdarzenie mia³o miejsce i typie incydentu. Tabele odpowiadaj¹ce za gromadzenie danych o zdarzeniach to: \textit{Shot}, \textit{Substitution},  \textit{Foul}, \textit{FreeThrow}, \textit{Assist}, \textit{Rebound}, \textit{Block}, \textit{Steal}, \textit{Turnover}
+
 
 
 \begin{figure}[htp]

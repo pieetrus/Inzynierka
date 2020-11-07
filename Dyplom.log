@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  5 NOV 2020 01:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  7 NOV 2020 13:18
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -884,7 +884,7 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count388
 \l__pdf_internal_box=\box102
 ) (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux)
-(rozdzial04.aux) (rozdzial05.aux) (rozdzial06.aux))
+(rozdzial04.aux) (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux))
 \openout1 = `Dyplom.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 660.
@@ -1071,7 +1071,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial01.aux'.
 
  (rozdzial01.tex
-<rys01/ligspace.png, id=169, 454.69875pt x 220.57407pt>
+<rys01/ligspace.png, id=174, 454.69875pt x 220.57407pt>
 File: rys01/ligspace.png Graphic file (type png)
 <use rys01/ligspace.png>
 Package pdftex.def Info: rys01/ligspace.png  used on input line 12.
@@ -1084,12 +1084,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys01/ligspace.png>]
-<rys01/ligspaceopis.png, id=180, 457.71pt x 353.82187pt>
+<rys01/ligspaceopis.png, id=185, 457.71pt x 353.82187pt>
 File: rys01/ligspaceopis.png Graphic file (type png)
 <use rys01/ligspaceopis.png>
 Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 26.
 (pdftex.def)             Requested size: 227.5pt x 175.86311pt.
-<rys01/ligspacebrzeskaliga.png, id=181, 741.52031pt x 703.87968pt>
+<rys01/ligspacebrzeskaliga.png, id=186, 741.52031pt x 703.87968pt>
 File: rys01/ligspacebrzeskaliga.png Graphic file (type png)
 <use rys01/ligspacebrzeskaliga.png>
 Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 32.
@@ -1099,7 +1099,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<rys01/fibalivestats.png, id=184, 674.52pt x 380.17032pt>
+<rys01/fibalivestats.png, id=189, 674.52pt x 380.17032pt>
 File: rys01/fibalivestats.png Graphic file (type png)
 <use rys01/fibalivestats.png>
 Package pdftex.def Info: rys01/fibalivestats.png  used on input line 44.
@@ -1109,7 +1109,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [5 <./rys01/ligspaceopis.png> <./rys01/ligspacebrzeskaliga.png>]
-<rys01/fibalivestatsfeatures.png, id=194, 679.78969pt x 191.9672pt>
+<rys01/fibalivestatsfeatures.png, id=199, 679.78969pt x 191.9672pt>
 File: rys01/fibalivestatsfeatures.png Graphic file (type png)
 <use rys01/fibalivestatsfeatures.png>
 Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 51
@@ -1120,12 +1120,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [6 <./rys01/fibalivestats.png> <./rys01/fibalivestatsfeatures.png>]
-<rys01/dalkstronaglowna.png, id=204, 1444.64719pt x 395.22656pt>
+<rys01/dalkstronaglowna.png, id=209, 1444.64719pt x 395.22656pt>
 File: rys01/dalkstronaglowna.png Graphic file (type png)
 <use rys01/dalkstronaglowna.png>
 Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 65.
 (pdftex.def)             Requested size: 455.0pt x 124.47893pt.
-<rys01/dalkstatystykizawodnikow.png, id=205, 877.77937pt x 292.84406pt>
+<rys01/dalkstatystykizawodnikow.png, id=210, 877.77937pt x 292.84406pt>
 File: rys01/dalkstatystykizawodnikow.png Graphic file (type png)
 <use rys01/dalkstatystykizawodnikow.png>
 Package pdftex.def Info: rys01/dalkstatystykizawodnikow.png  used on input line
@@ -1164,7 +1164,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial04.aux'.
 
  (rozdzial04.tex
-<rys04/ogolny-schemat-dotnet.png, id=227, 371.3875pt x 493.845pt>
+<rys04/ogolny-schemat-dotnet.png, id=232, 371.3875pt x 493.845pt>
 File: rys04/ogolny-schemat-dotnet.png Graphic file (type png)
 <use rys04/ogolny-schemat-dotnet.png>
 Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 18
@@ -1201,7 +1201,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial05.aux'.
 
  (rozdzial05.tex
-<rys05/cleanCodeDiagram.png, id=256, 716.6775pt x 716.6775pt>
+<rys05/cleanCodeDiagram.png, id=261, 716.6775pt x 716.6775pt>
 File: rys05/cleanCodeDiagram.png Graphic file (type png)
 <use rys05/cleanCodeDiagram.png>
 Package pdftex.def Info: rys05/cleanCodeDiagram.png  used on input line 9.
@@ -1216,7 +1216,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys05/cleanCodeDiagram.png>]
-<rys05/domainTree.png, id=264, 162.6075pt x 399.74344pt>
+<rys05/domainTree.png, id=269, 162.6075pt x 399.74344pt>
 File: rys05/domainTree.png Graphic file (type png)
 <use rys05/domainTree.png>
 Package pdftex.def Info: rys05/domainTree.png  used on input line 20.
@@ -1226,7 +1226,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [14 <./rys05/domainTree.png>]
-<rys05/persistanceTree.png, id=271, 188.20313pt x 406.51875pt>
+<rys05/persistanceTree.png, id=276, 188.20313pt x 406.51875pt>
 File: rys05/persistanceTree.png Graphic file (type png)
 <use rys05/persistanceTree.png>
 Package pdftex.def Info: rys05/persistanceTree.png  used on input line 32.
@@ -1236,46 +1236,51 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [15 <./rys05/persistanceTree.png>]
-<rys05/applicationTree.png, id=278, 156.585pt x 395.22656pt>
+<rys05/divisionCQRS.png, id=284, 228.10219pt x 177.66376pt>
+File: rys05/divisionCQRS.png Graphic file (type png)
+<use rys05/divisionCQRS.png>
+Package pdftex.def Info: rys05/divisionCQRS.png  used on input line 43.
+(pdftex.def)             Requested size: 136.50139pt x 106.31984pt.
+<rys05/applicationTree.png, id=285, 156.585pt x 395.22656pt>
 File: rys05/applicationTree.png Graphic file (type png)
 <use rys05/applicationTree.png>
-Package pdftex.def Info: rys05/applicationTree.png  used on input line 44.
+Package pdftex.def Info: rys05/applicationTree.png  used on input line 51.
 (pdftex.def)             Requested size: 136.50139pt x 344.54388pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[16 <./rys05/applicationTree.png>]
-<rys05/infrastructureTree.png, id=285, 150.5625pt x 134.75343pt>
+[16 <./rys05/divisionCQRS.png> <./rys05/applicationTree.png>]
+<rys05/infrastructureTree.png, id=294, 150.5625pt x 134.75343pt>
 File: rys05/infrastructureTree.png Graphic file (type png)
 <use rys05/infrastructureTree.png>
-Package pdftex.def Info: rys05/infrastructureTree.png  used on input line 54.
+Package pdftex.def Info: rys05/infrastructureTree.png  used on input line 61.
 (pdftex.def)             Requested size: 136.50139pt x 122.17961pt.
-<rys05/apiTree.png, id=286, 178.41656pt x 490.08093pt>
+<rys05/apiTree.png, id=295, 178.41656pt x 490.08093pt>
 File: rys05/apiTree.png Graphic file (type png)
 <use rys05/apiTree.png>
-Package pdftex.def Info: rys05/apiTree.png  used on input line 63.
-(pdftex.def)             Requested size: 136.50139pt x 374.96304pt.
+Package pdftex.def Info: rys05/apiTree.png  used on input line 71.
+(pdftex.def)             Requested size: 113.75pt x 312.45424pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [17 <./rys05/infrastructureTree.png> <./rys05/apiTree.png>]
-<rys05/dev-workflow.png, id=296, 752.8125pt x 133.49875pt>
+<rys05/dev-workflow.png, id=305, 752.8125pt x 133.49875pt>
 File: rys05/dev-workflow.png Graphic file (type png)
 <use rys05/dev-workflow.png>
-Package pdftex.def Info: rys05/dev-workflow.png  used on input line 76.
+Package pdftex.def Info: rys05/dev-workflow.png  used on input line 86.
 (pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
-<rys05/databaseschema2.png, id=301, 5759.01563pt x 3887.52374pt>
+<rys05/databaseschema2.png, id=310, 5759.01563pt x 3887.52374pt>
 File: rys05/databaseschema2.png Graphic file (type png)
 <use rys05/databaseschema2.png>
-Package pdftex.def Info: rys05/databaseschema2.png  used on input line 88.
+Package pdftex.def Info: rys05/databaseschema2.png  used on input line 100.
 (pdftex.def)             Requested size: 5759.00166pt x 3887.51431pt.
-<rys05/playerdatabaseschema2.png, id=302, 3290.54344pt x 3473.47687pt>
+<rys05/playerdatabaseschema2.png, id=311, 3290.54344pt x 3473.47687pt>
 File: rys05/playerdatabaseschema2.png Graphic file (type png)
 <use rys05/playerdatabaseschema2.png>
-Package pdftex.def Info: rys05/playerdatabaseschema2.png  used on input line 96
-.
+Package pdftex.def Info: rys05/playerdatabaseschema2.png  used on input line 10
+8.
 (pdftex.def)             Requested size: 455.0pt x 480.29436pt.
 )
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1297,6 +1302,18 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [21
+
+
+
+
+]
+\openout2 = `rozdzial07.aux'.
+
+ (rozdzial07.tex)
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[22
 
 
 
@@ -1352,7 +1369,7 @@ tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[22
+[23
 
 
 
@@ -1361,13 +1378,13 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 740.
+(in both cases you will find help in the memoir manual). on input line 741.
 
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[23
+[24
 
 
 ]
@@ -1383,15 +1400,15 @@ Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (imakeidx)                `makeindex Dyplom.idx'.
 
 (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux) (rozdzial04.aux)
-(rozdzial05.aux) (rozdzial06.aux))
+(rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux))
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: 7A056CD5FB3B3CF6AAE74C9235D2A330;3877.
+(rerunfilecheck)             Checksum: FB220341708B8BAB1B306096D3A8C4FE;4050.
  ) 
 Here is how much of TeX's memory you used:
- 16238 strings out of 480235
- 244806 string characters out of 2879590
- 602242 words of memory out of 3000000
- 32389 multiletter control sequences out of 15000+200000
+ 16259 strings out of 480235
+ 245253 string characters out of 2879590
+ 603403 words of memory out of 3000000
+ 32399 multiletter control sequences out of 15000+200000
  628809 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,12n,72p,897b,392s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1408,9 +1425,9 @@ ms/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/Local/
 Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pietrus/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (23 pages, 2729921 bytes).
+Output written on Dyplom.pdf (24 pages, 2739159 bytes).
 PDF statistics:
- 397 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 326 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 411 PDF objects out of 1000 (max. 8388607)
+ 86 named destinations out of 1000 (max. 500000)
+ 339 words of extra memory for PDF output out of 10000 (max. 10000000)
 
