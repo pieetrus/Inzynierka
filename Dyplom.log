@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  3 DEC 2020 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  3 DEC 2020 15:35
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -872,8 +872,8 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 \Gin@req@height=\dimen264
 \Gin@req@width=\dimen265
 )
-LaTeX Font Info:    Trying to load font information for T1+qtm on input line 66
-0.
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 69
+3.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
@@ -884,27 +884,28 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count388
 \l__pdf_internal_box=\box102
 ) (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux)
-(rozdzial04.aux) (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux))
+(rozdzial04.aux) (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux)
+(rozdzial08.aux))
 \openout1 = `Dyplom.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 660.
-LaTeX Font Info:    ... okay on input line 660.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 693.
+LaTeX Font Info:    ... okay on input line 693.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
@@ -939,9 +940,9 @@ Package grfext Info: Graphics extension search list:
 \c@lstlisting=\count397
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 660.
+Package layouts Warning: Layout scale set to 0.5 on input line 693.
 
-Package hyperref Info: Link coloring OFF on input line 660.
+Package hyperref Info: Link coloring OFF on input line 693.
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -956,16 +957,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 660.
-LaTeX Info: Redefining \ref on input line 660.
-LaTeX Info: Redefining \pageref on input line 660.
-LaTeX Info: Redefining \nameref on input line 660.
+LaTeX Info: Redefining \nameref on input line 693.
+LaTeX Info: Redefining \ref on input line 693.
+LaTeX Info: Redefining \pageref on input line 693.
+LaTeX Info: Redefining \nameref on input line 693.
 (Dyplom.out) (Dyplom.out)
 \@outlinefile=\write5
 \openout5 = `Dyplom.out'.
 
 LaTeX Font Info:    Trying to load font information for T1+EBGaramond-OsF on in
-put line 669.
+put line 702.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/ebgaramond\t1ebgaramo
 nd-osf.fd
@@ -975,73 +976,73 @@ ond-OsF.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <12> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 669.
+nput line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 669.
+(Font)              scaled to size 12.0pt on input line 702.
 \tmpfboxrule=\skip274
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <16> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 669.
+nput line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 16.0pt on input line 669.
+(Font)              scaled to size 16.0pt on input line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <14> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 669.
+nput line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 14.0pt on input line 669.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-69.
+(Font)              scaled to size 14.0pt on input line 702.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+02.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-69.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+02.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-669.
+702.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-669.
+702.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 669.
+(Font)              <12> on input line 702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 669.
+(Font)              <8> on input line 702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 669.
+(Font)              <6> on input line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <22> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 669.
+nput line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 22.0pt on input line 669.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 669.
+(Font)              scaled to size 22.0pt on input line 702.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14> on input line 669.
+(Font)              <14> on input line 702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.79996> on input line 669.
+(Font)              <9.79996> on input line 702.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 669.
+(Font)              <7> on input line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <32> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 669.
+nput line 702.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 32.0pt on input line 669.
+(Font)              scaled to size 32.0pt on input line 702.
 
-Overfull \hbox (14.5pt too wide) in paragraph at lines 669--669
+Overfull \hbox (14.5pt too wide) in paragraph at lines 702--702
 [][]
  []
 
@@ -1049,7 +1050,7 @@ Overfull \hbox (14.5pt too wide) in paragraph at lines 669--669
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 669.
+(in both cases you will find help in the memoir manual). on input line 702.
 
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1075,7 +1076,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial01.aux'.
 
  (rozdzial01.tex
-<rys01/ligspace.png, id=219, 454.69875pt x 220.57407pt>
+<rys01/ligspace.png, id=259, 454.69875pt x 220.57407pt>
 File: rys01/ligspace.png Graphic file (type png)
 <use rys01/ligspace.png>
 Package pdftex.def Info: rys01/ligspace.png  used on input line 12.
@@ -1088,12 +1089,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys01/ligspace.png>]
-<rys01/ligspaceopis.png, id=230, 457.71pt x 353.82187pt>
+<rys01/ligspaceopis.png, id=270, 457.71pt x 353.82187pt>
 File: rys01/ligspaceopis.png Graphic file (type png)
 <use rys01/ligspaceopis.png>
 Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 26.
 (pdftex.def)             Requested size: 227.5pt x 175.86311pt.
-<rys01/ligspacebrzeskaliga.png, id=231, 741.52031pt x 703.87968pt>
+<rys01/ligspacebrzeskaliga.png, id=271, 741.52031pt x 703.87968pt>
 File: rys01/ligspacebrzeskaliga.png Graphic file (type png)
 <use rys01/ligspacebrzeskaliga.png>
 Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 32.
@@ -1103,7 +1104,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<rys01/fibalivestats.png, id=234, 674.52pt x 380.17032pt>
+<rys01/fibalivestats.png, id=274, 674.52pt x 380.17032pt>
 File: rys01/fibalivestats.png Graphic file (type png)
 <use rys01/fibalivestats.png>
 Package pdftex.def Info: rys01/fibalivestats.png  used on input line 44.
@@ -1113,7 +1114,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [6 <./rys01/ligspaceopis.png> <./rys01/ligspacebrzeskaliga.png>]
-<rys01/fibalivestatsfeatures.png, id=243, 679.78969pt x 191.9672pt>
+<rys01/fibalivestatsfeatures.png, id=283, 679.78969pt x 191.9672pt>
 File: rys01/fibalivestatsfeatures.png Graphic file (type png)
 <use rys01/fibalivestatsfeatures.png>
 Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 51
@@ -1124,12 +1125,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [7 <./rys01/fibalivestats.png> <./rys01/fibalivestatsfeatures.png>]
-<rys01/dalkstronaglowna.png, id=254, 1444.64719pt x 395.22656pt>
+<rys01/dalkstronaglowna.png, id=294, 1444.64719pt x 395.22656pt>
 File: rys01/dalkstronaglowna.png Graphic file (type png)
 <use rys01/dalkstronaglowna.png>
 Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 65.
 (pdftex.def)             Requested size: 455.0pt x 124.47893pt.
-<rys01/dalkstatystykizawodnikow.png, id=255, 877.77937pt x 292.84406pt>
+<rys01/dalkstatystykizawodnikow.png, id=295, 877.77937pt x 292.84406pt>
 File: rys01/dalkstatystykizawodnikow.png Graphic file (type png)
 <use rys01/dalkstatystykizawodnikow.png>
 Package pdftex.def Info: rys01/dalkstatystykizawodnikow.png  used on input line
@@ -1168,7 +1169,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial04.aux'.
 
  (rozdzial04.tex
-<rys04/ogolny-schemat-dotnet.png, id=276, 371.3875pt x 493.845pt>
+<rys04/ogolny-schemat-dotnet.png, id=316, 371.3875pt x 493.845pt>
 File: rys04/ogolny-schemat-dotnet.png Graphic file (type png)
 <use rys04/ogolny-schemat-dotnet.png>
 Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 18
@@ -1205,12 +1206,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial05.aux'.
 
  (rozdzial05.tex
-<rys05/webappschema.png, id=306, 663.22781pt x 277.78781pt>
+<rys05/webappschema.png, id=346, 663.22781pt x 277.78781pt>
 File: rys05/webappschema.png Graphic file (type png)
 <use rys05/webappschema.png>
 Package pdftex.def Info: rys05/webappschema.png  used on input line 6.
 (pdftex.def)             Requested size: 318.49861pt x 133.40019pt.
-<rys05/cleanCodeDiagram.png, id=310, 716.6775pt x 716.6775pt>
+<rys05/cleanCodeDiagram.png, id=350, 716.6775pt x 716.6775pt>
 File: rys05/cleanCodeDiagram.png Graphic file (type png)
 <use rys05/cleanCodeDiagram.png>
 Package pdftex.def Info: rys05/cleanCodeDiagram.png  used on input line 16.
@@ -1225,7 +1226,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys05/webappschema.png> <./rys05/cleanCodeDiagram.png>]
-<rys05/domainTree.png, id=320, 162.6075pt x 399.74344pt>
+<rys05/domainTree.png, id=360, 162.6075pt x 399.74344pt>
 File: rys05/domainTree.png Graphic file (type png)
 <use rys05/domainTree.png>
 Package pdftex.def Info: rys05/domainTree.png  used on input line 27.
@@ -1235,7 +1236,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [15 <./rys05/domainTree.png>]
-<rys05/persistanceTree.png, id=327, 188.20313pt x 406.51875pt>
+<rys05/persistanceTree.png, id=367, 188.20313pt x 406.51875pt>
 File: rys05/persistanceTree.png Graphic file (type png)
 <use rys05/persistanceTree.png>
 Package pdftex.def Info: rys05/persistanceTree.png  used on input line 39.
@@ -1245,12 +1246,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [16 <./rys05/persistanceTree.png>]
-<rys05/divisionCQRS.png, id=335, 228.10219pt x 177.66376pt>
+<rys05/divisionCQRS.png, id=375, 228.10219pt x 177.66376pt>
 File: rys05/divisionCQRS.png Graphic file (type png)
 <use rys05/divisionCQRS.png>
 Package pdftex.def Info: rys05/divisionCQRS.png  used on input line 50.
 (pdftex.def)             Requested size: 136.50139pt x 106.31984pt.
-<rys05/applicationTree.png, id=336, 156.585pt x 395.22656pt>
+<rys05/applicationTree.png, id=376, 156.585pt x 395.22656pt>
 File: rys05/applicationTree.png Graphic file (type png)
 <use rys05/applicationTree.png>
 Package pdftex.def Info: rys05/applicationTree.png  used on input line 58.
@@ -1260,12 +1261,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [17 <./rys05/divisionCQRS.png> <./rys05/applicationTree.png>]
-<rys05/infrastructureTree.png, id=345, 150.5625pt x 134.75343pt>
+<rys05/infrastructureTree.png, id=385, 150.5625pt x 134.75343pt>
 File: rys05/infrastructureTree.png Graphic file (type png)
 <use rys05/infrastructureTree.png>
 Package pdftex.def Info: rys05/infrastructureTree.png  used on input line 68.
 (pdftex.def)             Requested size: 136.50139pt x 122.17961pt.
-<rys05/apiTree.png, id=346, 178.41656pt x 490.08093pt>
+<rys05/apiTree.png, id=386, 178.41656pt x 490.08093pt>
 File: rys05/apiTree.png Graphic file (type png)
 <use rys05/apiTree.png>
 Package pdftex.def Info: rys05/apiTree.png  used on input line 78.
@@ -1275,17 +1276,17 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [18 <./rys05/infrastructureTree.png> <./rys05/apiTree.png>]
-<rys05/dev-workflow.png, id=356, 752.8125pt x 133.49875pt>
+<rys05/dev-workflow.png, id=396, 752.8125pt x 133.49875pt>
 File: rys05/dev-workflow.png Graphic file (type png)
 <use rys05/dev-workflow.png>
 Package pdftex.def Info: rys05/dev-workflow.png  used on input line 93.
 (pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
-<rys05/databaseschema.png, id=362, 5759.01563pt x 3887.52374pt>
+<rys05/databaseschema.png, id=402, 5759.01563pt x 3887.52374pt>
 File: rys05/databaseschema.png Graphic file (type png)
 <use rys05/databaseschema.png>
 Package pdftex.def Info: rys05/databaseschema.png  used on input line 110.
 (pdftex.def)             Requested size: 5759.00166pt x 3887.51431pt.
-<rys05/playerdatabaseschema.png, id=363, 3290.54344pt x 3473.47687pt>
+<rys05/playerdatabaseschema.png, id=403, 3290.54344pt x 3473.47687pt>
 File: rys05/playerdatabaseschema.png Graphic file (type png)
 <use rys05/playerdatabaseschema.png>
 Package pdftex.def Info: rys05/playerdatabaseschema.png  used on input line 118
@@ -1304,7 +1305,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [21 <./rys05/playerdatabaseschema.png>]
-<rys05/userdatabaseschema.png, id=384, 1577.895pt x 2204.235pt>
+<rys05/userdatabaseschema.png, id=424, 1577.895pt x 2204.235pt>
 File: rys05/userdatabaseschema.png Graphic file (type png)
 <use rys05/userdatabaseschema.png>
 Package pdftex.def Info: rys05/userdatabaseschema.png  used on input line 125.
@@ -1317,6 +1318,19 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial06.aux'.
 
  (rozdzial06.tex
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
+1.
+ (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 12.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 12.
+
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
@@ -1330,24 +1344,36 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [24]
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[25]
 \openout2 = `rozdzial07.aux'.
 
  (rozdzial07.tex)
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[25
+[26
+
+
+
+
+]
+\openout2 = `rozdzial08.aux'.
+
+ (rozdzial08.tex)
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[27
 
 
 
 
 ] (Dyplom.bbl
 bibitemlist
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 6
-.
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
+
 Underfull \hbox (badness 6675) in paragraph at lines 22--28
 []\T1/qtm/m/n/12 P. Di-xon.  What is Ty-pe-Script and why wo-uld I use it in pl
 ace of Ja-va-
@@ -1392,7 +1418,7 @@ tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[26
+[28
 
 
 
@@ -1401,13 +1427,13 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 741.
+(in both cases you will find help in the memoir manual). on input line 775.
 
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[27
+[29
 
 
 ]
@@ -1423,31 +1449,33 @@ Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (imakeidx)                `makeindex Dyplom.idx'.
 
 (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux) (rozdzial04.aux)
-(rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux))
+(rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux) (rozdzial08.aux))
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: 9EC1225031A80A57C340E4DE87498807;5193.
+(rerunfilecheck)             Checksum: 5A472EEABBA58CCC2510741328A6DE62;6776.
  ) 
 Here is how much of TeX's memory you used:
- 16295 strings out of 480235
- 245862 string characters out of 2879590
- 606427 words of memory out of 3000000
- 32420 multiletter control sequences out of 15000+200000
- 628809 words of font info for 74 fonts, out of 3000000 for 9000
+ 16836 strings out of 480235
+ 251651 string characters out of 2879590
+ 966258 words of memory out of 3000000
+ 32879 multiletter control sequences out of 15000+200000
+ 642021 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,12n,72p,897b,472s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.
-enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-
-ec.enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ebgaramo
-nd/ebgm_tcdnmr.enc}<C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/ebgaramond/EBGaramond-Regular.pfb><C:/Users/pietrus/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pietrus/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/AppDat
-a/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pietrus
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (27 pages, 2919285 bytes).
+ 60i,12n,99p,897b,2050s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
+enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
+q-ec.enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/ebgara
+mond/ebgm_tcdnmr.enc}<C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/ebgaramond/EBGaramond-Regular.pfb><C:/Users/pietrus/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/pietrus/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pietrus/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pie
+trus/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on Dyplom.pdf (29 pages, 2945554 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 413 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 604 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
+ 477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

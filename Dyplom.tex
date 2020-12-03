@@ -37,6 +37,9 @@
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{color,calc}
+
+
+
 %\usepackage{soul} % pakiet z komendami do podkreœlania tekstu
 
 \usepackage{ebgaramond} % pakiet z czcionkami garamond, potrzebny tylko do strony tytu³owej, musi wyst¹piæ przed pakietem tgtermes
@@ -149,50 +152,80 @@ Listing \thelstlisting: #1\hfill%\hfill%
 %%commentstyle=\color{green}, 
 %%stringstyle=\color{red}, 
 %%}
-%%
-%%\lstdefinestyle{sharpcstyle}{
-%%language=[Sharp]C,
-%%basicstyle=\footnotesize\ttfamily, 
-%%numbers=left, 
-%%numberstyle=\tiny, 
-%%numbersep=5pt, 
-%%tabsize=2, 
-%%extendedchars=true, 
-%%breaklines=true, 
-%%showspaces=false, 
-%%showtabs=true, 
-%%xleftmargin=17pt,
-%%framexleftmargin=17pt,
-%%framexrightmargin=5pt,
-%%framexbottommargin=4pt,
-%%morecomment=[l]{//}, %use comment-line-style!
-%%morecomment=[s]{/*}{*/}, %for multiline comments
-%%showstringspaces=false, 
-%%morekeywords={  abstract, event, new, struct,
-                %%as, explicit, null, switch,
-                %%base, extern, object, this,
-                %%bool, false, operator, throw,
-                %%break, finally, out, true,
-                %%byte, fixed, override, try,
-                %%case, float, params, typeof,
-                %%catch, for, private, uint,
-                %%char, foreach, protected, ulong,
-                %%checked, goto, public, unchecked,
-                %%class, if, readonly, unsafe,
-                %%const, implicit, ref, ushort,
-                %%continue, in, return, using,
-                %%decimal, int, sbyte, virtual,
-                %%default, interface, sealed, volatile,
-                %%delegate, internal, short, void,
-                %%do, is, sizeof, while,
-                %%double, lock, stackalloc,
-                %%else, long, static,
-                %%enum, namespace, string},
-%%keywordstyle=\color{cyan},
-%%identifierstyle=\color{red},
-%%stringstyle=\color{blue}, 
-%%commentstyle=\color{green},
-%%}
+%%%
+
+
+%\usepackage[T1]{fontenc}
+%\usepackage{inconsolata}
+%
+\usepackage{color}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+
+%
+%\lstset{language=[Sharp]C,
+%	showspaces=false,
+%	showtabs=false,
+%	breaklines=true,
+%	showstringspaces=false,
+%	breakatwhitespace=true,
+%	escapeinside={(*@}{@*)},
+%	commentstyle=\color{greencomments},
+%	keywordstyle=\color{bluekeywords},
+%	stringstyle=\color{redstrings},
+%	basicstyle=\ttfamily
+%}
+
+
+\lstdefinestyle{sharpcstyle}{
+language=[Sharp]C,
+basicstyle=\footnotesize\ttfamily, 
+numbers=left, 
+numberstyle=\tiny, 
+numbersep=5pt, 
+tabsize=2, 
+extendedchars=true, 
+breaklines=true, 
+showspaces=false, 
+showtabs=false, 
+xleftmargin=17pt,
+framexleftmargin=17pt,
+framexrightmargin=5pt,
+framexbottommargin=4pt,
+morecomment=[l]{//}, %use comment-line-style!
+morecomment=[s]{/*}{*/}, %for multiline comments
+showstringspaces=false, 
+morekeywords={  abstract, event, new, struct,
+                as, explicit, null, switch,
+                base, extern, object, this,
+                bool, false, operator, throw,
+                break, finally, out, true,
+                byte, fixed, override, try,
+                case, float, params, typeof,
+                catch, for, private, uint,
+                char, foreach, protected, ulong,
+                checked, goto, public, unchecked,
+                class, if, readonly, unsafe,
+                const, implicit, ref, ushort,
+                continue, in, return, using,
+                decimal, int, sbyte, virtual,
+                default, interface, sealed, volatile,
+                delegate, internal, short, void,
+                do, is, sizeof, while,
+                double, lock, stackalloc,
+                else, long, static,
+                enum, namespace, string, var, await},
+keywordstyle=\color{bluekeywords},
+identifierstyle=\color{black},
+stringstyle=\color{redstrings}, 
+commentstyle=\color{greencomments},
+escapeinside={(*@}{@*)}
+}
+
+
+
+
 
 \renewcommand\lstlistlistingname{Spis listingów}
 \makeatletter
@@ -720,6 +753,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 \include{rozdzial05}
 \include{rozdzial06}
 \include{rozdzial07}
+\include{rozdzial08}
 
 %\bibliographystyle{plalpha}
 \bibliographystyle{plabbrv}

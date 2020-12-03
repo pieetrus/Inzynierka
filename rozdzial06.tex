@@ -1,30 +1,125 @@
 \chapter{Implementacja}
-\section{Logowanie i rejestracja}
-¯e na pocz¹tku widoczny jest ekran logowania lub rejestracji. Jest to konieczne w celu autoryzacji czy u¿ytkownik jest adminem i ma dostep do czêœci odpowiedzialnych za zarz¹dzanie lig¹, czy ma dostêp jedynie do przegl¹dania danych na niej zawartych.
-\section{Panel zarz¹dzania lig¹}
-Ogólnie o zak³adce manage. Dostêp ma do niej tylko admin. Z jej poziomu mo¿emy dodawaæ do bazy nowych zawodników oraz dru¿yny wraz z logiem które dziêki paczce mo¿emy fajnie.
-Zarz¹dzanie sezonem tj. tworzenie nowych sezonów, przypisywanie do nich dywizji. Zarz¹dzenie dru¿ynami przypisanymi do danej w dywizji w danym sezonie.
-A nastepnie przypisywanie zawodnikow do druzyn w danym sezonie.
-Zakladka division w ktorej wlasciwie tylko mamy mozliwosc dodawania badz usuwanie dywizji.
-\section{Zak³adka match manager}
-Mo¿emy tu planowaæ przysz³e mecze, oraz ewentualnie dopisywaæ mecze które siê ju¿ odby³y.
-Po stworzeniu meczu mo¿na pisaæ z niego statystyki. I ogólnie o programie do  
-statystyk.
 
-\section{Zak³adka schedule}
-W tej zak³adce dostêpne s¹ do podejrzenia wszystkie mecze które s¹ zaplanowane, trwaj¹ b¹dŸ ju¿ siê odby³y posortowane po dacie. Mo¿na wejœæ w informacje na temat meczu klikaj¹c na box score. Dostaniemy wtedy informacje na temat statystyk ka¿dego zawodnika z meczu, oraz wchodz¹c w zak³adkê play by play ka¿d¹ akcjê z meczu.
-Warto zaznaczyæ ¿e dzia³a tu funkcja wyniku live.
+\section{Rejestracja, logowanie oraz role}
+Do stworzenia u¿ytkowników wykorzystano wbudowany w .NETa interfejs API o nazwie Identity, który pozwala na zarz¹dzanie u¿ytkownikami, has³ami, danymi profilu, rolami oraz tokenami.
+Po rejestracji informacje na temat u¿ytkownika zachowywane s¹ w bazie, jego has³o zostaje zhaszowane (tym zajmuje siê Identity, przez co nie by³o potrzeby implementacji tego na w³asn¹ rêkê).
+Przed samym procesem tworzenia u¿ytkownika nastêpuje sprawdzenie, czy u¿ytkownik o podanych danych nie znajduje siê ju¿ w bazie i w takim przypadku proces przerywany zostaje wyj¹tkiem.\\
+Je¿eli jest to nowy u¿ytkownik, na podstawie przes³anych danych tworzony jest obiekt \textit{AppUsera} oraz przypisana zostaje mu rola.
+W przypadku gdy u¿ytkownik zostanie pomyœlnie dodany do bazy zwracany jest obiekt \textit{User} wraz z wygenerowanym tokenem pozwalaj¹cym na automatyczne zalogowanie siê do aplikacji. Kod odpowiadaj¹cy za rejestracjê nowego u¿ytkownika znajduje siê na listingu \ref{list:req1}.
+\lstset{style=sharpcstyle}
+{\belowcaptionskip=-20pt
+\begin{lstlisting}[label=list:req1,caption=Rejestracja nowego u¿ytkownika]
+	if (await _context.AppUser.AnyAsync(x => x.Email == request.Email, cancellationToken))
+	throw new BadRequestException("Email already exist");
+	
+	if (await _context.AppUser.AnyAsync(x => x.UserName == request.UserName, cancellationToken))
+	throw new BadRequestException("Username already exist");
+	
+	var user = new AppUser
+	{
+		DisplayName = request.DisplayName,
+		Email = request.Email,
+		UserName = request.UserName,
+	};
+	
+	var result = await _userManager.CreateAsync(user, request.Password);
+	await _userManager.AddToRoleAsync(user, "USER");
+	
+	if (result.Succeeded)
+	{
+		return new Dto.User
+		{
+			DisplayName = user.DisplayName,
+			Username = user.UserName,
+			Token = _jwtGenerator.CreateToken(user),
+		};
+	}
+	throw new Exception("Problem creating user");
+\end{lstlisting}
+}
 
-\section{Zak³adka stats}
+Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy has³o jest prawid³owe. Je¿eli tak z bazy zostaje pobierana rola przypisana do u¿ytkownika oraz generowany jest token. W przypadku niepowodzenia zwracany jest wyj¹tek braku autoryzacji. Przedstawia to listing \ref{list:req2}.
 
-Statystyki zawodników oraz dru¿yn, z mo¿liwoœci¹ filtrowania po sezonie i dywizji. Domyœlnie wybierany jest aktualny seazon z najwy¿sza dywizj¹.
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req2,caption=Logowanie]
+	var user = await _context.AppUser.Include(x => x.Photos)
+	.FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken);
+	
+	if (user == null)
+	throw new NotFoundException(nameof(Dto.User), request.Email);
+	
+	var result = await _signInManager.CheckPasswordSignInAsync(user, request.Password, false);
+	
+	if (result.Succeeded)
+	{
+		var roles = await _userManager.GetRolesAsync(user);
+		
+		return new Dto.User
+		{
+			Username = user.UserName,
+			DisplayName = user.DisplayName,
+			Token = _jwtGenerator.CreateToken(user),
+			Image = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
+			Role = roles.FirstOrDefault()
+		};
+	}
+	throw new UnauthorizedException(request.Email);
+	\end{lstlisting}
+}
 
-\section{Zak³adka players}
-Wypisani wszyscy zawodnicy z ligi, mo¿liwoœæ filtrowania ich po pierwszej literze nazwiska. Po wejœciu w zawodnika s¹ informacje o nim. Statystyki ze wszystkich sezonów oraz dywizji. W teams analogicznie + logo.
+Logowanie jest konieczne, aby mieæ dostêp do reszty funkcjonalnoœci aplikacji. Podczas ka¿dego requesta do ka¿dego endpointa (za wyj¹tkiem logowania oraz rejestracji), sprawdzany jest token i w przypadku jego braku, lub niewa¿noœci zwracany jest kod 401, œwiadcz¹cy o braku autoryzacji. \\
+\indent U¿ytkownik mo¿e posiadaæ jedn¹ z dwóch ról - Admin lub User. Podczas rejestracji domyœlnie ka¿demu nowemu u¿ytkownikowi przypisywana jest rola User. Zmiany mo¿na dokonaæ jedynie z poziomu bazy danych. Role te ró¿ni¹ siê dostêpem do poszczególnych funkcjonalnoœci aplikacji. 
+U¿ytkownik nie ma dostêpu do metod zwi¹zanych z zarz¹dzaniem lig¹ oraz meczami, natomiast Admin ma dostêp do wszystkich funkcjonalnoœci systemu. Efekt ten osi¹gniêto dodaj¹c nag³ówki z autoryzacj¹ roli przy odpowiednich metodach w kontrollerach. Autoryzacjê metody rol¹ przedstawiono na przyk³adzie tworzenia meczu na listingu \ref{list:req3}.
 
-\section{Profil u¿ytkownika}
-Opcja dodawania zdjêæ i ustawianie jednego z nich jako zdjêcie g³ówne.
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req3,caption=Autoryzacja rol¹ metody tworzenia meczu]
+	[HttpPost]
+	[Authorize(Roles = "Admin")]
+	public async Task<IActionResult> Create([FromBody] CreateMatchCommand command)
+	{
+		await Mediator.Send(command);		
+		return NoContent();
+	}
+	\end{lstlisting}
+}
 
+\section{Zarz¹dzanie profilem u¿ytkownika}
 
-\section{Zak³adka tabele}
-Tabele pokazuj¹ce dru¿yny i ich punkty, opcja filtrowania anal do stats.
+\section{Zarz¹dzanie lig¹}
+
+\subsection{Zarz¹dzanie sezonami oraz dywizjami}
+
+\subsection{Zarz¹dzanie dru¿ynami oraz zawodnikami}
+
+\section{Zarz¹dzanie meczami i program do pisania statystyk}
+
+\section{Przesy³anie wyniku meczu na ¿ywo}
+%\section{Logowanie i rejestracja}
+%¯e na pocz¹tku widoczny jest ekran logowania lub rejestracji. Jest to konieczne w celu autoryzacji czy u¿ytkownik jest adminem i ma dostep do czêœci odpowiedzialnych za zarz¹dzanie lig¹, czy ma dostêp jedynie do przegl¹dania danych na niej zawartych.
+%\section{Panel zarz¹dzania lig¹}
+%Ogólnie o zak³adce manage. Dostêp ma do niej tylko admin. Z jej poziomu mo¿emy dodawaæ do bazy nowych zawodników oraz dru¿yny wraz z logiem które dziêki paczce mo¿emy fajnie.
+%Zarz¹dzanie sezonem tj. tworzenie nowych sezonów, przypisywanie do nich dywizji. Zarz¹dzenie dru¿ynami przypisanymi do danej w dywizji w danym sezonie.
+%A nastepnie przypisywanie zawodnikow do druzyn w danym sezonie.
+%Zakladka division w ktorej wlasciwie tylko mamy mozliwosc dodawania badz usuwanie dywizji.
+%\section{Zak³adka match manager}
+%Mo¿emy tu planowaæ przysz³e mecze, oraz ewentualnie dopisywaæ mecze które siê ju¿ odby³y.
+%Po stworzeniu meczu mo¿na pisaæ z niego statystyki. I ogólnie o programie do  
+%statystyk.
+%
+%\section{Zak³adka schedule}
+%W tej zak³adce dostêpne s¹ do podejrzenia wszystkie mecze które s¹ zaplanowane, trwaj¹ b¹dŸ ju¿ siê odby³y posortowane po dacie. Mo¿na wejœæ w informacje na temat meczu klikaj¹c na box score. Dostaniemy wtedy informacje na temat statystyk ka¿dego zawodnika z meczu, oraz wchodz¹c w zak³adkê play by play ka¿d¹ akcjê z meczu.
+%Warto zaznaczyæ ¿e dzia³a tu funkcja wyniku live.
+%
+%\section{Zak³adka stats}
+%
+%Statystyki zawodników oraz dru¿yn, z mo¿liwoœci¹ filtrowania po sezonie i dywizji. Domyœlnie wybierany jest aktualny seazon z najwy¿sza dywizj¹.
+%
+%\section{Zak³adka players}
+%Wypisani wszyscy zawodnicy z ligi, mo¿liwoœæ filtrowania ich po pierwszej literze nazwiska. Po wejœciu w zawodnika s¹ informacje o nim. Statystyki ze wszystkich sezonów oraz dywizji. W teams analogicznie + logo.
+%
+%\section{Profil u¿ytkownika}
+%Opcja dodawania zdjêæ i ustawianie jednego z nich jako zdjêcie g³ówne.
+%
+%
+%\section{Zak³adka tabele}
+%Tabele pokazuj¹ce dru¿yny i ich punkty, opcja filtrowania anal do stats.
