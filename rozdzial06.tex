@@ -38,12 +38,11 @@ W przypadku gdy u¿ytkownik zostanie pomyœlnie dodany do bazy zwracany jest obiek
 \end{lstlisting}
 }
 
-Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy has³o jest prawid³owe. Je¿eli tak z bazy zostaje pobierana rola przypisana do u¿ytkownika oraz generowany jest token. W przypadku niepowodzenia zwracany jest wyj¹tek braku autoryzacji. Przedstawia to listing \ref{list:req2}.
+Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy has³o jest prawid³owe. Je¿eli tak z bazy zostaje pobierana rola przypisana do u¿ytkownika oraz adres url zdjêcia je¿eli takowe wczeœniej zosta³o wrzucone i generowany jest token. W przypadku niepowodzenia zwracany jest wyj¹tek braku autoryzacji. Przedstawia to listing \ref{list:req2}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req2,caption=Logowanie]
-	var user = await _context.AppUser.Include(x => x.Photos)
-	.FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken);
+	var user = await _context.AppUser.Include(x => x.Photos).FirstOrDefaultAsync(x => x.Email == request.Email, cancellationToken);
 	
 	if (user == null)
 	throw new NotFoundException(nameof(Dto.User), request.Email);
@@ -83,13 +82,185 @@ U¿ytkownik nie ma dostêpu do metod zwi¹zanych z zarz¹dzaniem lig¹ oraz meczami, 
 	\end{lstlisting}
 }
 
-\section{Zarz¹dzanie profilem u¿ytkownika}
+\section{Profil u¿ytkownika}
+Aplikacja posiada funkcjonalnoœæ wgrywania zdjêæ, które mo¿na nastêpnie wykorzystaæ jako avatar. Zdjêcie zostaje przypisane do u¿ytkownika, który je uploaduje, oraz zostaje wybrane jako zdjêcie g³ówne je¿eli jest to pierwsze zdjêcie wrzucone przez u¿ytkownika. Kod odpowiadaj¹cy za wgrywanie zdjêcia znajduje siê na listingu \ref{list:req4}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req4,caption=Dodawanie nowego zdjêcia]
+	var photoUploadResult = _photoAccessor.AddPhoto(request.File);
+	
+	var user = await _context.AppUser.Include(x => x.Photos)
+	.SingleOrDefaultAsync(x => x.UserName == _userAccessor.GetCurrentUsername(), cancellationToken);
+	
+	var photo = new Photo
+	{
+		Url = photoUploadResult.Url,
+		Id = photoUploadResult.PublicId
+	};
+	
+	if (!user.Photos.Any(x => x.IsMain))
+		photo.IsMain = true;
+	
+	user.Photos.Add(photo);
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return photo;
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
+Zdjêcie wrzucone zostaje na serwis chmurowy cloudinary, a w bazie przechowywany jest link do wrzuconego zdjêcia.\\
+\indent Zaimplementowano równie¿ mo¿liwoœæ podgl¹du profilu innych u¿ytkowników. Na podstawie przes³anej w requeœcie nazwy u¿ytkownika z bazy pobierane s¹ informacje na jego temat wraz ze zdjêciem g³ównym je¿eli takowe posiada. Do znalezienia u¿ytkownika wykorzystano metodê SingleOrDefaultAsync, co oznacza ¿e w przypadku braku u¿ytkownika o podanej nazwie funkcja rzuca wyj¹tek. Sposób pobierania danych na temat profilu przedstawia listing \ref{list:req5}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req5,caption=Pobieranie danych na temat profilu]
+	var user = await _context.AppUser.Include(x => x.Photos)
+	.SingleOrDefaultAsync(x => x.UserName == request.Username, cancellationToken);
+	
+	return new Profile
+	{
+		DisplayName = user.DisplayName,
+		Username = user.UserName,
+		Image = user.Photos.FirstOrDefault(x => x.IsMain)?.Url,
+		Photos = user.Photos,
+		Bio = user.Bio
+	};
+	\end{lstlisting}
+}
+
 
 \section{Zarz¹dzanie lig¹}
 
-\subsection{Zarz¹dzanie sezonami oraz dywizjami}
+Jest to implementacja funkcjonalnoœci do których dostêp ma jedynie u¿ytkownik z rol¹ Admin. \\
+Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn oraz zawodników. Do ka¿dego z wymienionych obiektów zaimplementowa³a zosta³a równie¿ walidacja wys³anych danych przy u¿yciu rozszerzenie Fluent Validation. Sposób implementacji tych podstawowych operacji CRUD przedstawiono na przyk³adzie obiektu sezonu. Je¿eli dane w zapytaniu przejd¹ walidacjê, której implementacjê przestawia listing \ref{list:req6} to nastêpuje przypisanie danych do obiektu \textit{Season}. Je¿eli w zapytaniu znajduj¹ siê dane na temat dywizji które maj¹ zostaæ przypisane do tego sezonu to równie¿ s¹ one dodawane, w przypadku ich braku operacja zostaje pominiêta i nastêpuje zapisanie sezonu do bazy. Je¿eli operacja przebieg³a prawid³owo zwracany jest Id sezonu, w innym przypadku rzucany jest wyj¹tek, co przedstawia listing \ref{list:req7}
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req6,caption=Walidacja danych]
+	RuleFor(x => x.Name)
+	.NotEmpty();
+	RuleFor(x => x.StartDate)
+	.NotEmpty();
+	\end{lstlisting}
+}
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req7,caption=Dodawanie nowego sezonu]
+	var newSeasonDivisions = new List<SeasonDivision>();
+	var season = new Season
+	{
+		Name = request.Name,
+		StartDate = request.StartDate,
+		EndDate = request.EndDate
+	};
+	
+	if (request.DivisionsId.Any())
+	{
+		foreach (var divisionId in request.DivisionsId)
+		{
+			var seasonDivision = new SeasonDivision
+			{
+				Season = season,
+				DivisionId = divisionId,
+			};
+			newSeasonDivisions.Add(seasonDivision);
+		}
+		_context.SeasonDivision.AddRange(newSeasonDivisions);
+	}
+	else
+	{
+		_context.Season.Add(season);
+	}
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return season.Id;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
+Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znaleziony rzucany jest wyj¹tek. Po znalezieniu obiektu poszczególnym w³asnoœciom przypisywane s¹ nowe dane jeœli takowe zosta³y przys³ane, w przypadku ich braku zachowana zostaje stara wartoœæ. Sprawdzane s¹ równie¿ przys³ane dywizje które s¹ przypisane do sezonu, w przypadku nowych zostaj¹ one dodanych. Usuwanie dywizji z sezonu znajduje siê w innej metodzie. Podczas wysy³ania danych do edycji równie¿ nastêpuje walidacja, analogiczna do tej podczas dodawania. Kod odpowiedzialny za edycjê znajduje siê na listingu \ref{list:req8}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req8,caption=Edycja sezonu]
+	var newSeasonDivisions = new List<SeasonDivision>();
+	
+	var entity = await _context.Season.FindAsync( request.Id);
+	
+	if (entity == null)
+		throw new NotFoundException(nameof(Season), request.Id);
+	
+	entity.Name = request.Name ?? entity.Name;
+	entity.StartDate = request.StartDate ?? entity.StartDate;
+	entity.EndDate = request.EndDate ?? entity.EndDate;
+	
+	if (request.DivisionsId.Any())
+	{
+		var seasonDivisionsInDb = _context.SeasonDivision.Where(x => x.SeasonId == entity.Id).Select(x => x.DivisionId).ToList();
+		foreach (var divisionId in request.DivisionsId)
+		{
+			var seasonDivision = new SeasonDivision
+			{
+				SeasonId = entity.Id,
+				DivisionId = divisionId,
+			};
+			newSeasonDivisions.Add(seasonDivision);
+		}
+		newSeasonDivisions.RemoveAll(x => seasonDivisionsInDb.Contains(x.DivisionId));
+		_context.SeasonDivision.AddRange(newSeasonDivisions);
+	}
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return Unit.Value;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
+Usuwanie obiektu wykonywane jest na podstawie Id wys³anego w zapytaniu, dziêki po którym szuka siê sezonu do usuniêcia. Gdy takiego nie ma rzucany jest wyj¹tek. W przypadku powodzenia sezon zostaje usuniêty a zmiany zostaj¹ zapisane w bazie. W przypadku problemów z zapisem rzucany jest wyj¹tek. Omawian¹ sytuacjê przedstawia listing \ref{list:req9}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req9,caption=Usuwanie sezonu]
+	var entity = await _context.Season.FindAsync(request.Id, cancellationToken);
+	
+	if (entity == null)
+		throw new NotFoundException(nameof(Season), request.Id);
+	
+	_context.Season.Remove(entity);
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return Unit.Value;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
 
 \subsection{Zarz¹dzanie dru¿ynami oraz zawodnikami}
+Dru¿yny oraz zawodników przypisuje siê do sezonów oraz dywizji. Tworzy siê w ten sposób obiekty \textit{PlayerSeason} oraz \textit{TeamSeason}. Obiektowi zostaje przypisany Id sezonu oraz dywizji, którego ma dotyczyæ. Zapisany zostaje tak¿e Id dru¿yny do której w danym sezonie oraz dywizji zostaje zapisany. Warto zaznaczyæ ¿e jest to referencja do obiektu \textit{TeamSeason}, a nie \textit{Team}. Kod odpowiadaj¹cy za tworzenie obiektu przedstawia poni¿szy listing \ref{list:req10}. 
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req10,caption=Przypisywanie zawodnika do sezonu oraz dywizji]
+	var seasonDivision = await _context.SeasonDivision.FirstOrDefaultAsync(
+	x => x.SeasonId == request.SeasonId && x.DivisionId == request.DivisionId, cancellationToken);
+	
+	if (seasonDivision == null)
+		throw new NotFoundException(nameof(SeasonDivision), request.SeasonId);
+	
+	var entity = new PlayerSeason
+	{
+		PlayerId = request.PlayerId,
+		SeasonDivisionId = seasonDivision.Id,
+		TeamId = request.TeamId,
+		JerseyNr = request.JerseyNr,
+	};
+	
+	_context.PlayerSeason.Add(entity);
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return Unit.Value;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
 
 \section{Zarz¹dzanie meczami i program do pisania statystyk}
 
