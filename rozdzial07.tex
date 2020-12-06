@@ -1,17 +1,352 @@
 \chapter{Opis dzia³ania aplikacji}% 
-\section{Strona domowa}
+\section{Strona startowa}
+Po wejœciu w aplikacjê oczom u¿ytkownika ukazuje siê strona startowa pozwalaj¹c¹ na zalogowanie siê lub rejestracjê po klikniêciu w odpowiednie przyciski przedstawiona na rysunku \ref{fig:homepage}, b¹dŸ je¿eli u¿ytkownik ju¿ siê zalogowa³ a token w przegl¹darce nie wygas³ przycisk pozwalaj¹cy na wejœcie do aplikacji, a dok³adnie do zak³adki z tabelami co ukazuje rys.~\ref{fig:homepagelogged}.
 
-\section{Tabele}
+\begin{figure}[h]
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{rys07/homepage.png}
+		\captionof{figure}{A figure}
+		\label{fig:homepage}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{rys07/homepagelogged.png}
+		\captionof{figure}{Another figure}
+		\label{fig:homepagelogged}
+	\end{minipage}
+\end{figure}
+
+Po naciœniêciu przycisku Login pokazuje siê modal ukazany na rys.~\ref{fig:loginmodal}. Przycisk register powoduje ukazanie siê modala widocznego na rys.~\ref{fig:registermodal}. W przypadku poprawnego wype³nienia danych u¿ytkownik w obu przypadkach zostaje zalogowany i przeniesiony na zak³adkê z tabelami.
+
+\begin{figure}[h]
+	\centering
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{rys07/loginmodal.png}
+		\captionof{figure}{A figure}
+		\label{fig:loginmodal}
+	\end{minipage}%
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.8\linewidth]{rys07/registermodal.png}
+		\captionof{figure}{Another figure}
+		\label{fig:registermodal}
+	\end{minipage}
+\end{figure}
+
+Po zalogowaniu w prawym górnym rogu w pasku nawigacyjnym pojawia siê nazwa u¿ytkownika, oraz w przypadku gdy ma wgrane zdjêcie, to pokazuje siê równie¿ jego avatar. W zale¿noœci od tego czy zalogowany u¿ytkownik ma przypisan¹ rolê admina lub usera, na pasku nawigacyjnym dostêpne s¹ inne zak³adki co widaæ na rys.~\ref{fig:navbar}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/navbaruser.png}
+		\caption{Dla u¿ytkownika z rol¹ User}
+		\label{fig:Ng1} 
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{1\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/navbaradmin.png}
+		\caption{Dla u¿ytkownika z rol¹ Admin}
+		\label{fig:Ng2}
+	\end{subfigure}
+	
+	\caption[]{Pasek zak³adek dla u¿ytkownika w zale¿noœci od przypisanej do niego roli. U¿ytkownik z rol¹ Admin ma dostêp do zarz¹dzania lig¹ oraz meczami.}
+	\label{fig:navbar} 
+\end{figure}
+
+\section{Profil}
+
+Po klikniêciu w strza³kê znajduj¹c¹ siê przy nazwie u¿ytkownika na pasku nawigacyjnym rozwija siê okno dialogowe pozwalaj¹cy na przejœcie do profilu b¹dŸ wylogowania siê rys.~\ref{fig:navbarprofile}. Po wybraniu opcji ,,My profile'' u¿ytkownik zostaje przekierowany do panelu ze swoim profilem pokazanym na rys.~\ref{fig:profile} gdzie ma mo¿liwoœæ dodania nowego zdjêcia, usuniêcia poprzednich, b¹dŸ zmiany avatara.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.3\linewidth]{rys07/navbarprofile.png}
+	\captionof{figure}{Okno dialogowe wyœwietlaj¹ce siê po klikniêciu strza³ki obok nazwy u¿ytkownika}
+	\label{fig:navbarprofile}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{rys07/profile.png}
+	\captionof{figure}{Widok profilu u¿ytkownika}
+	\label{fig:profile}
+\end{figure}
+
+Aby dodaæ nowe zdjêcie nale¿y klikn¹æ w przycisk ,,Add photo'', wtedy oczom u¿ytkownika uka¿e siê okienko do którego nale¿y przeci¹gn¹æ zdjêcie metod¹ drag\&drop. Po jego wczytaniu nale¿y je odpowiednio przyci¹æ i potwierdziæ operacje klikaj¹c na zielony ptaszek jak na. Zdjêcie zostanie wgrane i pojawi siê w panelu zdjêæ do wyboru jako g³ówne b¹dŸ usuniêcia. Ca³y proces dodawania zosta³ przedstawiony na rys.~\ref{fig:dodawaniezdj}.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/upload1.png}
+		\caption{Panel dodawania zdjêæ przed wrzuceniem zdjêcia}
+		\label{fig:step1} 
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/upload2.png}
+		\caption{Panel dodawania zdjêæ po wrzuceniu zdjêcia}
+		\label{fig:step2}
+	\end{subfigure}
+
+	\begin{subfigure}[b]{0.6\textwidth}
+	\includegraphics[width=1\linewidth]{rys07/upload3.png}
+	\caption{Panel ze zdjêciami wraz z nowo dodanym zdjêciem}
+	\label{fig:step3}
+\end{subfigure}
+	
+	\caption[]{Dodawanie nowego zdjêcia w profilu}
+	\label{fig:dodawaniezdj} 
+\end{figure}
+
+\newpage
+
+\section{Przegl¹danie tabel}
+W zak³adce z tabelami u¿ytkownik ma mo¿liwoœæ podgl¹du jak wygl¹da sytuacja punktowa w interesuj¹cym go sezonie oraz dywizji. Tabela zawiera informacje na temat aktualnej pozycji dru¿yny w tabeli, rozegranych meczów, wygranych, pora¿kach oraz liczbie uzbieranych przez dru¿ynê punktów. U¿ytkownik mo¿e zmieniæ tabelê wybieraj¹c inny sezon lub dywizje z pasków do filtrowania.
+Zak³adka widoczna jest na rys.~\ref{fig:tables}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{rys07/tables1.png}
+	\captionof{figure}{Zak³adka z tabelami przedstawiaj¹ca tabelê z Ekstraligii z sezonu 2020}
+	\label{fig:tables}
+\end{figure}
 
 
-\section{Terminarz}
+\section{Terminarz i podgl¹d meczu}
+Po przejœciu do zak³adki z terminarzem pokazanej na rys.~\ref{fig:schedule} u¿ytkownik ma mo¿liwoœæ podgl¹du zaplanowanych, trwaj¹cych oraz zakoñczonych ju¿ meczów. Mecze wyœwietlane s¹ wed³ug daty planowanego rozpoczêcia. Je¿eli mecz ju¿ siê rozpocz¹³, a jeszcze siê nie zakoñczy³, to po ka¿dej zmianie wyniku wynik oraz czas meczu aktualizuj¹ siê bez potrzeby odœwie¿ania strony. 
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{rys07/schedule.png}
+	\captionof{figure}{Zak³adka z tabelami przedstawiaj¹ca tabelê z Ekstraligii z sezonu 2020}
+	\label{fig:schedule}
+\end{figure}
+
+Po klikniêciu przycisku ,,Box score'' znajduj¹cego siê pod meczem aplikacja przekierowuje u¿ytkownika do podgl¹du statystyk z meczu pokazanego na rys.~\ref{fig:boxscore}. Je¿eli jest to mecz który jeszcze siê toczy, wynik równie¿ na bie¿¹co jest aktualizowany bez potrzeby odœwie¿ania. W dolnej czêœci strony widoczne s¹ statystyki zawodników, którzy grali w meczu. Zebrane s¹ tam informacje o liczbie zdobytych punktów, skutecznoœci rzutów za 2 i 3, rzutów wolnych, liczbie zbiórek, asyst, strat, przechwytów oraz fauli.\\
+Przechodz¹c w zak³adkê ,,Play by play'' pokazanej na rys.~\ref{fig:playbyplay} u¿ytkownik ma mo¿liwoœæ przeœledziæ ka¿de zapisane wydarzenie w trakcie meczu, oraz ich autorów.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/boxscore.png}
+	\captionof{figure}{Podgl¹d statystyk z meczu}
+	\label{fig:boxscore}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/playbyplay.png}
+	\captionof{figure}{Podgl¹d wszystkich zagrañ z meczu}
+	\label{fig:playbyplay}
+\end{figure}
+
+\newpage
 \section{Statystyki}
 
-\section{Zawodnicy}
+W zak³adce ,,Stats'' u¿ytkownik ma mo¿liwoœæ podgl¹du statystyk poszczególnych zawodników oraz dru¿yn z ca³ego sezonu. Pokazana zosta³a na rys.~\ref{fig:stats}. Dostêpna jest opcja filtrowania danych wybieraj¹c odpowiedni sezon b¹dŸ dywizje z pasków filtruj¹cych. Tabela zawiera wartoœci bêd¹ce sum¹ statystyk z pojedynczych meczów w sezonie.
 
-\section{Dru¿yny}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/stats.png}
+	\captionof{figure}{Podgl¹d statystyk zawodników oraz dru¿yn z ca³ego sezonu}
+	\label{fig:stats}
+\end{figure}
 
-\section{Panel zarz¹dzania meczami}
+Istnieje tak¿e opcja podgl¹du statystyk poszczególnych zawodników oraz dru¿yn z wszystkich sezonów oraz dywizji w których brali udzia³. Aby sprawdziæ informacje i statystyki wybranego zawodnika nale¿y przejœæ do zak³adki ,,Players'', po klikniêciu otworzy siê strona widoczna na rys.~\ref{fig:players}. Znajduje siê tam lista wszystkich zawodników znajduj¹cych siê w bazie wraz z paskiem do filtrowania po pierwszej literze nazwiska. Po klikniêciu na imiê i nazwisko interesuj¹cego u¿ytkownika zawodnika, zostanie on przekierowany na stronê widoczn¹ na rys.~\ref{fig:playerdetails} na której znajduj¹ siê szczegó³owe informacje na temat jego wzrostu, pozycji oraz daty urodzenia. Poni¿ej tych informacji znajduje siê tabela z informacjami o wszystkich rozegranych sezonach, klubach oraz statystykach z tych rozgrywek. Pod tabel¹ z informacjami widoczny jest pomarañczowy przycisk ,,Manage player'', który jest widoczny jedynie dla u¿ytkowników z rol¹ Admin i pozwala na edycjê zawodnika.\\
+\indent Informacje na temat dru¿yn mo¿na uzyskaæ przechodz¹c w zak³adkê ,,Teams'' widoczn¹ na rys.~\ref{fig:teams}, a nastêpnie wybraæ dru¿ynê. Przekieruje to u¿ytkownika do strony z informacjami na temat wybranej dru¿yny jak na rys.~\ref{fig:teamdetails}. Tu równie¿ znajduje siê pomarañczowy przycisk do zarz¹dzania widoczny jedynie dla u¿ytkownika z rol¹ Admin, logo dru¿yny, oraz statystyki ze wszystkich sezonów w których dru¿yna wystêpowa³a.
 
-\section{Panel zarz¹dzania lig¹}
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.6\textwidth}
+		\centering
+		\includegraphics[width=0.83\linewidth]{rys07/players.png}
+		\captionof{figure}{}
+		\label{fig:players}
+	\end{subfigure}%
+	\begin{subfigure}{.35\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{rys07/teams.png}
+		\captionof{figure}{}
+		\label{fig:teams}
+	\end{subfigure}
+	\caption{a) zak³adka ,,Players'' z list¹ wszystkich zawodników, b) zak³adka ,,Teams'' z list¹ wszystkich zawodników}
+	\label{fig:test}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.9\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/playerdetails.png}
+		\captionof{figure}{}
+		\label{fig:playerdetails}
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{0.9\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/teamdetails.png}
+		\captionof{figure}{}
+		\label{fig:teamdetails}
+	\end{subfigure}
+	
+	\caption[]{Strona z informacjami i statystykami dla a) zawodnika b) dru¿yny}
+	\label{fig:teamss} 
+\end{figure}
+
+\section{Zarz¹dzanie lig¹}
+
+Opcje zarz¹dzania lig¹ znajduj¹ siê pod zak³adk¹ ,,Manage''. Po za³adowaniu strony oczom u¿ytkownika ukazuje siê pasek nawigacyjny przedstawiony na rys.~\ref{fig:managenav}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/managenav.png}
+	\captionof{figure}{Pasek nawigacyjny w zak³adce zarz¹dzania}
+	\label{fig:managenav}
+\end{figure}
+
+W pierwszej i drugiej zak³adce znajduj¹ siê formularze do tworzenia odpowiednio zawodnika i dru¿yny. W przypadku poprawnego dodania u¿ytkownik zostaje przekierowany na stronê z informacjami o nowo utworzonym zawodniku b¹dŸ dru¿ynie. Formularze te zosta³y przedstawione na rys.~\ref{fig:manageforms}.
+
+\begin{figure}[h!]
+	\centering
+	\begin{subfigure}[b]{0.6\textwidth}
+		\includegraphics[width=1\linewidth]{rys07/createplayer.png}
+		\captionof{figure}{}
+		\label{fig:createplayer}
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{1\textwidth}
+			\includegraphics[width=1\linewidth]{rys07/createteam.png}
+		\captionof{figure}{}
+		\label{fig:createteam}
+	\end{subfigure}
+	
+	\caption[]{Formularz dodawania a) zawodnika b) dru¿yny}
+	\label{fig:manageforms} 
+\end{figure}
+
+Zak³adka ,,Seasons'' widoczna jest na rys.~\ref{fig:season}. Z jej poziomu u¿ytkownik ma mo¿liwoœæ dodania nowego sezonu, edycji aktualnego, b¹dŸ usuniêcia go. Mo¿na zmieniæ sezon którym chce siê zarz¹dzaæ wybieraj¹c odpowiedni¹ opcjê z panelu po prawej stronie. Po wybraniu opcji dodawania pojawia siê okno dialogowe pokazane na rys.~\ref{fig:seasoncreate}. Wygl¹da ono tak samo jak okno do edycji. Z jego poziomu mamy mo¿liwoœæ przy tworzeniu nowego sezonu zdefiniowaæ jakie dywizje maj¹ siê w nim znajdowaæ zaznaczaj¹c odpowiednie checkboxy.\\
+Z poziomu tej zak³adki u¿ytkownik ma równie¿ mo¿liwoœæ zarz¹dzania dru¿ynami przypisanymi do danej dywizji w sezonie. Aby to zrobiæ nale¿y klikn¹æ w przycisk ,,Manage teams'' przy wybranej dywizji. Pojawia siê okno pokazane na rys.~\ref{fig:manageteams}. U¿ytkownik ma mo¿liwoœæ przypisywania do wybranej dywizji w sezonie nowych zespo³ów wybieraj¹c je z dropdowna, b¹dŸ wypisania dru¿yn wybieraj¹c przycisk ,,Remove''. Do dru¿yny na zadany sezon zg³osiæ zawodników mo¿na klikaj¹c na przycisk ,,Manage players'' przy wybranej dru¿ynie. Otwiera to dialog z rys.~\ref{fig:manageplayers}. W niej korzystaj¹c z formularza z dropdownem do wyboru zawodników oraz miejscem na numer koszulki przypisuje siê zawodników. Istnieje tak¿e mo¿liwoœæ wypisania ich z dru¿yny klikaj¹c ,,Remove''.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=.75\linewidth]{rys07/season.png}
+	\captionof{figure}{Zak³adka season}
+	\label{fig:season}
+\end{figure}
+
+\begin{figure}[h!]
+	\begin{minipage}{\linewidth}
+		\centering
+		\includegraphics[width=.4\linewidth]{rys07/seasoncreate.png}
+		\captionof{figure}{Okno dialogowe dodawania sezonu}
+		\label{fig:seasoncreate}
+	\end{minipage}
+	\vspace{1em} % add some whitespace after the first figure
+	
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{rys07/manageteams.png}
+		\captionof{figure}{Okno dialogowe zarz¹dzania dru¿ynami przypisanymi do dywizji w sezonie}
+		\label{fig:manageteams}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[b]{0.45\linewidth}
+		\centering
+		\includegraphics[width=1\linewidth]{rys07/manageplayers.png}
+		\captionof{figure}{Okno dialogowe zarz¹dzania zawodnikami przypisanymi do dru¿yny w sezonie}
+		\label{fig:manageplayers}
+	\end{minipage}
+\end{figure}
+
+\newpage
+
+W zak³adce ,,Divisions'' widocznej na rys.~\ref{fig:divisions} u¿ytkownik ma mo¿liwoœæ dodania, b¹dŸ usuniêcia wybranej z panelu po prawej stronie dywizji. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/division.png}
+	\captionof{figure}{Panel dodawania meczów}
+	\label{fig:divisions}
+\end{figure}
+
+
+
+\section{Zarz¹dzanie meczami i program do pisania statystyk}
+
+Po przejœciu do zak³adki ,,Match manager'' oczom u¿ytkownika ukazuje siê strona przedstawiona na rys.~\ref{fig:matchmanager}. Z tego poziomu mo¿liwe jest planowanie kolejnych meczów, usuwanie ich, a tak¿e mo¿liwoœæ pisania z nich statystyk.\\
+Aby dodaæ nowy mecz nale¿y klikn¹æ przycik ,,New game''. Otwiera siê wtedy okno pokazane na rys.~\ref{fig:newgame}. Na podstawie wybranej daty oraz dywizji aplikacja w kolejnym oknie wyboru z rys.~\ref{fig:choseteams} pozwoli na wybór jedynie dru¿yn zapisanych do sezonu oraz dywizji z wybranego punktu w czasie. Po klikniêciu ,,Add Match'' mecz zostaje dodany do listy ze wszystkimi meczami. Aby zacz¹æ pisaæ z niego statystyki nale¿y przy meczu klikn¹æ ,,Go to match''. Otworzy to okno pokazane na rys.~\ref{fig:gotomatch}. Nale¿y wybraæ tutaj kolor koszulek w których dru¿yny graj¹, oraz zawodników którzy zostaj¹ zg³oszeni do meczu. Po dokonaniu tego nale¿y klikn¹æ ,,Next''. U¿ytkownik zostaje wtedy przekierowany do programu do pisania statystyk przedstawionego na rys.~\ref{fig:statsprogram}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/matchmanager.png}
+	\captionof{figure}{Widok zak³adki do zarz¹dzania meczami}
+	\label{fig:matchmanager}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{rys07/newgame.png}
+		\captionof{figure}{}
+		\label{fig:newgame}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.95\linewidth]{rys07/choseteams.png}
+		\captionof{figure}{}
+		\label{fig:choseteams}
+	\end{subfigure}
+	\caption{a) Pierwsze b) Drugie okno podczas dodawania nowego meczu}
+	\label{fig:xd}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{rys07/gotomatch.png}
+	\captionof{figure}{Okno wybierania koloru koszulek i zg³aszania zawodników do meczu}
+	\label{fig:gotomatch}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{rys07/statsprogram.png}
+	\captionof{figure}{Program do statystyk}
+	\label{fig:statsprogram}
+\end{figure}
+
+\newpage
+
+W górnej czêœci strony znajduj¹ siê nazwy dru¿yn, iloœæ zdobytych przez nie punktów, numer kwarty, oraz czas pozosta³y do jej koñca. Zegar uruchamia siê przyciskiem ,,Start clock''. Obok przycisku znajduj¹ siê przyciski do przewijania minut i sekund do przodu lub ty³u. Poni¿ej znajduje siê pasek z kwadratami z numerami koszulek zawodników. Przy wyborze wydarzenia nale¿y w pierwszej kolejnoœci wybraæ zawodnika klikaj¹c w kwadrat, któremu to wydarzenia ma zostaæ przypisane. Ni¿ej znajduje siê pasek z czterema bia³ymi prostok¹tami które przechowuj¹ informacjê o tym ile czasu zosta³o dru¿ynie do wykorzystania do koñca po³owy, oraz ile fauli pope³ni³a dru¿yna w kwarcie.\\
+Z lewej i prawej strony znajduj¹ siê przyciski odpowiadaj¹ce wydarzeniom. Po ich klikniêciu (oprócz przycisku ,,Timeout'') otwiera siê okno dialogowe jak na rys.~\ref{fig:shotmade} w którym wybiera siê szczegó³y na temat wydarzenia, jak jego typ, b¹dŸ kolejne wydarzenie jak asysta i numer zawodnika któremu nale¿y j¹ przypisaæ. Po klikniêciu ,,OK'' zostaje ono dodane. Wynik meczu wtedy aktualizuje siê, a rzut pojawi¹ siê w sekcji ,,Action log'', obrazuje to rys.~\ref{fig:statsprogrampts}. W razie pomy³ki wydarzenie to mo¿na usun¹æ klikaj¹c w ikonê œmietnika obok wydarzenia, co spowoduje równie¿ odjêcie punktów w górnym panelu i powrót do starego wyniku. Sposób postêpowania wygl¹da analogicznie z ka¿dym wydarzeniem.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\linewidth]{rys07/shotmade.png}
+	\captionof{figure}{Okno dialogowe dodawania celnego rzutu}
+	\label{fig:shotmade}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{rys07/statsprogrampts.png}
+	\captionof{figure}{Program do statystyk po dodaniu wydarzenia celnego rzutu}
+	\label{fig:statsprogrampts}
+\end{figure}
+
+Gdy czas zegara dobiegnie koñca, przycisk startowania i zatrzymywania zegara zmienia siê w przycisk zakoñczenia meczu jak na rys.~\ref{fig:endmatch}. Po jego klikniêciu mecz zostaje zakoñczony, a statystyki dru¿yn i zawodników aktualizowane s¹ o ich statystyki z tego meczu. Po zakoñczeniu meczu i statystyk nie mo¿na ju¿ edytowaæ.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{rys07/endmatch.png}
+	\captionof{figure}{Górny panel po zakoñczeniu czasu gry}
+	\label{fig:endmatch}
+\end{figure}
+
+

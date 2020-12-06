@@ -37,6 +37,8 @@
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{color,calc}
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 
@@ -162,6 +164,8 @@ Listing \thelstlisting: #1\hfill%\hfill%
 \definecolor{bluekeywords}{rgb}{0.13,0.13,1}
 \definecolor{greencomments}{rgb}{0,0.5,0}
 \definecolor{redstrings}{rgb}{0.9,0,0}
+\usepackage{minted}
+
 
 %
 %\lstset{language=[Sharp]C,
@@ -215,7 +219,8 @@ morekeywords={  abstract, event, new, struct,
                 do, is, sizeof, while,
                 double, lock, stackalloc,
                 else, long, static,
-                enum, namespace, string, var, await},
+                enum, namespace, string, var,
+                await, builder, @action, },
 keywordstyle=\color{bluekeywords},
 identifierstyle=\color{black},
 stringstyle=\color{redstrings}, 

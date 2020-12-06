@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  3 DEC 2020 17:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  6 DEC 2020 12:10
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -440,6 +440,48 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count303
 \calc@Cskip=\skip193
 )
+Class memoir Info: For the caption package to function properly with memoir, we
+ will now reset \caption and friends to kernel defaults and then let the
+caption package take over. Remember: all caption configuration now goes via the
+ caption package interface, not the interface from the memoir class.  on input 
+line 41.
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+\captionmargin=\dimen190
+\captionmargin@=\dimen191
+\captionwidth=\dimen192
+\caption@tempdima=\dimen193
+\caption@indent=\dimen194
+\caption@parindent=\dimen195
+\caption@hangindent=\dimen196
+Package caption Info: memoir document class detected.
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-memoi
+r.sto
+File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
+ memoir document class (AR)
+))
+\c@caption@flags=\count304
+\c@continuedfloat=\count305
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen197
+\caption@adjustwidth@linewidth=\dimen198
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.st
+y
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count306
+\c@subtable=\count307
+)
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/ebgaramond\ebgaramond
 .sty
 Package: ebgaramond 2020/04/12 (Bob Tennent and autoinst) Style file for EB Gar
@@ -457,16 +499,16 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
 x
-\XKV@toks=\toks25
-\XKV@tempa@toks=\toks26
-
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex)
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
 )
-\XKV@depth=\count304
+\XKV@depth=\count308
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+))
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/fontaxes\fontaxes.sty
@@ -500,29 +542,151 @@ Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )))
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count305
+\lst@mode=\count309
 \lst@gtempboxa=\box52
-\lst@token=\toks27
-\lst@length=\count306
-\lst@currlwidth=\dimen190
-\lst@column=\count307
-\lst@pos=\count308
-\lst@lostspace=\dimen191
-\lst@width=\dimen192
-\lst@newlines=\count309
-\lst@lineno=\count310
-\lst@maxwidth=\dimen193
+\lst@token=\toks28
+\lst@length=\count310
+\lst@currlwidth=\dimen199
+\lst@column=\count311
+\lst@pos=\count312
+\lst@lostspace=\dimen256
+\lst@width=\dimen257
+\lst@newlines=\count313
+\lst@lineno=\count314
+\lst@maxwidth=\dimen258
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count311
-\lst@skipnumbers=\count312
+\c@lstnumber=\count315
+\lst@skipnumbers=\count316
 \lst@framebox=\box53
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
-\c@loldepth=\count313
+ (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count317
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count318
+\FV@InFile=\read4
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count319
+\FV@StepNumber=\count320
+\FV@OutFile=\write4
+) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count321
+\output=\toks29
+\linenoprevgraf=\count322
+\linenumbersep=\dimen259
+\linenumberwidth=\dimen260
+\c@linenumber=\count323
+\c@pagewiselinenumber=\count324
+\c@LN@truepage=\count325
+\c@internallinenumber=\count326
+\c@internallinenumbers=\count327
+\quotelinenumbersep=\dimen261
+\bframerule=\dimen262
+\bframesep=\dimen263
+\bframebox=\box55
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count328
+\c@FV@TrueTabCounter=\count329
+\FV@TabBox@Group=\box56
+\FV@TmpLength=\skip194
+\c@FV@HighlightLinesStart=\count330
+\c@FV@HighlightLinesStop=\count331
+\FV@LoopCount=\count332
+\FV@NCharsBox=\box57
+\FV@BreakIndent=\dimen264
+\FV@BreakIndentNChars=\count333
+\FV@BreakSymbolSepLeft=\dimen265
+\FV@BreakSymbolSepLeftNChars=\count334
+\FV@BreakSymbolSepRight=\dimen266
+\FV@BreakSymbolSepRightNChars=\count335
+\FV@BreakSymbolIndentLeft=\dimen267
+\FV@BreakSymbolIndentLeftNChars=\count336
+\FV@BreakSymbolIndentRight=\dimen268
+\FV@BreakSymbolIndentRightNChars=\count337
+\c@FancyVerbLineBreakLast=\count338
+\FV@LineBox=\box58
+\FV@LineIndentBox=\box59
+\FV@LineWidth=\dimen269
+) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform
+.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile
+.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.s
+ty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)))
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty
+(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
+\integerpart=\count339
+\decimalpart=\count340
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip195
+\fb@frw=\dimen270
+\fb@frh=\dimen271
+) (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count341
+\float@exts=\toks30
+\float@box=\box60
+\@float@everytoks=\toks31
+\@floatcapt=\box61
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box62
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count342
+\c@minted@pygmentizecounter=\count343
+\@float@every@listing=\toks32
+\c@listing=\count344
+)
+runsystem(if not exist _minted-Dyplom mkdir _minted-Dyplom)...executed.
+
+\c@loldepth=\count345
 
 
 ******************************************************
@@ -549,127 +713,117 @@ Package: memlays 2002/08/10 v1.0 Extra membook layouts
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/layouts\layouts.sty
 Package: layouts 2009/09/02 v2.6d graphical depiction of document elements
-\l@ylen=\skip194
-\layoutsbox=\box54
-\l@youtunitlength=\skip195
-\l@youtlinethick=\skip196
-\l@youtlinethickii=\skip197
-\l@ysetupparskip=\skip198
-\l@ysetupbaselineskip=\skip199
-\l@yonem=\skip256
-\l@yonex=\skip257
-\l@ylmarg=\skip258
-\l@yrmarg=\skip259
-\l@yitmindent=\skip260
-\l@ylblwidth=\skip261
-\l@ylblsep=\skip262
-\l@ylparindent=\skip263
-\l@ytsep=\skip264
-\l@ypskip=\skip265
-\l@yptsep=\skip266
-\l@ypsep=\skip267
-\l@yitmsep=\skip268
-\l@ytok=\toks28
-\l@youtpw=\count314
-\l@youtph=\count315
-\l@youthpi=\count316
-\l@youthpii=\count317
-\l@youthpiii=\count318
-\l@youthpiv=\count319
-\l@youthpv=\count320
-\l@youthpvi=\count321
-\l@youthpvii=\count322
-\l@youtparskip=\count323
-\l@youtvpi=\count324
-\l@youtvpii=\count325
-\l@youtvpiii=\count326
-\l@youtvpiv=\count327
-\l@youtvpv=\count328
-\l@youtvpvi=\count329
-\l@youtvpvii=\count330
-\l@youthdo=\count331
-\l@youthdi=\count332
-\l@youthdii=\count333
-\l@youthdiii=\count334
-\l@youthdiv=\count335
-\l@youthdv=\count336
-\l@youthdvi=\count337
-\l@youthdvii=\count338
-\l@youtvdo=\count339
-\l@youtvdi=\count340
-\l@youtvdii=\count341
-\l@youtvdiii=\count342
-\l@youtvdiv=\count343
-\l@youtvdv=\count344
-\l@youtvdvi=\count345
-\l@youtvdvii=\count346
-\l@youtvdviii=\count347
-\l@youtxci=\count348
-\l@youtxcii=\count349
-\l@youtxciii=\count350
-\l@youtxciv=\count351
-\l@youtxcv=\count352
-\l@youtxcvi=\count353
-\l@youtyci=\count354
-\l@youtycii=\count355
-\l@youtyciii=\count356
-\l@youtyciv=\count357
-\l@youtycv=\count358
-\l@youtycvi=\count359
-\l@youtycvii=\count360
-\l@youtycviii=\count361
-\l@youtxco=\count362
-\l@youtyco=\count363
-\l@ytempdima=\skip269
+\l@ylen=\skip196
+\layoutsbox=\box63
+\l@youtunitlength=\skip197
+\l@youtlinethick=\skip198
+\l@youtlinethickii=\skip199
+\l@ysetupparskip=\skip256
+\l@ysetupbaselineskip=\skip257
+\l@yonem=\skip258
+\l@yonex=\skip259
+\l@ylmarg=\skip260
+\l@yrmarg=\skip261
+\l@yitmindent=\skip262
+\l@ylblwidth=\skip263
+\l@ylblsep=\skip264
+\l@ylparindent=\skip265
+\l@ytsep=\skip266
+\l@ypskip=\skip267
+\l@yptsep=\skip268
+\l@ypsep=\skip269
+\l@yitmsep=\skip270
+\l@ytok=\toks33
+\l@youtpw=\count346
+\l@youtph=\count347
+\l@youthpi=\count348
+\l@youthpii=\count349
+\l@youthpiii=\count350
+\l@youthpiv=\count351
+\l@youthpv=\count352
+\l@youthpvi=\count353
+\l@youthpvii=\count354
+\l@youtparskip=\count355
+\l@youtvpi=\count356
+\l@youtvpii=\count357
+\l@youtvpiii=\count358
+\l@youtvpiv=\count359
+\l@youtvpv=\count360
+\l@youtvpvi=\count361
+\l@youtvpvii=\count362
+\l@youthdo=\count363
+\l@youthdi=\count364
+\l@youthdii=\count365
+\l@youthdiii=\count366
+\l@youthdiv=\count367
+\l@youthdv=\count368
+\l@youthdvi=\count369
+\l@youthdvii=\count370
+\l@youtvdo=\count371
+\l@youtvdi=\count372
+\l@youtvdii=\count373
+\l@youtvdiii=\count374
+\l@youtvdiv=\count375
+\l@youtvdv=\count376
+\l@youtvdvi=\count377
+\l@youtvdvii=\count378
+\l@youtvdviii=\count379
+\l@youtxci=\count380
+\l@youtxcii=\count381
+\l@youtxciii=\count382
+\l@youtxciv=\count383
+\l@youtxcv=\count384
+\l@youtxcvi=\count385
+\l@youtyci=\count386
+\l@youtycii=\count387
+\l@youtyciii=\count388
+\l@youtyciv=\count389
+\l@youtycv=\count390
+\l@youtycvi=\count391
+\l@youtycvii=\count392
+\l@youtycviii=\count393
+\l@youtxco=\count394
+\l@youtyco=\count395
+\l@ytempdima=\skip271
 ))
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/printlen\printlen.sty
 Package: printlen 2009/09/03 v1.1a print lengths with units
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\enitkv@toks@=\toks29
-\labelindent=\skip270
-\enit@outerparindent=\dimen194
-\enit@toks=\toks30
-\enit@inbox=\box55
-\enit@count@id=\count364
-\enitdp@description=\count365
+\labelindent=\skip272
+\enit@outerparindent=\dimen272
+\enit@toks=\toks34
+\enit@inbox=\box64
+\enit@count@id=\count396
+\enitdp@description=\count397
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/imakeidx\imakeidx.sty
 Package: imakeidx 2016/10/15 v1.3e Package for typesetting indices in a synchro
 nous mode
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
-\c@tracingmulticols=\count366
-\mult@box=\box56
-\multicol@leftmargin=\dimen195
-\c@unbalance=\count367
-\c@collectmore=\count368
-\doublecol@number=\count369
-\multicoltolerance=\count370
-\multicolpretolerance=\count371
-\full@width=\dimen196
-\page@free=\dimen197
-\premulticols=\dimen198
-\postmulticols=\dimen199
-\multicolsep=\skip271
-\multicolbaselineskip=\skip272
-\partial@page=\box57
-\last@line=\box58
-\maxbalancingoverflow=\dimen256
-\mult@rightbox=\box59
-\mult@grightbox=\box60
-\mult@gfirstbox=\box61
-\mult@firstbox=\box62
-\@tempa=\box63
-\@tempa=\box64
-\@tempa=\box65
-\@tempa=\box66
-\@tempa=\box67
-\@tempa=\box68
-\@tempa=\box69
-\@tempa=\box70
-\@tempa=\box71
+\c@tracingmulticols=\count398
+\mult@box=\box65
+\multicol@leftmargin=\dimen273
+\c@unbalance=\count399
+\c@collectmore=\count400
+\doublecol@number=\count401
+\multicoltolerance=\count402
+\multicolpretolerance=\count403
+\full@width=\dimen274
+\page@free=\dimen275
+\premulticols=\dimen276
+\postmulticols=\dimen277
+\multicolsep=\skip273
+\multicolbaselineskip=\skip274
+\partial@page=\box66
+\last@line=\box67
+\maxbalancingoverflow=\dimen278
+\mult@rightbox=\box68
+\mult@grightbox=\box69
+\mult@gfirstbox=\box70
+\mult@firstbox=\box71
 \@tempa=\box72
 \@tempa=\box73
 \@tempa=\box74
@@ -698,18 +852,27 @@ Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
 \@tempa=\box97
 \@tempa=\box98
 \@tempa=\box99
-\c@minrows=\count372
-\c@columnbadness=\count373
-\c@finalcolumnbadness=\count374
-\last@try=\dimen257
-\multicolovershoot=\dimen258
-\multicolundershoot=\dimen259
-\mult@nat@firstbox=\box100
-\colbreak@box=\box101
-\mc@col@check@num=\count375
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\c@minrows=\count404
+\c@columnbadness=\count405
+\c@finalcolumnbadness=\count406
+\last@try=\dimen279
+\multicolovershoot=\dimen280
+\multicolundershoot=\dimen281
+\mult@nat@firstbox=\box109
+\colbreak@box=\box110
+\mc@col@check@num=\count407
 ))
-\Dyplom@idxfile=\write4
-\openout4 = `Dyplom.idx'.
+\Dyplom@idxfile=\write6
+\openout6 = `Dyplom.idx'.
 
 
 Writing index file Dyplom.idx
@@ -719,19 +882,6 @@ Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
-ds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
-.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
 nekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -750,9 +900,9 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen260
-\Hy@linkcounter=\count376
-\Hy@pagecounter=\count377
+\@linkdim=\dimen282
+\Hy@linkcounter=\count408
+\Hy@pagecounter=\count409
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
@@ -762,16 +912,11 @@ Now handling font encoding PD1 ...
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.s
-ty
-Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-\Hy@SavedSpaceFactor=\count378
+\Hy@SavedSpaceFactor=\count410
 Package hyperref Info: Option `bookmarks' set `true' on input line 4338.
 Package hyperref Info: Option `breaklinks' set `true' on input line 4338.
 Package hyperref Info: Option `unicode' set `true' on input line 4338.
-
-(C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+ (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -783,14 +928,13 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count379
-
+\c@Hy@tempcnt=\count411
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen261
+\XeTeXLinkMargin=\dimen283
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -800,9 +944,9 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count380
-\Field@Width=\dimen262
-\Fld@charsize=\dimen263
+\Fld@menulength=\count412
+\Field@Width=\dimen284
+\Fld@charsize=\dimen285
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -818,15 +962,15 @@ Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count381
-\c@Item=\count382
-\c@Hfootnote=\count383
+\Hy@abspage=\count413
+\c@Item=\count414
+\c@Hfootnote=\count415
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/memoir\memhfixc.sty
 Package: memhfixc 2019/10/24 v1.18 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count384
-\c@Hpagenote=\count385
+\c@memhycontfloat=\count416
+\c@Hpagenote=\count417
 )
 Package hyperref Info: Driver: hpdftex.
 
@@ -839,8 +983,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count386
-\c@bookmark@seq@number=\count387
+\Fld@listcount=\count418
+\c@bookmark@seq@number=\count419
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
 ilecheck.sty
@@ -853,7 +997,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip273
+\Hy@SectionHShift=\skip275
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
@@ -869,11 +1013,16 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen264
-\Gin@req@width=\dimen265
+\Gin@req@height=\dimen286
+\Gin@req@width=\dimen287
 )
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Dy
+plom.aex <nul: /p x=^%~$PATH:i>> Dyplom.aex)...executed.
+
+runsystem(del Dyplom.aex)...executed.
+
 LaTeX Font Info:    Trying to load font information for T1+qtm on input line 69
-3.
+8.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
@@ -881,46 +1030,46 @@ File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
 dftex.def
 File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
-\l__kernel_color_stack_int=\count388
-\l__pdf_internal_box=\box102
+\l__kernel_color_stack_int=\count420
+\l__pdf_internal_box=\box111
 ) (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux)
 (rozdzial04.aux) (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux)
 (rozdzial08.aux))
 \openout1 = `Dyplom.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 693.
-LaTeX Font Info:    ... okay on input line 693.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 698.
+LaTeX Font Info:    ... okay on input line 698.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count389
-\scratchdimen=\dimen266
-\scratchbox=\box103
-\nofMPsegments=\count390
-\nofMParguments=\count391
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count392
-\MPscratchDim=\dimen267
-\MPnumerator=\count393
-\makeMPintoPDFobject=\count394
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count421
+\scratchdimen=\dimen288
+\scratchbox=\box112
+\nofMPsegments=\count422
+\nofMParguments=\count423
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count424
+\MPscratchDim=\dimen289
+\MPnumerator=\count425
+\makeMPintoPDFobject=\count426
+\everyMPtoPDFconversion=\toks36
 )
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -935,14 +1084,19 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpg,.mps,.png,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 )
-\c@mv@tabular=\count395
-\c@mv@boldtabular=\count396
-\c@lstlisting=\count397
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@mv@tabular=\count427
+\c@mv@boldtabular=\count428
+\c@lstlisting=\count429
 
 
-Package layouts Warning: Layout scale set to 0.5 on input line 693.
+Package layouts Warning: Layout scale set to 0.5 on input line 698.
 
-Package hyperref Info: Link coloring OFF on input line 693.
+Package hyperref Info: Link coloring OFF on input line 698.
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -953,20 +1107,20 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count398
+\c@section@level=\count430
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 693.
-LaTeX Info: Redefining \ref on input line 693.
-LaTeX Info: Redefining \pageref on input line 693.
-LaTeX Info: Redefining \nameref on input line 693.
+LaTeX Info: Redefining \nameref on input line 698.
+LaTeX Info: Redefining \ref on input line 698.
+LaTeX Info: Redefining \pageref on input line 698.
+LaTeX Info: Redefining \nameref on input line 698.
 (Dyplom.out) (Dyplom.out)
-\@outlinefile=\write5
-\openout5 = `Dyplom.out'.
+\@outlinefile=\write7
+\openout7 = `Dyplom.out'.
 
 LaTeX Font Info:    Trying to load font information for T1+EBGaramond-OsF on in
-put line 702.
+put line 707.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/ebgaramond\t1ebgaramo
 nd-osf.fd
@@ -976,73 +1130,73 @@ ond-OsF.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <12> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 702.
+nput line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 702.
-\tmpfboxrule=\skip274
+(Font)              scaled to size 12.0pt on input line 707.
+\tmpfboxrule=\skip276
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <16> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 702.
+nput line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 16.0pt on input line 702.
+(Font)              scaled to size 16.0pt on input line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <14> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 702.
+nput line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 14.0pt on input line 702.
+(Font)              scaled to size 14.0pt on input line 707.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-02.
+07.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-02.
+07.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-702.
+707.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-702.
+707.
 
 (C:\Users\pietrus\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 702.
+(Font)              <12> on input line 707.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 702.
+(Font)              <8> on input line 707.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 702.
+(Font)              <6> on input line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <22> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 702.
+nput line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 22.0pt on input line 702.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 702.
+(Font)              scaled to size 22.0pt on input line 707.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 707.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14> on input line 702.
+(Font)              <14> on input line 707.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.79996> on input line 702.
+(Font)              <9.79996> on input line 707.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 702.
+(Font)              <7> on input line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' in size <32> not availab
 le
 (Font)              Font shape `T1/EBGaramond-OsF/regular/n' tried instead on i
-nput line 702.
+nput line 707.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/regular/n' will be
-(Font)              scaled to size 32.0pt on input line 702.
+(Font)              scaled to size 32.0pt on input line 707.
 
-Overfull \hbox (14.5pt too wide) in paragraph at lines 702--702
+Overfull \hbox (14.5pt too wide) in paragraph at lines 707--707
 [][]
  []
 
@@ -1050,7 +1204,7 @@ Overfull \hbox (14.5pt too wide) in paragraph at lines 702--702
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 702.
+(in both cases you will find help in the memoir manual). on input line 707.
 
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1076,7 +1230,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial01.aux'.
 
  (rozdzial01.tex
-<rys01/ligspace.png, id=254, 454.69875pt x 220.57407pt>
+<rys01/ligspace.png, id=244, 454.69875pt x 220.57407pt>
 File: rys01/ligspace.png Graphic file (type png)
 <use rys01/ligspace.png>
 Package pdftex.def Info: rys01/ligspace.png  used on input line 12.
@@ -1089,12 +1243,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys01/ligspace.png>]
-<rys01/ligspaceopis.png, id=265, 457.71pt x 353.82187pt>
+<rys01/ligspaceopis.png, id=255, 457.71pt x 353.82187pt>
 File: rys01/ligspaceopis.png Graphic file (type png)
 <use rys01/ligspaceopis.png>
 Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 26.
 (pdftex.def)             Requested size: 227.5pt x 175.86311pt.
-<rys01/ligspacebrzeskaliga.png, id=266, 741.52031pt x 703.87968pt>
+<rys01/ligspacebrzeskaliga.png, id=256, 741.52031pt x 703.87968pt>
 File: rys01/ligspacebrzeskaliga.png Graphic file (type png)
 <use rys01/ligspacebrzeskaliga.png>
 Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 32.
@@ -1104,7 +1258,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<rys01/fibalivestats.png, id=269, 674.52pt x 380.17032pt>
+<rys01/fibalivestats.png, id=259, 674.52pt x 380.17032pt>
 File: rys01/fibalivestats.png Graphic file (type png)
 <use rys01/fibalivestats.png>
 Package pdftex.def Info: rys01/fibalivestats.png  used on input line 44.
@@ -1114,7 +1268,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [6 <./rys01/ligspaceopis.png> <./rys01/ligspacebrzeskaliga.png>]
-<rys01/fibalivestatsfeatures.png, id=278, 679.78969pt x 191.9672pt>
+<rys01/fibalivestatsfeatures.png, id=268, 679.78969pt x 191.9672pt>
 File: rys01/fibalivestatsfeatures.png Graphic file (type png)
 <use rys01/fibalivestatsfeatures.png>
 Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 51
@@ -1125,12 +1279,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [7 <./rys01/fibalivestats.png> <./rys01/fibalivestatsfeatures.png>]
-<rys01/dalkstronaglowna.png, id=289, 1444.64719pt x 395.22656pt>
+<rys01/dalkstronaglowna.png, id=279, 1444.64719pt x 395.22656pt>
 File: rys01/dalkstronaglowna.png Graphic file (type png)
 <use rys01/dalkstronaglowna.png>
 Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 65.
 (pdftex.def)             Requested size: 455.0pt x 124.47893pt.
-<rys01/dalkstatystykizawodnikow.png, id=290, 877.77937pt x 292.84406pt>
+<rys01/dalkstatystykizawodnikow.png, id=280, 877.77937pt x 292.84406pt>
 File: rys01/dalkstatystykizawodnikow.png Graphic file (type png)
 <use rys01/dalkstatystykizawodnikow.png>
 Package pdftex.def Info: rys01/dalkstatystykizawodnikow.png  used on input line
@@ -1169,7 +1323,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial04.aux'.
 
  (rozdzial04.tex
-<rys04/ogolny-schemat-dotnet.png, id=311, 371.3875pt x 493.845pt>
+<rys04/ogolny-schemat-dotnet.png, id=301, 371.3875pt x 493.845pt>
 File: rys04/ogolny-schemat-dotnet.png Graphic file (type png)
 <use rys04/ogolny-schemat-dotnet.png>
 Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 18
@@ -1206,12 +1360,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial05.aux'.
 
  (rozdzial05.tex
-<rys05/webappschema.png, id=341, 663.22781pt x 277.78781pt>
+<rys05/webappschema.png, id=331, 663.22781pt x 277.78781pt>
 File: rys05/webappschema.png Graphic file (type png)
 <use rys05/webappschema.png>
 Package pdftex.def Info: rys05/webappschema.png  used on input line 6.
 (pdftex.def)             Requested size: 318.49861pt x 133.40019pt.
-<rys05/cleanCodeDiagram.png, id=345, 716.6775pt x 716.6775pt>
+<rys05/cleanCodeDiagram.png, id=335, 716.6775pt x 716.6775pt>
 File: rys05/cleanCodeDiagram.png Graphic file (type png)
 <use rys05/cleanCodeDiagram.png>
 Package pdftex.def Info: rys05/cleanCodeDiagram.png  used on input line 16.
@@ -1226,7 +1380,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys05/webappschema.png> <./rys05/cleanCodeDiagram.png>]
-<rys05/domainTree.png, id=355, 162.6075pt x 399.74344pt>
+<rys05/domainTree.png, id=345, 162.6075pt x 399.74344pt>
 File: rys05/domainTree.png Graphic file (type png)
 <use rys05/domainTree.png>
 Package pdftex.def Info: rys05/domainTree.png  used on input line 27.
@@ -1236,7 +1390,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [15 <./rys05/domainTree.png>]
-<rys05/persistanceTree.png, id=362, 188.20313pt x 406.51875pt>
+<rys05/persistanceTree.png, id=352, 188.20313pt x 406.51875pt>
 File: rys05/persistanceTree.png Graphic file (type png)
 <use rys05/persistanceTree.png>
 Package pdftex.def Info: rys05/persistanceTree.png  used on input line 39.
@@ -1246,12 +1400,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [16 <./rys05/persistanceTree.png>]
-<rys05/divisionCQRS.png, id=370, 228.10219pt x 177.66376pt>
+<rys05/divisionCQRS.png, id=360, 228.10219pt x 177.66376pt>
 File: rys05/divisionCQRS.png Graphic file (type png)
 <use rys05/divisionCQRS.png>
 Package pdftex.def Info: rys05/divisionCQRS.png  used on input line 50.
 (pdftex.def)             Requested size: 136.50139pt x 106.31984pt.
-<rys05/applicationTree.png, id=371, 156.585pt x 395.22656pt>
+<rys05/applicationTree.png, id=361, 156.585pt x 395.22656pt>
 File: rys05/applicationTree.png Graphic file (type png)
 <use rys05/applicationTree.png>
 Package pdftex.def Info: rys05/applicationTree.png  used on input line 58.
@@ -1261,12 +1415,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [17 <./rys05/divisionCQRS.png> <./rys05/applicationTree.png>]
-<rys05/infrastructureTree.png, id=380, 150.5625pt x 134.75343pt>
+<rys05/infrastructureTree.png, id=370, 150.5625pt x 134.75343pt>
 File: rys05/infrastructureTree.png Graphic file (type png)
 <use rys05/infrastructureTree.png>
 Package pdftex.def Info: rys05/infrastructureTree.png  used on input line 68.
 (pdftex.def)             Requested size: 136.50139pt x 122.17961pt.
-<rys05/apiTree.png, id=381, 178.41656pt x 490.08093pt>
+<rys05/apiTree.png, id=371, 178.41656pt x 490.08093pt>
 File: rys05/apiTree.png Graphic file (type png)
 <use rys05/apiTree.png>
 Package pdftex.def Info: rys05/apiTree.png  used on input line 78.
@@ -1276,17 +1430,17 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [18 <./rys05/infrastructureTree.png> <./rys05/apiTree.png>]
-<rys05/dev-workflow.png, id=391, 752.8125pt x 133.49875pt>
+<rys05/dev-workflow.png, id=381, 752.8125pt x 133.49875pt>
 File: rys05/dev-workflow.png Graphic file (type png)
 <use rys05/dev-workflow.png>
 Package pdftex.def Info: rys05/dev-workflow.png  used on input line 93.
 (pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
-<rys05/databaseschema.png, id=397, 5759.01563pt x 3887.52374pt>
+<rys05/databaseschema.png, id=387, 5759.01563pt x 3887.52374pt>
 File: rys05/databaseschema.png Graphic file (type png)
 <use rys05/databaseschema.png>
 Package pdftex.def Info: rys05/databaseschema.png  used on input line 110.
 (pdftex.def)             Requested size: 5759.00166pt x 3887.51431pt.
-<rys05/playerdatabaseschema.png, id=398, 3290.54344pt x 3473.47687pt>
+<rys05/playerdatabaseschema.png, id=388, 3290.54344pt x 3473.47687pt>
 File: rys05/playerdatabaseschema.png Graphic file (type png)
 <use rys05/playerdatabaseschema.png>
 Package pdftex.def Info: rys05/playerdatabaseschema.png  used on input line 118
@@ -1305,7 +1459,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [21 <./rys05/playerdatabaseschema.png>]
-<rys05/userdatabaseschema.png, id=419, 1577.895pt x 2204.235pt>
+<rys05/userdatabaseschema.png, id=409, 1577.895pt x 2204.235pt>
 File: rys05/userdatabaseschema.png Graphic file (type png)
 <use rys05/userdatabaseschema.png>
 Package pdftex.def Info: rys05/userdatabaseschema.png  used on input line 125.
@@ -1355,30 +1509,302 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[27])
+[27]
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [28]
-\openout2 = `rozdzial07.aux'.
-
- (rozdzial07.tex)
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[29
+[29]
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[30]
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[31])
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[32]
+\openout2 = `rozdzial07.aux'.
+
+ (rozdzial07.tex
+<rys07/homepage.png, id=825, 680.5425pt x 475.7775pt>
+File: rys07/homepage.png Graphic file (type png)
+<use rys07/homepage.png>
+Package pdftex.def Info: rys07/homepage.png  used on input line 9.
+(pdftex.def)             Requested size: 182.00069pt x 127.23473pt.
+<rys07/homepagelogged.png, id=826, 682.80093pt x 475.7775pt>
+File: rys07/homepagelogged.png Graphic file (type png)
+<use rys07/homepagelogged.png>
+Package pdftex.def Info: rys07/homepagelogged.png  used on input line 15.
+(pdftex.def)             Requested size: 182.00069pt x 126.81366pt.
+<rys07/loginmodal.png, id=829, 449.42906pt x 185.94469pt>
+File: rys07/loginmodal.png Graphic file (type png)
+<use rys07/loginmodal.png>
+Package pdftex.def Info: rys07/loginmodal.png  used on input line 27.
+(pdftex.def)             Requested size: 182.00069pt x 75.29866pt.
+<rys07/registermodal.png, id=830, 450.9347pt x 272.51813pt>
+File: rys07/registermodal.png Graphic file (type png)
+<use rys07/registermodal.png>
+Package pdftex.def Info: rys07/registermodal.png  used on input line 33.
+(pdftex.def)             Requested size: 182.00069pt x 109.99083pt.
+<rys07/navbaruser.png, id=832, 1049.42062pt x 48.18pt>
+File: rys07/navbaruser.png Graphic file (type png)
+<use rys07/navbaruser.png>
+Package pdftex.def Info: rys07/navbaruser.png  used on input line 44.
+(pdftex.def)             Requested size: 455.0pt x 20.88974pt.
+<rys07/navbaradmin.png, id=833, 1045.65656pt x 45.16875pt>
+File: rys07/navbaradmin.png Graphic file (type png)
+<use rys07/navbaradmin.png>
+Package pdftex.def Info: rys07/navbaradmin.png  used on input line 50.
+(pdftex.def)             Requested size: 455.0pt x 19.65443pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[33
 
 
 
 
+ <./rys07/homepage.png> <./rys07/homepagelogged.png> <./rys07/loginmodal.png> <
+./rys07/registermodal.png>]
+<rys07/navbarprofile.png, id=847, 153.57375pt x 124.21407pt>
+File: rys07/navbarprofile.png Graphic file (type png)
+<use rys07/navbarprofile.png>
+Package pdftex.def Info: rys07/navbarprofile.png  used on input line 65.
+(pdftex.def)             Requested size: 136.50139pt x 110.41179pt.
+<rys07/profile.png, id=848, 1301.61281pt x 545.03625pt>
+File: rys07/profile.png Graphic file (type png)
+<use rys07/profile.png>
+Package pdftex.def Info: rys07/profile.png  used on input line 72.
+(pdftex.def)             Requested size: 318.49861pt x 133.36456pt.
+<rys07/upload1.png, id=850, 960.58875pt x 380.92313pt>
+File: rys07/upload1.png Graphic file (type png)
+<use rys07/upload1.png>
+Package pdftex.def Info: rys07/upload1.png  used on input line 82.
+(pdftex.def)             Requested size: 273.00278pt x 108.26196pt.
+<rys07/upload2.png, id=851, 956.82469pt x 423.08063pt>
+File: rys07/upload2.png Graphic file (type png)
+<use rys07/upload2.png>
+Package pdftex.def Info: rys07/upload2.png  used on input line 88.
+(pdftex.def)             Requested size: 273.00278pt x 120.7148pt.
+<rys07/upload3.png, id=852, 959.83594pt x 320.69812pt>
+File: rys07/upload3.png Graphic file (type png)
+<use rys07/upload3.png>
+Package pdftex.def Info: rys07/upload3.png  used on input line 94.
+(pdftex.def)             Requested size: 273.00278pt x 91.21396pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[34 <./rys07/navbaruser.png> <./rys07/navbaradmin.png> <./rys07/navbarprofile.p
+ng> <./rys07/profile.png>]
+<rys07/tables1.png, id=865, 1049.42062pt x 442.65375pt>
+File: rys07/tables1.png Graphic file (type png)
+<use rys07/tables1.png>
+Package pdftex.def Info: rys07/tables1.png  used on input line 110.
+(pdftex.def)             Requested size: 364.00139pt x 153.53973pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[35 <./rys07/upload1.png> <./rys07/upload2.png> <./rys07/upload3.png> <./rys07/
+tables1.png>]
+<rys07/schedule.png, id=876, 694.09312pt x 593.21625pt>
+File: rys07/schedule.png Graphic file (type png)
+<use rys07/schedule.png>
+Package pdftex.def Info: rys07/schedule.png  used on input line 121.
+(pdftex.def)             Requested size: 364.00139pt x 311.10828pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[36 <./rys07/schedule.png>]
+<rys07/boxscore.png, id=887, 867.99281pt x 658.71094pt>
+File: rys07/boxscore.png Graphic file (type png)
+<use rys07/boxscore.png>
+Package pdftex.def Info: rys07/boxscore.png  used on input line 131.
+(pdftex.def)             Requested size: 455.0pt x 345.2957pt.
+<rys07/playbyplay.png, id=888, 869.49844pt x 477.28313pt>
+File: rys07/playbyplay.png Graphic file (type png)
+<use rys07/playbyplay.png>
+Package pdftex.def Info: rys07/playbyplay.png  used on input line 139.
+(pdftex.def)             Requested size: 455.0pt x 249.76172pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[37 <./rys07/boxscore.png> <./rys07/playbyplay.png>]
+<rys07/stats.png, id=897, 912.40875pt x 656.4525pt>
+File: rys07/stats.png Graphic file (type png)
+<use rys07/stats.png>
+Package pdftex.def Info: rys07/stats.png  used on input line 151.
+(pdftex.def)             Requested size: 455.0pt x 327.35399pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[38 <./rys07/stats.png>]
+<rys07/players.png, id=910, 624.08156pt x 541.27219pt>
+File: rys07/players.png Graphic file (type png)
+<use rys07/players.png>
+Package pdftex.def Info: rys07/players.png  used on input line 165.
+(pdftex.def)             Requested size: 226.5928pt x 196.52618pt.
+<rys07/teams.png, id=911, 354.57469pt x 588.69937pt>
+File: rys07/teams.png Graphic file (type png)
+<use rys07/teams.png>
+Package pdftex.def Info: rys07/teams.png  used on input line 171.
+(pdftex.def)             Requested size: 111.47646pt x 185.08195pt.
+<rys07/playerdetails.png, id=912, 1100.61188pt x 499.8675pt>
+File: rys07/playerdetails.png Graphic file (type png)
+<use rys07/playerdetails.png>
+Package pdftex.def Info: rys07/playerdetails.png  used on input line 183.
+(pdftex.def)             Requested size: 409.49722pt x 185.97777pt.
+<rys07/teamdetails.png, id=913, 1102.87032pt x 439.6425pt>
+File: rys07/teamdetails.png Graphic file (type png)
+<use rys07/teamdetails.png>
+Package pdftex.def Info: rys07/teamdetails.png  used on input line 189.
+(pdftex.def)             Requested size: 409.49722pt x 163.2421pt.
+<rys07/managenav.png, id=915, 955.31906pt x 54.9553pt>
+File: rys07/managenav.png Graphic file (type png)
+<use rys07/managenav.png>
+Package pdftex.def Info: rys07/managenav.png  used on input line 204.
+(pdftex.def)             Requested size: 455.0pt x 26.17363pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[39 <./rys07/players.png> <./rys07/teams.png> <./rys07/playerdetails.png> <./ry
+s07/teamdetails.png>]
+<rys07/createplayer.png, id=925, 585.68813pt x 342.5297pt>
+File: rys07/createplayer.png Graphic file (type png)
+<use rys07/createplayer.png>
+Package pdftex.def Info: rys07/createplayer.png  used on input line 214.
+(pdftex.def)             Requested size: 273.00278pt x 159.66664pt.
+<rys07/createteam.png, id=926, 942.52126pt x 309.40594pt>
+File: rys07/createteam.png Graphic file (type png)
+<use rys07/createteam.png>
+Package pdftex.def Info: rys07/createteam.png  used on input line 220.
+(pdftex.def)             Requested size: 455.0pt x 149.36769pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[40 <./rys07/managenav.png> <./rys07/createplayer.png> <./rys07/createteam.png>
 ]
+<rys07/season.png, id=942, 942.52126pt x 454.69875pt>
+File: rys07/season.png Graphic file (type png)
+<use rys07/season.png>
+Package pdftex.def Info: rys07/season.png  used on input line 234.
+(pdftex.def)             Requested size: 341.25pt x 164.62807pt.
+<rys07/seasoncreate.png, id=943, 456.95718pt x 301.125pt>
+File: rys07/seasoncreate.png Graphic file (type png)
+<use rys07/seasoncreate.png>
+Package pdftex.def Info: rys07/seasoncreate.png  used on input line 242.
+(pdftex.def)             Requested size: 181.99722pt x 119.92865pt.
+<rys07/manageteams.png, id=944, 463.7325pt x 313.9228pt>
+File: rys07/manageteams.png Graphic file (type png)
+<use rys07/manageteams.png>
+Package pdftex.def Info: rys07/manageteams.png  used on input line 250.
+(pdftex.def)             Requested size: 204.74861pt x 138.60545pt.
+<rys07/manageplayers.png, id=945, 456.20438pt x 411.78844pt>
+File: rys07/manageplayers.png Graphic file (type png)
+<use rys07/manageplayers.png>
+Package pdftex.def Info: rys07/manageplayers.png  used on input line 257.
+(pdftex.def)             Requested size: 204.74861pt x 184.81297pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[41 <./rys07/season.png> <./rys07/seasoncreate.png> <./rys07/manageteams.png> <
+./rys07/manageplayers.png>]
+<rys07/division.png, id=955, 944.7797pt x 227.34938pt>
+File: rys07/division.png Graphic file (type png)
+<use rys07/division.png>
+Package pdftex.def Info: rys07/division.png  used on input line 269.
+(pdftex.def)             Requested size: 455.0pt x 109.4907pt.
+<rys07/matchmanager.png, id=961, 949.29657pt x 504.38437pt>
+File: rys07/matchmanager.png Graphic file (type png)
+<use rys07/matchmanager.png>
+Package pdftex.def Info: rys07/matchmanager.png  used on input line 283.
+(pdftex.def)             Requested size: 455.0pt x 241.7554pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[42 <./rys07/division.png> <./rys07/matchmanager.png>]
+<rys07/newgame.png, id=973, 457.71pt x 193.47281pt>
+File: rys07/newgame.png Graphic file (type png)
+<use rys07/newgame.png>
+Package pdftex.def Info: rys07/newgame.png  used on input line 294.
+(pdftex.def)             Requested size: 216.1243pt x 91.35439pt.
+<rys07/choseteams.png, id=974, 455.45157pt x 194.97844pt>
+File: rys07/choseteams.png Graphic file (type png)
+<use rys07/choseteams.png>
+Package pdftex.def Info: rys07/choseteams.png  used on input line 300.
+(pdftex.def)             Requested size: 216.1243pt x 92.52348pt.
+<rys07/gotomatch.png, id=975, 901.86937pt x 530.73282pt>
+File: rys07/gotomatch.png Graphic file (type png)
+<use rys07/gotomatch.png>
+Package pdftex.def Info: rys07/gotomatch.png  used on input line 311.
+(pdftex.def)             Requested size: 341.25pt x 200.82214pt.
+<rys07/statsprogram.png, id=976, 785.93625pt x 560.0925pt>
+File: rys07/statsprogram.png Graphic file (type png)
+<use rys07/statsprogram.png>
+Package pdftex.def Info: rys07/statsprogram.png  used on input line 318.
+(pdftex.def)             Requested size: 364.00139pt x 259.4062pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[43 <./rys07/newgame.png> <./rys07/choseteams.png> <./rys07/gotomatch.png> <./r
+ys07/statsprogram.png>]
+<rys07/shotmade.png, id=988, 779.16093pt x 511.15968pt>
+File: rys07/shotmade.png Graphic file (type png)
+<use rys07/shotmade.png>
+Package pdftex.def Info: rys07/shotmade.png  used on input line 331.
+(pdftex.def)             Requested size: 273.00278pt x 179.09575pt.
+<rys07/statsprogrampts.png, id=989, 789.70032pt x 558.58687pt>
+File: rys07/statsprogrampts.png Graphic file (type png)
+<use rys07/statsprogrampts.png>
+Package pdftex.def Info: rys07/statsprogrampts.png  used on input line 338.
+(pdftex.def)             Requested size: 318.49861pt x 225.28888pt.
+
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[44 <./rys07/shotmade.png> <./rys07/statsprogrampts.png>]
+<rys07/endmatch.png, id=999, 782.925pt x 124.96687pt>
+File: rys07/endmatch.png Graphic file (type png)
+<use rys07/endmatch.png>
+Package pdftex.def Info: rys07/endmatch.png  used on input line 347.
+(pdftex.def)             Requested size: 455.0pt x 72.62575pt.
+)
+Overfull \vbox (0.89998pt too high) has occurred while \output is active []
+
+
+[45 <./rys07/endmatch.png>]
 \openout2 = `rozdzial08.aux'.
 
  (rozdzial08.tex)
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[30
+[46
 
 
 
@@ -1430,7 +1856,7 @@ tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[31
+[47
 
 
 
@@ -1439,21 +1865,21 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 Class memoir Warning: The material used in the headers is too large
 (14.49998pt) for the given head height (13.6pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 775.
+(in both cases you will find help in the memoir manual). on input line 780.
 
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
-[32
+[48
 
 
 ]
-\tf@toc=\write6
-\openout6 = `Dyplom.toc'.
+\tf@toc=\write8
+\openout8 = `Dyplom.toc'.
 
-\tf@lot=\write7
-\openout7 = `Dyplom.lot'.
+\tf@lot=\write9
+\openout9 = `Dyplom.lot'.
 
 
 
@@ -1463,16 +1889,16 @@ Package imakeidx Warning: Remember to run (pdf)latex again after calling
 (Dyplom.aux (rozdzial01.aux) (rozdzial02.aux) (rozdzial03.aux) (rozdzial04.aux)
 (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux) (rozdzial08.aux))
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: 84E287EA58E3B98143D6BDE97D029018;6451.
+(rerunfilecheck)             Checksum: 673256645EBF2B2558E9C7389E1DEB93;6350.
  ) 
 Here is how much of TeX's memory you used:
- 17025 strings out of 480235
- 254452 string characters out of 2879590
- 1027837 words of memory out of 3000000
- 32934 multiletter control sequences out of 15000+200000
+ 21747 strings out of 480235
+ 350373 string characters out of 2879590
+ 1234680 words of memory out of 3000000
+ 37356 multiletter control sequences out of 15000+200000
  642021 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,99p,900b,2050s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,13n,99p,1045b,2063s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
 enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
 y.enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
@@ -1485,9 +1911,9 @@ Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pie
 trus/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (32 pages, 2976241 bytes).
+Output written on Dyplom.pdf (48 pages, 5134630 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 301 named destinations out of 1000 (max. 500000)
- 469 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1170 PDF objects out of 1200 (max. 8388607)
+ 497 named destinations out of 1000 (max. 500000)
+ 633 words of extra memory for PDF output out of 10000 (max. 10000000)
 

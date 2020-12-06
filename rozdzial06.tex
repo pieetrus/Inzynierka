@@ -131,7 +131,7 @@ Zdjêcie wrzucone zostaje na serwis chmurowy cloudinary, a w bazie przechowywany 
 
 \section{Zarz¹dzanie lig¹}
 
-Jest to implementacja funkcjonalnoœci do których dostêp ma jedynie u¿ytkownik z rol¹ Admin. \\
+Do prezentowanych poni¿ej funkcjonalnoœci dostêp ma jedynie u¿ytkownik z rol¹ Admin. \\
 Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn oraz zawodników. Do ka¿dego z wymienionych obiektów zaimplementowa³a zosta³a równie¿ walidacja wys³anych danych przy u¿yciu rozszerzenie Fluent Validation. Sposób implementacji tych podstawowych operacji CRUD przedstawiono na przyk³adzie obiektu sezonu. Je¿eli dane w zapytaniu przejd¹ walidacjê, której implementacjê przestawia listing \ref{list:req6} to nastêpuje przypisanie danych do obiektu \textit{Season}. Je¿eli w zapytaniu znajduj¹ siê dane na temat dywizji które maj¹ zostaæ przypisane do tego sezonu to równie¿ s¹ one dodawane, w przypadku ich braku operacja zostaje pominiêta i nastêpuje zapisanie sezonu do bazy. Je¿eli operacja przebieg³a prawid³owo zwracany jest Id sezonu, w innym przypadku rzucany jest wyj¹tek, co przedstawia listing \ref{list:req7}
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req6,caption=Walidacja danych]
@@ -166,9 +166,7 @@ Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn or
 		_context.SeasonDivision.AddRange(newSeasonDivisions);
 	}
 	else
-	{
 		_context.Season.Add(season);
-	}
 	
 	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
 	if (success) return season.Id;
@@ -177,7 +175,7 @@ Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn or
 	\end{lstlisting}
 }
 
-Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znaleziony rzucany jest wyj¹tek. Po znalezieniu obiektu poszczególnym w³asnoœciom przypisywane s¹ nowe dane jeœli takowe zosta³y przys³ane, w przypadku ich braku zachowana zostaje stara wartoœæ. Sprawdzane s¹ równie¿ przys³ane dywizje które s¹ przypisane do sezonu, w przypadku nowych zostaj¹ one dodanych. Usuwanie dywizji z sezonu znajduje siê w innej metodzie. Podczas wysy³ania danych do edycji równie¿ nastêpuje walidacja, analogiczna do tej podczas dodawania. Kod odpowiedzialny za edycjê znajduje siê na listingu \ref{list:req8}.
+Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znaleziony rzucany jest wyj¹tek. Po znalezieniu obiektu poszczególnym w³asnoœciom przypisywane s¹ nowe dane jeœli takowe zosta³y przys³ane, w przypadku ich braku zachowana zostaje stara wartoœæ. Sprawdzane s¹ równie¿ przys³ane dywizje które s¹ przypisane do sezonu, w przypadku nowych zostaj¹ one dodane. Usuwanie dywizji z sezonu znajduje siê w innej metodzie. Podczas wysy³ania danych do edycji równie¿ nastêpuje walidacja, analogiczna do tej podczas dodawania. Kod odpowiedzialny za edycjê znajduje siê na listingu \ref{list:req8}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req8,caption=Edycja sezonu]
@@ -233,8 +231,7 @@ Usuwanie obiektu wykonywane jest na podstawie Id wys³anego w zapytaniu, dziêki p
 	\end{lstlisting}
 }
 
-\subsection{Zarz¹dzanie dru¿ynami oraz zawodnikami}
-Dru¿yny oraz zawodników przypisuje siê do sezonów oraz dywizji. Tworzy siê w ten sposób obiekty \textit{PlayerSeason} oraz \textit{TeamSeason}. Obiektowi zostaje przypisany Id sezonu oraz dywizji, którego ma dotyczyæ. Zapisany zostaje tak¿e Id dru¿yny do której w danym sezonie oraz dywizji zostaje zapisany. Warto zaznaczyæ ¿e jest to referencja do obiektu \textit{TeamSeason}, a nie \textit{Team}. Kod odpowiadaj¹cy za tworzenie obiektu przedstawia poni¿szy listing \ref{list:req10}. 
+\indent Dru¿yny oraz zawodników przypisuje siê do sezonów oraz dywizji. Tworzy siê w ten sposób obiekty \textit{PlayerSeason} oraz \textit{TeamSeason}. Obiektowi zostaje przypisany Id sezonu oraz dywizji, którego ma dotyczyæ. Zapisany zostaje tak¿e Id dru¿yny do której w danym sezonie oraz dywizji zostaje zapisany. Warto zaznaczyæ ¿e jest to referencja do obiektu \textit{TeamSeason}, a nie \textit{Team}. Kod odpowiadaj¹cy za tworzenie obiektu \textit{PlayerSeason} przedstawia listing \ref{list:req10}, w przypadku \textit{TeamSeason} wygl¹da to analogicznie. 
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req10,caption=Przypisywanie zawodnika do sezonu oraz dywizji]
@@ -261,36 +258,210 @@ Dru¿yny oraz zawodników przypisuje siê do sezonów oraz dywizji. Tworzy siê w ten
 	\end{lstlisting}
 }
 
+W danym sezonie oraz dywizji ta sama dru¿yna mo¿e pojawiæ siê tylko raz. Tak samo w przypadku zawodników. Ograniczenie to zosta³o na³o¿one na poziomie bazy. Przedstawia je listing \ref{list:req11}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req11,caption=Ograniczenie unikalnoœci TeamId oraz SeasonDivisionId]
+	builder.HasIndex(e => new { e.TeamId, e.SeasonDivisionId })
+	.HasName("UQ_Team_Season_Player_ID_Season_Division_ID")
+	.IsUnique();
+	\end{lstlisting}
+}
+
+Obiekty te mo¿na równie¿ edytowaæ oraz usuwaæ.
 
 \section{Zarz¹dzanie meczami i program do pisania statystyk}
+Mecze mo¿na planowaæ dodaj¹c je do bazy ustawiaj¹c w³aœciwoœæ StartDate na datê w przysz³oœci, mo¿na dodawaæ równie¿ mecze które odby³y siê w przesz³oœci. Podczas dodawania meczu w pierwszej kolejnoœci sprawdzane jest na podstawie daty rozpoczêcia meczu oraz dywizji przes³anej w zapytaniu czy dla wybranej daty zosta³ ju¿ utworzony sezon wraz z dywizj¹, je¿eli nie rzucany jest wyj¹tek. Nastêpnie pobierane s¹ dane na temat dru¿yn w sezonie, przy pomocy których tworzone s¹ obiekty \textit{TeamMatch} dla obu dru¿yn. Zostaj¹ one dodane do bazy oraz zapisane. Je¿eli operacja zakoñczy siê sukcesem tworzony jest obiekt meczu. Kod znajduje siê na listingu \ref{list:req12}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req12,caption=Dodawanie nowego meczu]
+	var seasonDivision = await_context.SeasonDivision
+	.Include(x => x.Season).FirstOrDefaultAsync(x => x.DivisionId == request.DivisionId && x.Season.StartDate <= request.StartDate && x.Season.EndDate >= request.StartDate, cancellationToken);
+	
+	if (seasonDivision == null)
+		throw new Exception("Matches cannot be scheduled for this season. Firstly create season.");
+	
+	var teamHome = await _context.TeamSeason.FirstOrDefaultAsync(x => x.Id == request.TeamHomeId, cancellationToken);
+	var teamGuest = await _context.TeamSeason.FirstOrDefaultAsync(x => x.Id == request.TeamGuestId, cancellationToken);
+	if (teamHome == null)
+		throw new NotFoundException(nameof(TeamSeason),request.TeamHomeId);
+	if (teamGuest == null)
+		throw new NotFoundException(nameof(TeamSeason),request.TeamGuestId);
+	
+	var teamMatchHome = new TeamMatch { TeamId = teamHome.TeamId };
+	var teamMatchGuest = new TeamMatch { TeamId = teamGuest.TeamId };
+	
+	_context.TeamMatch.AddRange(teamMatchHome, teamMatchGuest);
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (!success) throw new Exception("Problem saving changes. Team match entity.");
+	
+	var entity = new Match
+	{
+		SeasonDivisionId = seasonDivision.Id,
+		TeamSeasonHomeId = request.TeamHomeId,
+		TeamSeasonGuestId = request.TeamGuestId,
+		TeamHomeId = teamMatchHome.Id,
+		TeamGuestId = teamMatchGuest.Id,
+		Attendance = request.Attendance ?? 0,
+		StartDate = request.StartDate,
+		Ended = request.Ended ?? false
+	};
+	
+	_context.Match.Add(entity);
+	
+	success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return Unit.Value;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
+Po utworzeniu meczu nale¿y go rozpocz¹æ aby móc zbieraæ z niego statystyki. S³u¿y do tego metoda StartMatch, która znajduje siê na listingu \ref{list:req13}. W pierwszej kolejnoœci z bazy pobierany jest mecz który nale¿y rozpocz¹æ. W obiekcie zostaj¹ zapisane informacje na temat koloru koszulek obu zespo³ów. Tworzone s¹ równie¿ obiekty \textit{PlayerMatch} na podstawie przes³anych Id zawodników, którzy maj¹ zostaæ zg³oszeni do meczu.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req13,caption=Rozpoczynanie meczu]
+	var match = await _context.Match.Include(x => x.PlayerMatches)
+	.Include(x => x.Incidents).FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+	
+	if (match == null)
+		throw new NotFoundException(nameof(Match), request.Id);
+	
+	match.Started = true;
+	match.TeamHomeJerseyColor = request.TeamHomeJerseyColor;
+	match.TeamGuestJerseyColor = request.TeamGuestJerseyColor;
+	
+	var playerMatchList = new List<PlayerMatch>();
+	
+	foreach (var playerSeasonId in request.TeamHomePlayerSeasonIds)
+	{
+		var playerMatch = new PlayerMatch { PlayerSeasonId = playerSeasonId, MatchId = request.Id, IsGuest = false };
+		playerMatchList.Add(playerMatch);
+	}
+	
+	foreach (var playerSeasonId in request.TeamGuestPlayerSeasonIds)
+	{
+		var playerMatch = new PlayerMatch { PlayerSeasonId = playerSeasonId, MatchId = request.Id, IsGuest = true };
+		playerMatchList.Add(playerMatch);
+	}
+	
+	_context.PlayerMatch.AddRange(playerMatchList);
+	
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return Unit.Value;
+	
+	throw new Exception("Problem saving changes");
+	\end{lstlisting}
+}
+
+Pisanie statystyk polega na wysy³aniu poszczególnych wydarzeñ. Aplikacja obs³uguje nastêpuj¹ce zdarzenia: rzuty, zbiórki, straty, przechwyty, faule, rzuty wolne i przerwy na ¿¹danie. Ka¿dy z obiektów opisuj¹cych zdarzenie ma relacjê z tabel¹ \textit{Incident}, która zawiera w sobie informacje na temat czasu i typu wydarzenia, oraz meczu i kwarty w którym mia³o miejsce. Dodawanie nowych zdarzeñ przedstawiono na przyk³adzie dodania nowego rzutu na listingu \ref{list:req14}. W pierwszej kolejnoœci sprawdzane jest czy dla zawodnika który jest przypisany jako oddaj¹cy rzut zosta³ stworzony obiekt \textit{PlayerMatch}, je¿eli nie, to jest on tworzony. Nastêpnie w zale¿noœci od tego czy rzut by³ o wartoœci dwóch lub trzech punktów oraz czy by³ celny odpowiednio aktualizuje siê pola w obiekcie \textit{TeamMatch} oraz \textit{PlayerMatch}. Je¿eli w ¿¹daniu zosta³ przekazany Id zawodnika, który asystowa³, b¹dŸ Id zbieraj¹cego to dodawane s¹ równie¿ asysta i zbiórka.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req14,caption=Dodawanie rzutu]
+	var playerMatch = await GetPlayerMatchAndAddIfNotExistYet(request, cancellationToken);
+	
+	if (Shot.Value == 2)
+	{
+		TeamMatch.Fg2a++;
+		playerMatch.Fg2a++;
+		if (Shot.IsAccurate)
+		{
+			TeamMatch.Fg2m++;
+			playerMatch.Fg2m++;
+		}
+	}
+	else if (Shot.Value == 3)
+	{
+		TeamMatch.Fg3a++;
+		playerMatch.Fg3a++;
+		if (Shot.IsAccurate)
+		{
+			TeamMatch.Fg3m++;
+			playerMatch.Fg3m++;
+		}
+	}
+	
+	if (request.PlayerAssistId.HasValue)
+		await AddAssist(request, cancellationToken);
+	
+	if (request.PlayerReboundId.HasValue||request.TeamReboundId.HasValue)
+		await AddRebound(request, cancellationToken);
+	
+	_context.Shot.Add(Shot);
+	var success = await _context.SaveChangesAsync(cancellationToken) > 0;
+	if (success) return incident;
+	
+	throw new Exception("Error saving changes");
+	\end{lstlisting}
+}
+
 
 \section{Przesy³anie wyniku meczu na ¿ywo}
-%\section{Logowanie i rejestracja}
-%¯e na pocz¹tku widoczny jest ekran logowania lub rejestracji. Jest to konieczne w celu autoryzacji czy u¿ytkownik jest adminem i ma dostep do czêœci odpowiedzialnych za zarz¹dzanie lig¹, czy ma dostêp jedynie do przegl¹dania danych na niej zawartych.
-%\section{Panel zarz¹dzania lig¹}
-%Ogólnie o zak³adce manage. Dostêp ma do niej tylko admin. Z jej poziomu mo¿emy dodawaæ do bazy nowych zawodników oraz dru¿yny wraz z logiem które dziêki paczce mo¿emy fajnie.
-%Zarz¹dzanie sezonem tj. tworzenie nowych sezonów, przypisywanie do nich dywizji. Zarz¹dzenie dru¿ynami przypisanymi do danej w dywizji w danym sezonie.
-%A nastepnie przypisywanie zawodnikow do druzyn w danym sezonie.
-%Zakladka division w ktorej wlasciwie tylko mamy mozliwosc dodawania badz usuwanie dywizji.
-%\section{Zak³adka match manager}
-%Mo¿emy tu planowaæ przysz³e mecze, oraz ewentualnie dopisywaæ mecze które siê ju¿ odby³y.
-%Po stworzeniu meczu mo¿na pisaæ z niego statystyki. I ogólnie o programie do  
-%statystyk.
-%
-%\section{Zak³adka schedule}
-%W tej zak³adce dostêpne s¹ do podejrzenia wszystkie mecze które s¹ zaplanowane, trwaj¹ b¹dŸ ju¿ siê odby³y posortowane po dacie. Mo¿na wejœæ w informacje na temat meczu klikaj¹c na box score. Dostaniemy wtedy informacje na temat statystyk ka¿dego zawodnika z meczu, oraz wchodz¹c w zak³adkê play by play ka¿d¹ akcjê z meczu.
-%Warto zaznaczyæ ¿e dzia³a tu funkcja wyniku live.
-%
-%\section{Zak³adka stats}
-%
-%Statystyki zawodników oraz dru¿yn, z mo¿liwoœci¹ filtrowania po sezonie i dywizji. Domyœlnie wybierany jest aktualny seazon z najwy¿sza dywizj¹.
-%
-%\section{Zak³adka players}
-%Wypisani wszyscy zawodnicy z ligi, mo¿liwoœæ filtrowania ich po pierwszej literze nazwiska. Po wejœciu w zawodnika s¹ informacje o nim. Statystyki ze wszystkich sezonów oraz dywizji. W teams analogicznie + logo.
-%
-%\section{Profil u¿ytkownika}
-%Opcja dodawania zdjêæ i ustawianie jednego z nich jako zdjêcie g³ówne.
-%
-%
-%\section{Zak³adka tabele}
-%Tabele pokazuj¹ce dru¿yny i ich punkty, opcja filtrowania anal do stats.
+Funkcjonalnoœæ przesy³ania wyniku meczu na ¿ywo zosta³a zaimplementowana przy u¿yciu biblioteki SignalR.
+Przy jej pomocy stworzono Hub o nazwie IncidentsHub, którego implementacja znajduje siê na listingu \ref{list:req15}. Podczas dodawania nowego rzutu mediator wysy³a komendê utworzenia rzutu, co wywo³uje metodê omówion¹ w poprzedniej sekcji przedstawion¹ na listingu \ref{list:req14}. Po dodaniu tej rzutu do bazy, do wszystkich klientów huba zostaje wys³any event informuj¹cy o tym, ¿e rzut zosta³ otrzymany - ,,ReceiveShot'', wraz z informacjami na jego temat.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req15,caption=Definicja klasy IncidentsHub]
+	public class IncidenctsHub : Hub
+	{
+		public IMediator _mediator { get; }
+		
+		public IncidenctsHub(IMediator mediator)
+		{
+			_mediator = mediator;
+		}
+		
+		public async Task SendShot(CreateShotCommand command)
+		{
+			var incident = await _mediator.Send(command);
+			
+			await Clients.All.SendAsync("ReceiveShot", incident.Shot.IsAccurate, incident.IsGuest, incident.Shot.Value, incident.MatchId, incident.Quater, incident.Minutes, incident.Seconds, incident.Id);
+		}
+	}
+	\end{lstlisting}
+}
+
+Aby dodaæ nowy rzut nale¿y go wys³aæ do endpointa ,,/incidentsHub'' który wczeœniej zosta³ skonfigurowany w klasie Startup, jak pokazuje listing \ref{list:req16}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req16,caption=Konfiguracja endpointa pozwalaj¹cego na œledzenie wyniku na ¿ywo]
+		app.UseEndpoints(endpoints =>
+		{
+			endpoints.MapHub<IncidenctsHub>("/incidentsHub");
+			endpoints.MapControllers();
+		});
+	\end{lstlisting}
+}
+
+Aplikacja kliencka ³¹czy siê do huba przez wczeœniej skonfigurowanego endpointa, przesy³aj¹c przy tym token. Dopóki po³¹czenie jest aktywne hub jest obserwowany czy nie wyst¹pi³ event ,,ReceiveShot'', w przypadku jego wyst¹pienia aktualizowany jest wynik meczu. Po zamkniêciu strony b¹dŸ aplikacji po³¹czenie z hubem jest przerywane. Kod znajduje siê na listingu \ref{list:req17}.
+
+{\belowcaptionskip=-20pt
+	\begin{lstlisting}[label=list:req17,caption=Pod³¹czenie do huba od strony klienta]
+	@action createHubConnection = () => {
+		this.hubConnection = new HubConnectionBuilder()
+		.withUrl("http://localhost:5000/incidentsHub", {
+			accessTokenFactory: () => this.rootStore.commonStore.token!,
+		})
+		.configureLogging(LogLevel.Information)
+		.build();
+		
+		this.hubConnection.start()
+		.then(() => console.log(this.hubConnection!.state))
+		.catch((err) => {
+			console.log(err);
+		});
+		
+		this.hubConnection.on(
+		"ReceiveShot",
+		(isAccurate, isGuest, value, matchId, quater, minutes, seconds) => {
+			runInAction(() =>
+			this.updateScoreLogic(matchId, quater, minutes, seconds, isAccurate, isGuest, value));
+		});
+	};
+	
+	@action stopHubConnection = () => {
+		this.hubConnection?.stop();
+	};
+	\end{lstlisting}
+}
+

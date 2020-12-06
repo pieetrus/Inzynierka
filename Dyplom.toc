@@ -27,18 +27,16 @@
 \contentsline {section}{\numberline {6.1}Rejestracja, logowanie oraz role}{23}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Profil u\.zytkownika}{25}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Zarz\k adzanie lig\k a}{25}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Zarz\k adzanie dru\.zynami oraz zawodnikami}{27}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Zarz\k adzanie meczami i program do pisania statystyk}{28}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Przesy\IeC {\l }anie wyniku meczu na \.zywo}{28}{section.6.5}%
-\contentsline {chapter}{\chapternumberline {7}Opis dzia\IeC {\l }ania aplikacji}{29}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Strona domowa}{29}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Tabele}{29}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Terminarz}{29}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Statystyki}{29}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Zawodnicy}{29}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Dru\.zyny}{29}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Panel zarz\k adzania meczami}{29}{section.7.7}%
-\contentsline {section}{\numberline {7.8}Panel zarz\k adzania lig\k a}{29}{section.7.8}%
-\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{30}{chapter.8}%
-\contentsline {chapter}{Literatura}{31}{chapter*.3}%
-\contentsline {chapter}{Indeks rzeczowy}{31}{section*.4}%
+\contentsline {section}{\numberline {6.5}Przesy\IeC {\l }anie wyniku meczu na \.zywo}{31}{section.6.5}%
+\contentsline {chapter}{\chapternumberline {7}Opis dzia\IeC {\l }ania aplikacji}{33}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Strona startowa}{33}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Profil}{34}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Przegl\k adanie tabel}{35}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Terminarz i podgl\k ad meczu}{36}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Statystyki}{38}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Zarz\k adzanie lig\k a}{40}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Zarz\k adzanie meczami i program do pisania statystyk}{42}{section.7.7}%
+\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{46}{chapter.8}%
+\contentsline {chapter}{Literatura}{47}{chapter*.48}%
+\contentsline {chapter}{Indeks rzeczowy}{47}{section*.49}%
