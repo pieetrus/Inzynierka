@@ -1,5 +1,5 @@
 \chapter{Architektura systemu}
-Rozdzia≥ ten poúwiÍcono aby omÛwiÊ sposÛb implementacji prototypu aplikacji przy pomocy wymienionych rozdzia≥ wyøej technologii. ArchitekturÍ ca≥ej aplikacji ukazano na rys.~\ref{fig:webappschema}.
+Rozdzia≥ ten poúwiÍcono aby omÛwiÊ sposÛb implementacji prototypu aplikacji przy pomocy wymienionych rozdzia≥ wyøej technologii. ArchitekturÍ przedstawiono na schemacie (rys.~\ref{fig:webappschema}).
 
 \begin{figure}[htp]
 	\centering
@@ -9,7 +9,7 @@ Rozdzia≥ ten poúwiÍcono aby omÛwiÊ sposÛb implementacji prototypu aplikacji przy
 \end{figure}
 
 \section{Back-end}
-System zosta≥ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu}. Strza≥ki symbolizujπ ich zaleønoúÊ od siebie. Zastosowanie tego wzorca pozwala na niezaleønoúÊ bazy danych, zewnÍtrznych serwisÛw oraz warstwy prezentacji(w tym przypadku jest to API do zewnÍtrznego serwera z warstwπ prezentacyjnπ) i ich szybkπ oraz wygodnπ wymianÍ w razie potrzeby bez ingerowania w wewnÍtrzne warstwy aplikacji.
+System zosta≥ podzielony na warstwy tak jak na schemacie (rys.~\ref{fig:architekturasystemu}). Strza≥ki symbolizujπ ich zaleønoúÊ od siebie. Zastosowanie tego wzorca pozwala na niezaleønoúÊ bazy danych, zewnÍtrznych serwisÛw oraz warstwy prezentacji (w tym przypadku jest to API do zewnÍtrznego serwera z warstwπ prezentacyjnπ) i ich szybkπ oraz wygodnπ wymianÍ bez ingerowania w wewnÍtrzne warstwy aplikacji.
 
 \begin{figure}[h!tp]
 	\centering
@@ -20,38 +20,41 @@ System zosta≥ podzielony na warstwy tak jak na rys.~\ref{fig:architekturasystemu
 \newpage
 \subsection{Domain}
 
-Zawiera wszystkie klasy uøyte w bazie danych. Znajdujπ siÍ tu takøe enumy oraz logika z nimi zwiπzana jak np. metoda do wydobywania opisu z obiektu typu enum.
-
-\begin{figure}[h!tp]
-	\centering
-	\includegraphics[width=0.2\linewidth]{rys05/domainTree.png}
-	\caption{Pliki i foldery znajdujπce siÍ w warstwie domain}
-	\label{fig:domainTree}
-\end{figure}
-
-\newpage
+Zawiera wszystkie klasy uøyte w bazie danych. Znajdujπ siÍ tu takøe enumy oraz logika z nimi zwiπzana jak np. metoda do wydobywania opisu z obiektu typu enum. Struktura tej warstwy znajduje siÍ na rysunku \ref{fig:domainTree}.
 
 \subsection{Persistence}
-Odpowiada za konfiguracje poszczegÛlnych obiektÛw bazodanowych oraz za po≥πczenie z bazπ danych. Oddzielenie tej warstwy od warstwy domain pozwala na szybkπ i wygodnπ zmianÍ dostarczyciela bazy danych bez potrzeby edytowania samych obiektÛw. Znajdujπ siÍ tu takøe migracje.
+Odpowiada za konfiguracje poszczegÛlnych obiektÛw bazodanowych oraz za po≥πczenie z bazπ danych. Oddzielenie tej warstwy od domain pozwala na szybkπ i wygodnπ zmianÍ dostarczyciela bazy danych bez potrzeby edytowania samych obiektÛw. Znajdujπ siÍ tu takøe migracje. StrukturÍ tej warstwy przedstawiono na rysunku \ref{fig:persistenceTree}.
 
-\begin{figure}[htp]
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=0.3\linewidth]{rys05/persistanceTree.png}
-	\caption{Pliki i foldery znajdujπce siÍ w warstwie persistence}
-	\label{fig:persistenceTree}
+	\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=.6\linewidth]{rys05/domainTree.png}
+			\caption{}
+			\label{fig:domainTree}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.7\linewidth]{rys05/persistanceTree.png}
+		\caption{}
+		\label{fig:persistenceTree}
+	\end{subfigure}
+	\caption{Pliki i foldery znajdujπce siÍ w warstwie a) Domain b) Persistence}
+	\label{fig:tesdst}
 \end{figure}
 
 
-\newpage
 \subsection{Application}
-Zawiera ca≥π logikÍ aplikacji. Jest zaleøna od warstwy domain i nie ma zaleønoúci w innych warstwach lub projektach. Zawiera komendy oraz zapytania (commands/queries) ktÛre sπ obs≥ugiwane przez rozszerzenie MediatR patrz rys.~\ref{fig:divisionCQRS}.
+Zawiera ca≥π logikÍ aplikacji. Jest zaleøna od warstwy domain i nie ma zaleønoúci w innych warstwach lub projektach. Zawiera komendy oraz zapytania (commands/queries) ktÛre sπ obs≥ugiwane przez rozszerzenie MediatR. Przyk≥adowπ strukturÍ logiki zwiπzanej z dywizjami pokazano na rysunku \ref{fig:divisionCQRS}.
+\newpage
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.3\linewidth]{rys05/divisionCQRS.png}
+	\includegraphics[width=0.5\linewidth]{rys05/divisionCQRS.png}
 	\caption{Struktura komend i zapytaÒ dla obiektu division}
 	\label{fig:divisionCQRS}
 \end{figure}
- Pozwala to na oddzielenie zapytaÒ pobierajπcych dane z bazy od komand ktÛre zmieniajπ stan bazy danych.W tej klasie zdefiniowane sπ interfejsy implementowane pÛüniej na zewnπtrz tej warstwy. Np.~gdy aplikacja potrzebowa≥a dostÍpu do serwisu wysy≥ania zdjÍÊ do chmury, nowy interfejs zosta≥ dodany do aplikacji, a jego implementacja zosta≥a stworzona w warstwie infrastructure.
+
+Zastosowanie wzorca CQRS (Command Query Responsibility Segregation) pozwala na oddzielenie zapytaÒ pobierajπcych dane z bazy od komand ktÛre zmieniajπ stan bazy danych. W tej klasie zdefiniowane sπ interfejsy implementowane pÛüniej na zewnπtrz tej warstwy. Np.~gdy aplikacja potrzebowa≥a dostÍpu do serwisu wysy≥ania zdjÍÊ do chmury, nowy interfejs zosta≥ dodany do aplikacji, a jego implementacja zosta≥a stworzona w warstwie infrastructure.
 
 \begin{figure}[h!tp]
 	\centering
@@ -86,17 +89,16 @@ Zawiera controllery ktÛre sπ endpointami przez ktÛre wysy≥ane sπ zapytania z apl
 
 \section{Baza danych}
 
-BazÍ danych stworzono stosujπc podejúcie Code-First, czyli najpierw zosta≥y utworzone obiekty w kodzie reprezentujπce poszczegÛlne tabele, a nastÍpnie zosta≥y one zmapowane przy uøyciu rozszerzenia Entity Framework Core na SQL-owπ bazÍ danych. Podejúcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziÍki migracjom. Schemat tego podejúcia przedstawiono na rys.~\ref{fig:schematcodefirst}.
+BazÍ danych stworzono stosujπc podejúcie Code-First, czyli najpierw zosta≥y utworzone obiekty w kodzie reprezentujπce poszczegÛlne tabele, a nastÍpnie zosta≥y one zmapowane przy uøyciu rozszerzenia Entity Framework Core na SQL-owπ bazÍ danych. Podejúcie takie pozwala na szybkie i wygodne wprowadzanie zmian dziÍki migracjom. Schemat projektowania bazy w ten sposÛb przedstawia rysunek \ref{fig:schematcodefirst}.
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{rys05/dev-workflow.png}
-	\caption{Schemat tworzenia bazy danych w podejúciu Code-First, \cite{CodeFirst}}
+	\caption{Schemat tworzenia bazy danych w podejúciu Code-First, èrÛd≥o: \cite{CodeFirst}}
 	\label{fig:schematcodefirst}
 \end{figure}
 
-Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rys.~\ref{fig:databaseschema}.
-Jednak z powodu duøej iloúci tabel i relacji w nie znalaz≥a siÍ na nim tabela \textit{Player} oraz \textit{AspNetUsers}. TabelÍ \textit{Player} wraz z jej relacjami przedstawia rys.~\ref{fig:playerdatabaseschema}, natomiast tabela \textit{AspNetUsers} znajduje siÍ na rys.~\ref{fig:userdatabaseschema}.
+Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rysunku ~\ref{fig:databaseschema}. Z powodu duøej iloúci tabel i relacji nie znalaz≥a siÍ na nim tabela \textit{Player} oraz \textit{AspNetUsers}. TabelÍ \textit{Player} wraz z jej relacjami przedstawia rysunku ~\ref{fig:playerdatabaseschema}, natomiast tabela \textit{AspNetUsers} znajduje siÍ na rysunku ~\ref{fig:userdatabaseschema}.
 W bazie przechowywane sπ informacje o kaødym wydarzeniu ktÛre zosta≥o dodane przez program do statystyk. Kaøde wydarzenie jest powiπzane z tabelπ \textit{Incident} ktÛra zawiera informacje o meczu, czasie oraz kwarcie w ktÛrej zdarzenie mia≥o miejsce i typie incydentu. Tabele odpowiadajπce za gromadzenie danych o zdarzeniach to: \textit{Shot}, \textit{Substitution}, \textit{Foul}, \textit{FreeThrow}, \textit{Assist}, \textit{Rebound}, \textit{Block}, \textit{Steal}, \textit{Turnover}. Z kaødym takim zdarzeniem jest zwiπzany zawodnik/zawodnicy lub druøyna/druøyny.
 W tabeli \textit{Season} gromadzone sπ informacje na temat stworzonych sezonÛw, analogicznie tabela \textit{Division} gromadzi informacje na temat stworzonych dywizji. W tabeli \textit{Season\_Division} znajdujπ siÍ dywizje dla danego sezonu.
 Z tabelπ tπ zwiπzane sπ tabele \textit{Player\_Season} oraz \textit{Team\_Season}, ktÛre magazynujπ informacje na temat zawodnika oraz druøyny w danym sezonie oraz dywizji. 

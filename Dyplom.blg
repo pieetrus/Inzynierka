@@ -15,59 +15,60 @@ Reallocating 'name_of_file' (item size: 1) to 15 items.
 A level-1 auxiliary file: rozdzial06.aux
 Reallocating 'name_of_file' (item size: 1) to 15 items.
 A level-1 auxiliary file: rozdzial07.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+A level-1 auxiliary file: rozdzial08.aux
 Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: plabbrv.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: dokumentacja.bib
-Warning--to sort, need author or key in CodeFirst
-Warning--empty author in CodeFirst
-Warning--empty journal in CodeFirst
-Warning--empty year in CodeFirst
-Warning--empty journal in MarkDabbs
-Warning--empty year in MarkDabbs
-Warning--empty booktitle in PaulDixon
-Warning--empty journal in KamilGrudzien
-Warning--empty booktitle in RESTAPI
-Warning--empty booktitle in MikolajZywczok
-You've used 9 entries,
+Warning--I didn't find a database entry for "pomodoro"
+Warning--I didn't find a database entry for "IanGriffiths"
+Warning--I didn't find a database entry for "KamilGrudzien"
+Warning--I didn't find a database entry for "MikolajZywczok"
+Warning--I didn't find a database entry for "AlexBanks"
+Warning--I didn't find a database entry for "PaulDixon"
+Warning--I didn't find a database entry for "RESTAPI"
+Warning--I didn't find a database entry for "MarkDabbs"
+Warning--I didn't find a database entry for "CodeFirst"
+You've used 0 entries,
             2129 wiz_defined-function locations,
-            556 strings with 5300 characters,
-and the built_in function-call counts, 1980 in all, are:
-= -- 177
-> -- 57
+            528 strings with 4063 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
 < -- 0
-+ -- 25
-- -- 16
-* -- 93
-:= -- 343
-add.period$ -- 30
-call.type$ -- 9
-change.case$ -- 33
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 105
-empty$ -- 197
-format.name$ -- 16
-if$ -- 411
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 12
-newline$ -- 51
-num.names$ -- 16
-pop$ -- 66
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 0
 quote$ -- 0
-skip$ -- 58
+skip$ -- 1
 stack$ -- 0
-substring$ -- 45
-swap$ -- 6
+substring$ -- 0
+swap$ -- 0
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 30
-warning$ -- 10
-while$ -- 16
-width$ -- 10
-write$ -- 93
-(There were 10 warnings)
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 9 warnings)

@@ -385,7 +385,7 @@ escapeinside={(*@}{@*)}
 \usepackage[makeindex,noautomatic]{imakeidx} % tutaj mówimy, ¿eby indeks nie generowa³ siê automatycznie, 
 
 %\usepackage[noautomatic]{imakeidx} 
-\makeindex
+%\makeindex
 
 \makeatletter
 %%%\renewenvironment{theindex}
@@ -747,7 +747,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 \newpage
 \mbox{}\pdfbookmark[0]{Spis tabel}{spisTabel.1}
 %\addcontentsline{toc}{chapter}{Spis tabel}
-\listoftables*
+%\listoftables*
 
 %\include{skroty} %skróty mo¿na sobie pomin¹æ
 \chapterstyle{default}
@@ -759,6 +759,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 \include{rozdzial06}
 \include{rozdzial07}
 \include{rozdzial08}
+\include{bibliografia}
 
 %\bibliographystyle{plalpha}
 \bibliographystyle{plabbrv}
@@ -767,7 +768,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 %       Nazwê przygotowanej biblioteki wpisuje siê poni¿ej bez rozszerzenia 
 %       (w tym przypadku jest to "dokumentacja.bib")
 \setlength{\bibitemsep}{2pt} % - by zacieœniæ wykaz literatury
-\bibliography{dokumentacja}
+%\bibliography{dokumentacja}
 \appendix
 %\include{dodatekA}
 %\include{dodatekB}
@@ -775,6 +776,6 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 \chapterstyle{noNumbered}
 \phantomsection % sets an anchor
 \addcontentsline{toc}{chapter}{Indeks rzeczowy}
-\printindex
+%\printindex
 
 \end{document}
