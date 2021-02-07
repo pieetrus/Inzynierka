@@ -1,5 +1,5 @@
 \chapter{Architektura systemu}
-Rozdzia³ ten poœwiêcono aby omówiæ sposób implementacji prototypu aplikacji przy pomocy wymienionych rozdzia³ wy¿ej technologii. Architekturê przedstawiono na schemacie (rys.~\ref{fig:webappschema}).
+Rozdzia³ ten poœwiêcono aby omówiæ sposób implementacji prototypu aplikacji przy pomocy wymienionych w rozdziale 4 technologii. Architekturê przedstawiono na schemacie (rys.~\ref{fig:webappschema}).
 
 \begin{figure}[htp]
 	\centering
@@ -54,7 +54,7 @@ Zawiera ca³¹ logikê aplikacji. Jest zale¿na od warstwy domain i nie ma zale¿noœc
 	\label{fig:divisionCQRS}
 \end{figure}
 
-Zastosowanie wzorca CQRS (Command Query Responsibility Segregation) pozwala na oddzielenie zapytañ pobieraj¹cych dane z bazy od komand które zmieniaj¹ stan bazy danych. W tej klasie zdefiniowane s¹ interfejsy implementowane póŸniej na zewn¹trz tej warstwy. Np.~gdy aplikacja potrzebowa³a dostêpu do serwisu wysy³ania zdjêæ do chmury, nowy interfejs zosta³ dodany do aplikacji, a jego implementacja zosta³a stworzona w warstwie infrastructure.
+Zastosowanie wzorca CQRS (ang. Command Query Responsibility Segregation) pozwala na oddzielenie zapytañ pobieraj¹cych dane z bazy od komand które zmieniaj¹ stan bazy danych. W~tej klasie zdefiniowane s¹ interfejsy implementowane póŸniej na zewn¹trz tej warstwy. Np.~gdy aplikacja potrzebowa³a dostêpu do serwisu wysy³ania zdjêæ do chmury, nowy interfejs zosta³ dodany do aplikacji, a jego implementacja zosta³a stworzona w warstwie infrastructure.
 
 \begin{figure}[h!tp]
 	\centering
@@ -65,7 +65,7 @@ Zastosowanie wzorca CQRS (Command Query Responsibility Segregation) pozwala na o
 
 \newpage
 \subsection{Infrastructure}
-Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do przechowywania zdjêæ, generator tokenów autoryzacyjnych. Klasy te s¹ nastêpnie implementowane przy pomocy dependency injection za pomoc¹ interfejsów stworzonych w warstwie application.
+Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do przechowywania zdjêæ, generator tokenów autoryzacyjnych. Klasy te s¹ nastêpnie implementowane przy pomocy wstrzykiwania zale¿noœci za pomoc¹ interfejsów stworzonych w warstwie application.
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.3\linewidth]{rys05/infrastructureTree.png}
@@ -74,7 +74,7 @@ Zawiera klasy zapewniaj¹ce dostêp do zewnêtrznych zasobów takich jak chmura do p
 \end{figure}
 
 \subsection{API}
-Zawiera controllery które s¹ endpointami przez które wysy³ane s¹ zapytania z aplikacji klienckiej. Znajduj¹ siê tu równie¿ klasy konfiguruj¹ce rozszerzenie SignalR s³u¿¹ce do wysy³ania wyników meczu na ¿ywo, oraz klasa poœrednicz¹ca w przechwytywaniu b³êdów. W klasie Startup znajduje siê konfiguracja obs³ugi ¿¹dañ wysy³anych do aplikacji, a tak¿e wstrzykiwane s¹ serwisy i interfejsy.
+Zawiera kontrolery które definiuj¹ punkty koñcowe do których wysy³ane s¹ zapytania z aplikacji klienckiej. Znajduj¹ siê tu równie¿ klasy konfiguruj¹ce rozszerzenie SignalR s³u¿¹ce do wysy³ania wyników meczu na ¿ywo, oraz klasa poœrednicz¹ca w przechwytywaniu b³êdów. W klasie Startup znajduje siê konfiguracja obs³ugi ¿¹dañ wysy³anych do aplikacji, a tak¿e wstrzykiwane s¹ serwisy i interfejsy.
 
 \begin{figure}[htp]
 	\centering
@@ -102,7 +102,7 @@ Schemat zaprojektowanej bazy danych na potrzeby aplikacji przedstawiono na rysun
 W bazie przechowywane s¹ informacje o ka¿dym wydarzeniu które zosta³o dodane przez program do statystyk. Ka¿de wydarzenie jest powi¹zane z tabel¹ \textit{Incident} która zawiera informacje o meczu, czasie oraz kwarcie w której zdarzenie mia³o miejsce i typie incydentu. Tabele odpowiadaj¹ce za gromadzenie danych o zdarzeniach to: \textit{Shot}, \textit{Substitution}, \textit{Foul}, \textit{FreeThrow}, \textit{Assist}, \textit{Rebound}, \textit{Block}, \textit{Steal}, \textit{Turnover}. Z ka¿dym takim zdarzeniem jest zwi¹zany zawodnik/zawodnicy lub dru¿yna/dru¿yny.
 W tabeli \textit{Season} gromadzone s¹ informacje na temat stworzonych sezonów, analogicznie tabela \textit{Division} gromadzi informacje na temat stworzonych dywizji. W tabeli \textit{Season\_Division} znajduj¹ siê dywizje dla danego sezonu.
 Z tabel¹ t¹ zwi¹zane s¹ tabele \textit{Player\_Season} oraz \textit{Team\_Season}, które magazynuj¹ informacje na temat zawodnika oraz dru¿yny w danym sezonie oraz dywizji. 
-Tabela \textit{Match} magazynuje informacje na temat meczu, czasie jego startu, koñca, dru¿yn które ze sob¹ graj¹ (wystêpuje tu relacja zarówno do tabeli \textit{Team\_Match} oraz \textit{Team\_Season}) oraz koloru koszulek. Wystêpuj¹ tu relacje z tabel¹ \textit{Player\_Match} oraz \textit{Team\_Match} w których magazynowane s¹ statystyki z powi¹zanych meczów.
+Tabela \textit{Match} magazynuje informacje na temat meczu, czasie jego startu, koñca, dru¿yn które ze sob¹ graj¹ (wystêpuje tu relacja zarówno do tabeli \textit{Team\_Match} oraz \textit{Team\_Season}) oraz koloru koszulek. Wystêpuj¹ tu relacje z tabel¹ \textit{Player\_Match} oraz \textit{Team\_Match} w których magazynowane s¹ statystyki z~powi¹zanych meczów.
 W tabeli \textit{AspNetUsers} gromadzone s¹ informacje na temat konta u¿ytkownika. Wystêpuje tu relacja z tabel¹ \textit{Photos} w której mieœci siê link do zdjêcia, oraz z tabel¹ \textit{AspNetUserRoles} w której gromadzona jest informacja o rolach które s¹ przypisane do danego u¿ytkownika. Role natomiast magazynowane s¹ w tabeli \textit{AspNetRoles}.
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  6 DEC 2020 16:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.10.10)  13 DEC 2020 13:54
 entering extended mode
 **./Dyplom.tex
 (Dyplom.tex
@@ -1225,7 +1225,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial01.aux'.
 
  (rozdzial01.tex
-<rys01/ligspace.png, id=238, 454.69875pt x 220.57407pt>
+<rys01/ligspace.png, id=228, 454.69875pt x 220.57407pt>
 File: rys01/ligspace.png Graphic file (type png)
 <use rys01/ligspace.png>
 Package pdftex.def Info: rys01/ligspace.png  used on input line 12.
@@ -1238,52 +1238,54 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys01/ligspace.png>]
-<rys01/ligspaceopis.png, id=249, 457.71pt x 353.82187pt>
+<rys01/ligspaceopis.png, id=239, 457.71pt x 353.82187pt>
 File: rys01/ligspaceopis.png Graphic file (type png)
 <use rys01/ligspaceopis.png>
-Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 26.
+Package pdftex.def Info: rys01/ligspaceopis.png  used on input line 25.
 (pdftex.def)             Requested size: 227.5pt x 175.86311pt.
-<rys01/ligspacebrzeskaliga.png, id=250, 741.52031pt x 703.87968pt>
+<rys01/ligspacebrzeskaliga.png, id=240, 741.52031pt x 703.87968pt>
 File: rys01/ligspacebrzeskaliga.png Graphic file (type png)
 <use rys01/ligspacebrzeskaliga.png>
-Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 32.
-(pdftex.def)             Requested size: 318.49861pt x 302.3294pt.
+Package pdftex.def Info: rys01/ligspacebrzeskaliga.png  used on input line 31.
+(pdftex.def)             Requested size: 295.74722pt x 280.74136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-<rys01/fibalivestats.png, id=253, 674.52pt x 380.17032pt>
+<rys01/fibalivestats.png, id=243, 674.52pt x 380.17032pt>
 File: rys01/fibalivestats.png Graphic file (type png)
 <use rys01/fibalivestats.png>
-Package pdftex.def Info: rys01/fibalivestats.png  used on input line 44.
+Package pdftex.def Info: rys01/fibalivestats.png  used on input line 43.
 (pdftex.def)             Requested size: 409.49722pt x 230.80138pt.
+<rys01/fibalivestatsfeatures.png, id=244, 679.78969pt x 191.9672pt>
+File: rys01/fibalivestatsfeatures.png Graphic file (type png)
+<use rys01/fibalivestatsfeatures.png>
+Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 50
+.
+(pdftex.def)             Requested size: 455.0pt x 128.48846pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [6 <./rys01/ligspaceopis.png> <./rys01/ligspacebrzeskaliga.png>]
-<rys01/fibalivestatsfeatures.png, id=262, 679.78969pt x 191.9672pt>
-File: rys01/fibalivestatsfeatures.png Graphic file (type png)
-<use rys01/fibalivestatsfeatures.png>
-Package pdftex.def Info: rys01/fibalivestatsfeatures.png  used on input line 51
-.
-(pdftex.def)             Requested size: 455.0pt x 128.48846pt.
-
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [7 <./rys01/fibalivestats.png> <./rys01/fibalivestatsfeatures.png>]
-<rys01/dalkstronaglowna.png, id=273, 1444.64719pt x 395.22656pt>
+<rys01/dalkstronaglowna.png, id=263, 1444.64719pt x 395.22656pt>
 File: rys01/dalkstronaglowna.png Graphic file (type png)
 <use rys01/dalkstronaglowna.png>
-Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 65.
+Package pdftex.def Info: rys01/dalkstronaglowna.png  used on input line 64.
 (pdftex.def)             Requested size: 455.0pt x 124.47893pt.
-<rys01/dalkstatystykizawodnikow.png, id=274, 877.77937pt x 292.84406pt>
+<rys01/dalkstatystykizawodnikow.png, id=264, 877.77937pt x 292.84406pt>
 File: rys01/dalkstatystykizawodnikow.png Graphic file (type png)
 <use rys01/dalkstatystykizawodnikow.png>
 Package pdftex.def Info: rys01/dalkstatystykizawodnikow.png  used on input line
- 75.
+ 74.
 (pdftex.def)             Requested size: 455.0pt x 151.7972pt.
 )
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1318,12 +1320,24 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial04.aux'.
 
  (rozdzial04.tex
-<rys04/ogolny-schemat-dotnet.png, id=295, 371.3875pt x 493.845pt>
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+<rys04/ogolny-schemat-dotnet.png, id=285, 371.3875pt x 493.845pt>
 File: rys04/ogolny-schemat-dotnet.png Graphic file (type png)
 <use rys04/ogolny-schemat-dotnet.png>
-Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 18
+Package pdftex.def Info: rys04/ogolny-schemat-dotnet.png  used on input line 16
 .
-(pdftex.def)             Requested size: 318.49861pt x 423.52287pt.
+(pdftex.def)             Requested size: 227.5pt x 302.5185pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
+
+ []
+
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
@@ -1334,7 +1348,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
 
  []
 
@@ -1343,12 +1357,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [12 <./rys04/ogolny-schemat-dotnet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 30--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
@@ -1360,12 +1369,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial05.aux'.
 
  (rozdzial05.tex
-<rys05/webappschema.png, id=325, 663.22781pt x 277.78781pt>
+<rys05/webappschema.png, id=317, 663.22781pt x 277.78781pt>
 File: rys05/webappschema.png Graphic file (type png)
 <use rys05/webappschema.png>
 Package pdftex.def Info: rys05/webappschema.png  used on input line 6.
 (pdftex.def)             Requested size: 318.49861pt x 133.40019pt.
-<rys05/cleanCodeDiagram.png, id=329, 716.6775pt x 716.6775pt>
+<rys05/cleanCodeDiagram.png, id=321, 716.6775pt x 716.6775pt>
 File: rys05/cleanCodeDiagram.png Graphic file (type png)
 <use rys05/cleanCodeDiagram.png>
 Package pdftex.def Info: rys05/cleanCodeDiagram.png  used on input line 16.
@@ -1380,12 +1389,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
  <./rys05/webappschema.png> <./rys05/cleanCodeDiagram.png>]
-<rys05/domainTree.png, id=341, 162.6075pt x 399.74344pt>
+<rys05/domainTree.png, id=333, 162.6075pt x 399.74344pt>
 File: rys05/domainTree.png Graphic file (type png)
 <use rys05/domainTree.png>
 Package pdftex.def Info: rys05/domainTree.png  used on input line 32.
 (pdftex.def)             Requested size: 136.50139pt x 335.5931pt.
-<rys05/persistanceTree.png, id=342, 188.20313pt x 406.51875pt>
+<rys05/persistanceTree.png, id=334, 188.20313pt x 406.51875pt>
 File: rys05/persistanceTree.png Graphic file (type png)
 <use rys05/persistanceTree.png>
 Package pdftex.def Info: rys05/persistanceTree.png  used on input line 38.
@@ -1395,12 +1404,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [15 <./rys05/domainTree.png> <./rys05/persistanceTree.png>]
-<rys05/divisionCQRS.png, id=352, 228.10219pt x 177.66376pt>
+<rys05/divisionCQRS.png, id=344, 228.10219pt x 177.66376pt>
 File: rys05/divisionCQRS.png Graphic file (type png)
 <use rys05/divisionCQRS.png>
 Package pdftex.def Info: rys05/divisionCQRS.png  used on input line 52.
 (pdftex.def)             Requested size: 227.5pt x 177.19974pt.
-<rys05/applicationTree.png, id=353, 156.585pt x 395.22656pt>
+<rys05/applicationTree.png, id=345, 156.585pt x 395.22656pt>
 File: rys05/applicationTree.png Graphic file (type png)
 <use rys05/applicationTree.png>
 Package pdftex.def Info: rys05/applicationTree.png  used on input line 61.
@@ -1410,12 +1419,12 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [16 <./rys05/divisionCQRS.png> <./rys05/applicationTree.png>]
-<rys05/infrastructureTree.png, id=361, 150.5625pt x 134.75343pt>
+<rys05/infrastructureTree.png, id=353, 150.5625pt x 134.75343pt>
 File: rys05/infrastructureTree.png Graphic file (type png)
 <use rys05/infrastructureTree.png>
 Package pdftex.def Info: rys05/infrastructureTree.png  used on input line 71.
 (pdftex.def)             Requested size: 136.50139pt x 122.17961pt.
-<rys05/apiTree.png, id=362, 178.41656pt x 490.08093pt>
+<rys05/apiTree.png, id=354, 178.41656pt x 490.08093pt>
 File: rys05/apiTree.png Graphic file (type png)
 <use rys05/apiTree.png>
 Package pdftex.def Info: rys05/apiTree.png  used on input line 81.
@@ -1425,17 +1434,17 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [17 <./rys05/infrastructureTree.png> <./rys05/apiTree.png>]
-<rys05/dev-workflow.png, id=372, 752.8125pt x 133.49875pt>
+<rys05/dev-workflow.png, id=364, 752.8125pt x 133.49875pt>
 File: rys05/dev-workflow.png Graphic file (type png)
 <use rys05/dev-workflow.png>
 Package pdftex.def Info: rys05/dev-workflow.png  used on input line 96.
 (pdftex.def)             Requested size: 318.49861pt x 56.48259pt.
-<rys05/databaseschema.png, id=378, 5759.01563pt x 3887.52374pt>
+<rys05/databaseschema.png, id=370, 5759.01563pt x 3887.52374pt>
 File: rys05/databaseschema.png Graphic file (type png)
 <use rys05/databaseschema.png>
 Package pdftex.def Info: rys05/databaseschema.png  used on input line 112.
 (pdftex.def)             Requested size: 5759.00166pt x 3887.51431pt.
-<rys05/playerdatabaseschema.png, id=379, 3290.54344pt x 3473.47687pt>
+<rys05/playerdatabaseschema.png, id=371, 3290.54344pt x 3473.47687pt>
 File: rys05/playerdatabaseschema.png Graphic file (type png)
 <use rys05/playerdatabaseschema.png>
 Package pdftex.def Info: rys05/playerdatabaseschema.png  used on input line 120
@@ -1454,7 +1463,7 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [20 <./rys05/playerdatabaseschema.png>]
-<rys05/userdatabaseschema.png, id=400, 1577.895pt x 2204.235pt>
+<rys05/userdatabaseschema.png, id=392, 1577.895pt x 2204.235pt>
 File: rys05/userdatabaseschema.png Graphic file (type png)
 <use rys05/userdatabaseschema.png>
 Package pdftex.def Info: rys05/userdatabaseschema.png  used on input line 127.
@@ -1528,36 +1537,40 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 \openout2 = `rozdzial07.aux'.
 
  (rozdzial07.tex
-<rys07/homepage.png, id=816, 680.5425pt x 475.7775pt>
+<rys07/homepage.png, id=808, 680.5425pt x 475.7775pt>
 File: rys07/homepage.png Graphic file (type png)
 <use rys07/homepage.png>
 Package pdftex.def Info: rys07/homepage.png  used on input line 10.
 (pdftex.def)             Requested size: 163.7995pt x 114.51561pt.
-<rys07/homepagelogged.png, id=817, 682.80093pt x 475.7775pt>
+<rys07/homepagelogged.png, id=809, 682.80093pt x 475.7775pt>
 File: rys07/homepagelogged.png Graphic file (type png)
 <use rys07/homepagelogged.png>
 Package pdftex.def Info: rys07/homepagelogged.png  used on input line 16.
 (pdftex.def)             Requested size: 163.7995pt x 114.13084pt.
-<rys07/loginmodal.png, id=820, 449.42906pt x 185.94469pt>
+<rys07/loginmodal.png, id=812, 449.42906pt x 185.94469pt>
 File: rys07/loginmodal.png Graphic file (type png)
 <use rys07/loginmodal.png>
 Package pdftex.def Info: rys07/loginmodal.png  used on input line 31.
 (pdftex.def)             Requested size: 182.00069pt x 75.29866pt.
-<rys07/registermodal.png, id=821, 450.9347pt x 272.51813pt>
+<rys07/registermodal.png, id=813, 450.9347pt x 272.51813pt>
 File: rys07/registermodal.png Graphic file (type png)
 <use rys07/registermodal.png>
 Package pdftex.def Info: rys07/registermodal.png  used on input line 37.
 (pdftex.def)             Requested size: 182.00069pt x 109.99083pt.
-<rys07/navbaruser.png, id=823, 1049.42062pt x 48.18pt>
+<rys07/navbaruser.png, id=815, 1049.42062pt x 48.18pt>
 File: rys07/navbaruser.png Graphic file (type png)
 <use rys07/navbaruser.png>
-Package pdftex.def Info: rys07/navbaruser.png  used on input line 48.
+Package pdftex.def Info: rys07/navbaruser.png  used on input line 49.
 (pdftex.def)             Requested size: 455.0pt x 20.88974pt.
-<rys07/navbaradmin.png, id=824, 1045.65656pt x 45.16875pt>
+<rys07/navbaradmin.png, id=816, 1045.65656pt x 45.16875pt>
 File: rys07/navbaradmin.png Graphic file (type png)
 <use rys07/navbaradmin.png>
-Package pdftex.def Info: rys07/navbaradmin.png  used on input line 54.
+Package pdftex.def Info: rys07/navbaradmin.png  used on input line 55.
 (pdftex.def)             Requested size: 455.0pt x 19.65443pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
@@ -1569,30 +1582,30 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
  <./rys07/homepage.png> <./rys07/homepagelogged.png> <./rys07/loginmodal.png> <
 ./rys07/registermodal.png>]
-<rys07/navbarprofile.png, id=837, 153.57375pt x 124.21407pt>
+<rys07/navbarprofile.png, id=830, 153.57375pt x 124.21407pt>
 File: rys07/navbarprofile.png Graphic file (type png)
 <use rys07/navbarprofile.png>
-Package pdftex.def Info: rys07/navbarprofile.png  used on input line 69.
+Package pdftex.def Info: rys07/navbarprofile.png  used on input line 70.
 (pdftex.def)             Requested size: 136.50139pt x 110.41179pt.
-<rys07/profile.png, id=838, 1301.61281pt x 545.03625pt>
+<rys07/profile.png, id=831, 1301.61281pt x 545.03625pt>
 File: rys07/profile.png Graphic file (type png)
 <use rys07/profile.png>
-Package pdftex.def Info: rys07/profile.png  used on input line 76.
+Package pdftex.def Info: rys07/profile.png  used on input line 77.
 (pdftex.def)             Requested size: 318.49861pt x 133.36456pt.
-<rys07/upload1.png, id=840, 960.58875pt x 380.92313pt>
+<rys07/upload1.png, id=833, 960.58875pt x 380.92313pt>
 File: rys07/upload1.png Graphic file (type png)
 <use rys07/upload1.png>
-Package pdftex.def Info: rys07/upload1.png  used on input line 86.
+Package pdftex.def Info: rys07/upload1.png  used on input line 87.
 (pdftex.def)             Requested size: 273.00278pt x 108.26196pt.
-<rys07/upload2.png, id=841, 956.82469pt x 423.08063pt>
+<rys07/upload2.png, id=834, 956.82469pt x 423.08063pt>
 File: rys07/upload2.png Graphic file (type png)
 <use rys07/upload2.png>
-Package pdftex.def Info: rys07/upload2.png  used on input line 92.
+Package pdftex.def Info: rys07/upload2.png  used on input line 93.
 (pdftex.def)             Requested size: 273.00278pt x 120.7148pt.
-<rys07/upload3.png, id=842, 959.83594pt x 320.69812pt>
+<rys07/upload3.png, id=835, 959.83594pt x 320.69812pt>
 File: rys07/upload3.png Graphic file (type png)
 <use rys07/upload3.png>
-Package pdftex.def Info: rys07/upload3.png  used on input line 98.
+Package pdftex.def Info: rys07/upload3.png  used on input line 99.
 (pdftex.def)             Requested size: 273.00278pt x 91.21396pt.
 
 
@@ -1604,10 +1617,10 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [33 <./rys07/navbaruser.png> <./rys07/navbaradmin.png> <./rys07/navbarprofile.p
 ng> <./rys07/profile.png>]
-<rys07/tables1.png, id=856, 1049.42062pt x 442.65375pt>
+<rys07/tables1.png, id=848, 1049.42062pt x 442.65375pt>
 File: rys07/tables1.png Graphic file (type png)
 <use rys07/tables1.png>
-Package pdftex.def Info: rys07/tables1.png  used on input line 113.
+Package pdftex.def Info: rys07/tables1.png  used on input line 114.
 (pdftex.def)             Requested size: 364.00139pt x 153.53973pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1615,65 +1628,65 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [34 <./rys07/upload1.png> <./rys07/upload2.png> <./rys07/upload3.png> <./rys07/
 tables1.png>]
-<rys07/schedule.png, id=867, 694.09312pt x 593.21625pt>
+<rys07/schedule.png, id=859, 694.09312pt x 593.21625pt>
 File: rys07/schedule.png Graphic file (type png)
 <use rys07/schedule.png>
-Package pdftex.def Info: rys07/schedule.png  used on input line 124.
+Package pdftex.def Info: rys07/schedule.png  used on input line 125.
 (pdftex.def)             Requested size: 364.00139pt x 311.10828pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [35 <./rys07/schedule.png>]
-<rys07/boxscore.png, id=878, 867.99281pt x 658.71094pt>
+<rys07/boxscore.png, id=870, 867.99281pt x 658.71094pt>
 File: rys07/boxscore.png Graphic file (type png)
 <use rys07/boxscore.png>
-Package pdftex.def Info: rys07/boxscore.png  used on input line 134.
+Package pdftex.def Info: rys07/boxscore.png  used on input line 135.
 (pdftex.def)             Requested size: 455.0pt x 345.2957pt.
-<rys07/playbyplay.png, id=879, 869.49844pt x 477.28313pt>
+<rys07/playbyplay.png, id=871, 869.49844pt x 477.28313pt>
 File: rys07/playbyplay.png Graphic file (type png)
 <use rys07/playbyplay.png>
-Package pdftex.def Info: rys07/playbyplay.png  used on input line 142.
+Package pdftex.def Info: rys07/playbyplay.png  used on input line 143.
 (pdftex.def)             Requested size: 455.0pt x 249.76172pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [36 <./rys07/boxscore.png> <./rys07/playbyplay.png>]
-<rys07/stats.png, id=887, 912.40875pt x 656.4525pt>
+<rys07/stats.png, id=879, 912.40875pt x 656.4525pt>
 File: rys07/stats.png Graphic file (type png)
 <use rys07/stats.png>
-Package pdftex.def Info: rys07/stats.png  used on input line 154.
+Package pdftex.def Info: rys07/stats.png  used on input line 155.
 (pdftex.def)             Requested size: 455.0pt x 327.35399pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [37 <./rys07/stats.png>]
-<rys07/players.png, id=901, 624.08156pt x 541.27219pt>
+<rys07/players.png, id=893, 624.08156pt x 541.27219pt>
 File: rys07/players.png Graphic file (type png)
 <use rys07/players.png>
-Package pdftex.def Info: rys07/players.png  used on input line 168.
+Package pdftex.def Info: rys07/players.png  used on input line 169.
 (pdftex.def)             Requested size: 226.5928pt x 196.52618pt.
-<rys07/teams.png, id=902, 354.57469pt x 588.69937pt>
+<rys07/teams.png, id=894, 354.57469pt x 588.69937pt>
 File: rys07/teams.png Graphic file (type png)
 <use rys07/teams.png>
-Package pdftex.def Info: rys07/teams.png  used on input line 174.
+Package pdftex.def Info: rys07/teams.png  used on input line 175.
 (pdftex.def)             Requested size: 111.47646pt x 185.08195pt.
-<rys07/playerdetails.png, id=903, 1100.61188pt x 499.8675pt>
+<rys07/playerdetails.png, id=895, 1100.61188pt x 499.8675pt>
 File: rys07/playerdetails.png Graphic file (type png)
 <use rys07/playerdetails.png>
-Package pdftex.def Info: rys07/playerdetails.png  used on input line 186.
+Package pdftex.def Info: rys07/playerdetails.png  used on input line 187.
 (pdftex.def)             Requested size: 409.49722pt x 185.97777pt.
-<rys07/teamdetails.png, id=904, 1102.87032pt x 439.6425pt>
+<rys07/teamdetails.png, id=896, 1102.87032pt x 439.6425pt>
 File: rys07/teamdetails.png Graphic file (type png)
 <use rys07/teamdetails.png>
-Package pdftex.def Info: rys07/teamdetails.png  used on input line 192.
+Package pdftex.def Info: rys07/teamdetails.png  used on input line 193.
 (pdftex.def)             Requested size: 409.49722pt x 163.2421pt.
-<rys07/managenav.png, id=906, 955.31906pt x 54.9553pt>
+<rys07/managenav.png, id=898, 955.31906pt x 54.9553pt>
 File: rys07/managenav.png Graphic file (type png)
 <use rys07/managenav.png>
-Package pdftex.def Info: rys07/managenav.png  used on input line 207.
+Package pdftex.def Info: rys07/managenav.png  used on input line 208.
 (pdftex.def)             Requested size: 455.0pt x 26.17363pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1681,15 +1694,15 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [38 <./rys07/players.png> <./rys07/teams.png> <./rys07/playerdetails.png> <./ry
 s07/teamdetails.png>]
-<rys07/createplayer.png, id=916, 585.68813pt x 342.5297pt>
+<rys07/createplayer.png, id=908, 585.68813pt x 342.5297pt>
 File: rys07/createplayer.png Graphic file (type png)
 <use rys07/createplayer.png>
-Package pdftex.def Info: rys07/createplayer.png  used on input line 217.
+Package pdftex.def Info: rys07/createplayer.png  used on input line 218.
 (pdftex.def)             Requested size: 273.00278pt x 159.66664pt.
-<rys07/createteam.png, id=917, 942.52126pt x 309.40594pt>
+<rys07/createteam.png, id=909, 942.52126pt x 309.40594pt>
 File: rys07/createteam.png Graphic file (type png)
 <use rys07/createteam.png>
-Package pdftex.def Info: rys07/createteam.png  used on input line 223.
+Package pdftex.def Info: rys07/createteam.png  used on input line 224.
 (pdftex.def)             Requested size: 455.0pt x 149.36769pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1697,25 +1710,25 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [39 <./rys07/managenav.png> <./rys07/createplayer.png> <./rys07/createteam.png>
 ]
-<rys07/season.png, id=933, 942.52126pt x 454.69875pt>
+<rys07/season.png, id=925, 942.52126pt x 454.69875pt>
 File: rys07/season.png Graphic file (type png)
 <use rys07/season.png>
-Package pdftex.def Info: rys07/season.png  used on input line 237.
+Package pdftex.def Info: rys07/season.png  used on input line 238.
 (pdftex.def)             Requested size: 341.25pt x 164.62807pt.
-<rys07/seasoncreate.png, id=934, 456.95718pt x 301.125pt>
+<rys07/seasoncreate.png, id=926, 456.95718pt x 301.125pt>
 File: rys07/seasoncreate.png Graphic file (type png)
 <use rys07/seasoncreate.png>
-Package pdftex.def Info: rys07/seasoncreate.png  used on input line 245.
+Package pdftex.def Info: rys07/seasoncreate.png  used on input line 246.
 (pdftex.def)             Requested size: 181.99722pt x 119.92865pt.
-<rys07/manageteams.png, id=935, 463.7325pt x 313.9228pt>
+<rys07/manageteams.png, id=927, 463.7325pt x 313.9228pt>
 File: rys07/manageteams.png Graphic file (type png)
 <use rys07/manageteams.png>
-Package pdftex.def Info: rys07/manageteams.png  used on input line 253.
+Package pdftex.def Info: rys07/manageteams.png  used on input line 254.
 (pdftex.def)             Requested size: 204.74861pt x 138.60545pt.
-<rys07/manageplayers.png, id=936, 456.20438pt x 411.78844pt>
+<rys07/manageplayers.png, id=928, 456.20438pt x 411.78844pt>
 File: rys07/manageplayers.png Graphic file (type png)
 <use rys07/manageplayers.png>
-Package pdftex.def Info: rys07/manageplayers.png  used on input line 260.
+Package pdftex.def Info: rys07/manageplayers.png  used on input line 261.
 (pdftex.def)             Requested size: 204.74861pt x 184.81297pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1723,40 +1736,40 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [40 <./rys07/season.png> <./rys07/seasoncreate.png> <./rys07/manageteams.png> <
 ./rys07/manageplayers.png>]
-<rys07/division.png, id=946, 944.7797pt x 227.34938pt>
+<rys07/division.png, id=938, 944.7797pt x 227.34938pt>
 File: rys07/division.png Graphic file (type png)
 <use rys07/division.png>
-Package pdftex.def Info: rys07/division.png  used on input line 272.
+Package pdftex.def Info: rys07/division.png  used on input line 273.
 (pdftex.def)             Requested size: 455.0pt x 109.4907pt.
-<rys07/matchmanager.png, id=952, 949.29657pt x 504.38437pt>
+<rys07/matchmanager.png, id=944, 949.29657pt x 504.38437pt>
 File: rys07/matchmanager.png Graphic file (type png)
 <use rys07/matchmanager.png>
-Package pdftex.def Info: rys07/matchmanager.png  used on input line 286.
+Package pdftex.def Info: rys07/matchmanager.png  used on input line 287.
 (pdftex.def)             Requested size: 455.0pt x 241.7554pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [41 <./rys07/division.png> <./rys07/matchmanager.png>]
-<rys07/newgame.png, id=964, 457.71pt x 193.47281pt>
+<rys07/newgame.png, id=956, 457.71pt x 193.47281pt>
 File: rys07/newgame.png Graphic file (type png)
 <use rys07/newgame.png>
-Package pdftex.def Info: rys07/newgame.png  used on input line 297.
+Package pdftex.def Info: rys07/newgame.png  used on input line 298.
 (pdftex.def)             Requested size: 216.1243pt x 91.35439pt.
-<rys07/choseteams.png, id=965, 455.45157pt x 194.97844pt>
+<rys07/choseteams.png, id=957, 455.45157pt x 194.97844pt>
 File: rys07/choseteams.png Graphic file (type png)
 <use rys07/choseteams.png>
-Package pdftex.def Info: rys07/choseteams.png  used on input line 303.
+Package pdftex.def Info: rys07/choseteams.png  used on input line 304.
 (pdftex.def)             Requested size: 216.1243pt x 92.52348pt.
-<rys07/gotomatch.png, id=966, 901.86937pt x 530.73282pt>
+<rys07/gotomatch.png, id=958, 901.86937pt x 530.73282pt>
 File: rys07/gotomatch.png Graphic file (type png)
 <use rys07/gotomatch.png>
-Package pdftex.def Info: rys07/gotomatch.png  used on input line 314.
+Package pdftex.def Info: rys07/gotomatch.png  used on input line 315.
 (pdftex.def)             Requested size: 341.25pt x 200.82214pt.
-<rys07/statsprogram.png, id=967, 785.93625pt x 560.0925pt>
+<rys07/statsprogram.png, id=959, 785.93625pt x 560.0925pt>
 File: rys07/statsprogram.png Graphic file (type png)
 <use rys07/statsprogram.png>
-Package pdftex.def Info: rys07/statsprogram.png  used on input line 321.
+Package pdftex.def Info: rys07/statsprogram.png  used on input line 322.
 (pdftex.def)             Requested size: 364.00139pt x 259.4062pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1764,25 +1777,25 @@ Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 [42 <./rys07/newgame.png> <./rys07/choseteams.png> <./rys07/gotomatch.png> <./r
 ys07/statsprogram.png>]
-<rys07/shotmade.png, id=978, 779.16093pt x 511.15968pt>
+<rys07/shotmade.png, id=970, 779.16093pt x 511.15968pt>
 File: rys07/shotmade.png Graphic file (type png)
 <use rys07/shotmade.png>
-Package pdftex.def Info: rys07/shotmade.png  used on input line 334.
+Package pdftex.def Info: rys07/shotmade.png  used on input line 335.
 (pdftex.def)             Requested size: 273.00278pt x 179.09575pt.
-<rys07/statsprogrampts.png, id=979, 789.70032pt x 558.58687pt>
+<rys07/statsprogrampts.png, id=971, 789.70032pt x 558.58687pt>
 File: rys07/statsprogrampts.png Graphic file (type png)
 <use rys07/statsprogrampts.png>
-Package pdftex.def Info: rys07/statsprogrampts.png  used on input line 341.
+Package pdftex.def Info: rys07/statsprogrampts.png  used on input line 342.
 (pdftex.def)             Requested size: 318.49861pt x 225.28888pt.
 
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
 
 
 [43 <./rys07/shotmade.png> <./rys07/statsprogrampts.png>]
-<rys07/endmatch.png, id=990, 782.925pt x 124.96687pt>
+<rys07/endmatch.png, id=982, 782.925pt x 124.96687pt>
 File: rys07/endmatch.png Graphic file (type png)
 <use rys07/endmatch.png>
-Package pdftex.def Info: rys07/endmatch.png  used on input line 350.
+Package pdftex.def Info: rys07/endmatch.png  used on input line 351.
 (pdftex.def)             Requested size: 455.0pt x 72.62575pt.
 )
 Overfull \vbox (0.89998pt too high) has occurred while \output is active []
@@ -1847,7 +1860,13 @@ tm/m/n/12 [do-st¦p dnia 20 pa¹-dzier-nika
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 31--32
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+[]\T1/qtm/m/n/12 Czym jest Mi-cro-soft SQL Se-rver?, []$\T1/txtt/m/n/12 https :
+ / / www . centrumxp . pl / Publikacja /
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 35--36
 \T1/txtt/m/n/12 com / blog / fundamentals-[]web-[]application-[]architecture$[]
  \T1/qtm/m/n/12 [do-st¦p dnia 07 li-sto-
  []
@@ -1875,16 +1894,16 @@ either increase the head height or redesign the header
 (rozdzial05.aux) (rozdzial06.aux) (rozdzial07.aux) (rozdzial08.aux)
 (bibliografia.aux))
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: CF5FB718FD600EC3267958027396D93D;6226.
+(rerunfilecheck)             Checksum: 5C0FEA92E2698ACDDF5CC5EBF85108AF;5756.
  ) 
 Here is how much of TeX's memory you used:
- 21737 strings out of 480235
- 350372 string characters out of 2879590
- 1235984 words of memory out of 3000000
- 37355 multiletter control sequences out of 15000+200000
+ 21735 strings out of 480235
+ 350317 string characters out of 2879590
+ 1235945 words of memory out of 3000000
+ 37354 multiletter control sequences out of 15000+200000
  642021 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,13n,99p,1025b,2063s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 71i,13n,99p,1024b,2063s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.
 enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
 y.enc}{C:/Users/pietrus/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/
@@ -1897,9 +1916,9 @@ Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmb.pfb><C:/Users/pietrus/AppData/
 Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmr.pfb><C:/Users/pietrus/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb><C:/Users/pie
 trus/AppData/Local/Programs/MiKTeX/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on Dyplom.pdf (46 pages, 5132369 bytes).
+Output written on Dyplom.pdf (46 pages, 5131940 bytes).
 PDF statistics:
- 1149 PDF objects out of 1200 (max. 8388607)
- 491 named destinations out of 1000 (max. 500000)
- 625 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1143 PDF objects out of 1200 (max. 8388607)
+ 490 named destinations out of 1000 (max. 500000)
+ 609 words of extra memory for PDF output out of 10000 (max. 10000000)
 

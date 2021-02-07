@@ -38,7 +38,7 @@ W przypadku gdy u¿ytkownik zostanie pomyœlnie dodany do bazy zwracany jest obiek
 \end{lstlisting}
 }
 
-Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy has³o jest prawid³owe. Je¿eli tak z bazy zostaje pobierana rola przypisana do u¿ytkownika oraz adres url zdjêcia je¿eli takowe wczeœniej zosta³o wrzucone i generowany jest token. W przypadku niepowodzenia zwracany jest wyj¹tek braku autoryzacji. Przedstawia to listing \ref{list:req2}.
+Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy has³o jest prawid³owe. Je¿eli tak z bazy zostaje pobierana rola przypisana do u¿ytkownika oraz adres url zdjêcia je¿eli zosta³o ono wczeœniej przez niego dodane i generowany jest token. W przypadku niepowodzenia zwracany jest wyj¹tek braku autoryzacji. Przedstawia to listing \ref{list:req2}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req2,caption=Logowanie]
@@ -66,7 +66,7 @@ Podczas logowania nastêpuje sprawdzenie czy u¿ytkownik istnieje w bazie i czy ha
 	\end{lstlisting}
 }
 
-Logowanie jest konieczne, aby mieæ dostêp do reszty funkcjonalnoœci aplikacji. Podczas ka¿dego requesta do ka¿dego endpointa (za wyj¹tkiem logowania oraz rejestracji), sprawdzany jest token i w przypadku jego braku, lub niewa¿noœci zwracany jest kod 401, œwiadcz¹cy o braku autoryzacji. \\
+Logowanie jest konieczne, aby mieæ dostêp do pozosta³ych funkcjonalnoœci aplikacji. Podczas  zapytania ka¿dego do punktu koñcowego (za wyj¹tkiem logowania oraz rejestracji), sprawdzany jest token i w przypadku jego braku, lub niewa¿noœci zwracany jest kod 401, œwiadcz¹cy o braku autoryzacji. \\
 \indent U¿ytkownik mo¿e posiadaæ jedn¹ z dwóch ról - Admin lub User. Podczas rejestracji domyœlnie ka¿demu nowemu u¿ytkownikowi przypisywana jest rola User. Zmiany mo¿na dokonaæ jedynie z poziomu bazy danych. Role te ró¿ni¹ siê dostêpem do poszczególnych funkcjonalnoœci aplikacji. 
 U¿ytkownik nie ma dostêpu do metod zwi¹zanych z zarz¹dzaniem lig¹ oraz meczami, natomiast Admin ma dostêp do wszystkich funkcjonalnoœci systemu. Efekt ten osi¹gniêto dodaj¹c nag³ówki z autoryzacj¹ roli przy odpowiednich metodach w kontrollerach. Autoryzacjê metody rol¹ przedstawiono na przyk³adzie tworzenia meczu na listingu \ref{list:req3}.
 
@@ -83,7 +83,7 @@ U¿ytkownik nie ma dostêpu do metod zwi¹zanych z zarz¹dzaniem lig¹ oraz meczami, 
 }
 
 \section{Profil u¿ytkownika}
-Aplikacja posiada funkcjonalnoœæ wgrywania zdjêæ, które mo¿na nastêpnie wykorzystaæ jako avatar. Zdjêcie zostaje przypisane do u¿ytkownika, który je uploaduje, oraz zostaje wybrane jako zdjêcie g³ówne je¿eli jest to pierwsze zdjêcie wrzucone przez u¿ytkownika. Kod odpowiadaj¹cy za wgrywanie zdjêcia znajduje siê na listingu \ref{list:req4}.
+Aplikacja posiada funkcjonalnoœæ wgrywania zdjêæ, które mo¿na nastêpnie wykorzystaæ jako avatar. Zdjêcie zostaje przypisane do u¿ytkownika, oraz wybrane jako zdjêcie g³ówne je¿eli jest to pierwsze zdjêcie tego u¿ytkownika. Kod odpowiadaj¹cy za wgrywanie zdjêcia znajduje siê na listingu \ref{list:req4}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req4,caption=Dodawanie nowego zdjêcia]
@@ -109,8 +109,8 @@ Aplikacja posiada funkcjonalnoœæ wgrywania zdjêæ, które mo¿na nastêpnie wykorzys
 	\end{lstlisting}
 }
 
-Zdjêcie wrzucone zostaje na serwis chmurowy cloudinary, a w bazie przechowywany jest link do wrzuconego zdjêcia.\\
-\indent Zaimplementowano równie¿ mo¿liwoœæ podgl¹du profilu innych u¿ytkowników. Na podstawie przes³anej w requeœcie nazwy u¿ytkownika z bazy pobierane s¹ informacje na jego temat wraz ze zdjêciem g³ównym je¿eli takowe posiada. Do znalezienia u¿ytkownika wykorzystano metodê SingleOrDefaultAsync, co oznacza ¿e w przypadku braku u¿ytkownika o podanej nazwie funkcja rzuca wyj¹tek. Sposób pobierania danych na temat profilu przedstawia listing \ref{list:req5}.
+Zdjêcie zapisane zostaje na serwisie chmurowym o nazwie Cloudinary, a w bazie przechowywany jest jedynie link do niego.\\
+\indent Zaimplementowano równie¿ mo¿liwoœæ podgl¹du profilu innych u¿ytkowników. Na podstawie przes³anej w zapytaniu nazwy u¿ytkownika z bazy pobierane s¹ informacje na jego temat wraz ze zdjêciem g³ównym je¿eli takowe posiada. Do znalezienia u¿ytkownika wykorzystano metodê SingleOrDefaultAsync, co oznacza ¿e w przypadku braku u¿ytkownika o podanej nazwie funkcja zg³asza wyj¹tek. Sposób pobierania danych na temat profilu przedstawia listing~\ref{list:req5}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req5,caption=Pobieranie danych na temat profilu]
@@ -132,7 +132,7 @@ Zdjêcie wrzucone zostaje na serwis chmurowy cloudinary, a w bazie przechowywany 
 \section{Zarz¹dzanie lig¹}
 
 Do prezentowanych poni¿ej funkcjonalnoœci dostêp ma jedynie u¿ytkownik z rol¹ Admin. \\
-Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn oraz zawodników. Do ka¿dego z wymienionych obiektów zaimplementowa³a zosta³a równie¿ walidacja wys³anych danych przy u¿yciu rozszerzenie Fluent Validation. Sposób implementacji tych podstawowych operacji CRUD przedstawiono na przyk³adzie obiektu sezonu. Je¿eli dane w zapytaniu przejd¹ walidacjê, której implementacjê przestawia listing \ref{list:req6} to nastêpuje przypisanie danych do obiektu \textit{Season}. Je¿eli w zapytaniu znajduj¹ siê dane na temat dywizji które maj¹ zostaæ przypisane do tego sezonu to równie¿ s¹ one dodawane, w przypadku ich braku operacja zostaje pominiêta i nastêpuje zapisanie sezonu do bazy. Je¿eli operacja przebieg³a prawid³owo zwracany jest Id sezonu, w innym przypadku rzucany jest wyj¹tek, co przedstawia listing \ref{list:req7}
+Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn oraz zawodników. Do ka¿dego z wymienionych obiektów zaimplementowana zosta³a równie¿ walidacja wys³anych danych przy u¿yciu rozszerzenie Fluent Validation. Sposób implementacji tych podstawowych operacji CRUD przedstawiono na przyk³adzie obiektu sezonu. Je¿eli dane w zapytaniu przejd¹ walidacjê, której implementacjê przestawia listing \ref{list:req6} to nastêpuje przypisanie danych do obiektu \textit{Season}. Je¿eli w zapytaniu znajduj¹ siê dane na temat dywizji które maj¹ zostaæ przypisane do tego sezonu to równie¿ s¹ one dodawane, w przypadku ich braku operacja zostaje pominiêta i nastêpuje zapisanie sezonu do bazy. Je¿eli operacja przebieg³a prawid³owo zwracany jest Id sezonu, w innym przypadku zg³aszany jest wyj¹tek, co przedstawia listing \ref{list:req7}
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req6,caption=Walidacja danych]
 	RuleFor(x => x.Name)
@@ -175,7 +175,7 @@ Aplikacja pozwala na dodawanie, edycje oraz usuwanie sezonów, dywizji, dru¿yn or
 	\end{lstlisting}
 }
 
-Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znaleziony rzucany jest wyj¹tek. Po znalezieniu obiektu poszczególnym w³asnoœciom przypisywane s¹ nowe dane jeœli takowe zosta³y przys³ane, w przypadku ich braku zachowana zostaje stara wartoœæ. Sprawdzane s¹ równie¿ przys³ane dywizje które s¹ przypisane do sezonu, w przypadku nowych zostaj¹ one dodane. Usuwanie dywizji z sezonu znajduje siê w innej metodzie. Podczas wysy³ania danych do edycji równie¿ nastêpuje walidacja, analogiczna do tej podczas dodawania. Kod odpowiedzialny za edycjê znajduje siê na listingu \ref{list:req8}.
+Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znaleziony zg³aszany jest wyj¹tek. Po znalezieniu obiektu poszczególnym w³asnoœciom przypisywane s¹ nowe dane jeœli takowe zosta³y przys³ane, w przypadku ich braku zachowana zostaje stara wartoœæ. Sprawdzane s¹ równie¿ przys³ane dywizje które s¹ przypisane do sezonu, w przypadku nowych zostaj¹ one dodane. Usuwanie dywizji z sezonu znajduje siê w innej metodzie. Podczas wysy³ania danych do edycji równie¿ nastêpuje walidacja, analogiczna do tej podczas dodawania. Kod odpowiedzialny za edycjê znajduje siê na listingu \ref{list:req8}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req8,caption=Edycja sezonu]
@@ -213,7 +213,7 @@ Podczas edycji pobierany jest sezon za pomoc¹ Id, jeœli nie zostaje on znalezion
 	\end{lstlisting}
 }
 
-Usuwanie obiektu wykonywane jest na podstawie Id wys³anego w zapytaniu, dziêki po którym szuka siê sezonu do usuniêcia. Gdy takiego nie ma rzucany jest wyj¹tek. W przypadku powodzenia sezon zostaje usuniêty a zmiany zostaj¹ zapisane w bazie. W przypadku problemów z zapisem rzucany jest wyj¹tek. Omawian¹ sytuacjê przedstawia listing \ref{list:req9}.
+Usuwanie obiektu wykonywane jest na podstawie Id wys³anego w zapytaniu. Obiekt o wys³anym Id jest szukany w bazie, gdy takiego nie ma zg³aszany jest wyj¹tek. W przypadku powodzenia sezon zostaje usuniêty a zmiany zostaj¹ zapisane w bazie. W przypadku problemów z zapisem zg³aszany jest wyj¹tek. Omawian¹ sytuacjê przedstawia listing \ref{list:req9}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req9,caption=Usuwanie sezonu]
@@ -258,7 +258,7 @@ Usuwanie obiektu wykonywane jest na podstawie Id wys³anego w zapytaniu, dziêki p
 	\end{lstlisting}
 }
 
-W danym sezonie oraz dywizji ta sama dru¿yna mo¿e pojawiæ siê tylko raz. Tak samo w przypadku zawodników. Ograniczenie to zosta³o na³o¿one na poziomie bazy. Przedstawia je listing \ref{list:req11}.
+W danym sezonie oraz dywizji ta sama dru¿yna mo¿e pojawiæ siê tylko raz. Tak samo w~przypadku zawodników. Ograniczenie to zosta³o na³o¿one na poziomie bazy. Przedstawia je listing \ref{list:req11}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req11,caption=Ograniczenie unikalnoœci TeamId oraz SeasonDivisionId]
@@ -271,7 +271,7 @@ W danym sezonie oraz dywizji ta sama dru¿yna mo¿e pojawiæ siê tylko raz. Tak sam
 Obiekty te mo¿na równie¿ edytowaæ oraz usuwaæ.
 
 \section{Zarz¹dzanie meczami i program do pisania statystyk}
-Mecze mo¿na planowaæ dodaj¹c je do bazy ustawiaj¹c w³aœciwoœæ StartDate na datê w przysz³oœci, mo¿na dodawaæ równie¿ mecze które odby³y siê w przesz³oœci. Podczas dodawania meczu w pierwszej kolejnoœci sprawdzane jest na podstawie daty rozpoczêcia meczu oraz dywizji przes³anej w zapytaniu czy dla wybranej daty zosta³ ju¿ utworzony sezon wraz z dywizj¹, je¿eli nie rzucany jest wyj¹tek. Nastêpnie pobierane s¹ dane na temat dru¿yn w sezonie, przy pomocy których tworzone s¹ obiekty \textit{TeamMatch} dla obu dru¿yn. Zostaj¹ one dodane do bazy oraz zapisane. Je¿eli operacja zakoñczy siê sukcesem tworzony jest obiekt meczu. Kod znajduje siê na listingu \ref{list:req12}.
+Mecze mo¿na planowaæ dodaj¹c je do bazy ustawiaj¹c w³aœciwoœæ StartDate na datê w przysz³oœci, mo¿na dodawaæ równie¿ mecze które odby³y siê w przesz³oœci. Podczas dodawania meczu w pierwszej kolejnoœci sprawdzane jest na podstawie daty rozpoczêcia meczu oraz dywizji przes³anej w zapytaniu czy dla wybranej daty zosta³ ju¿ utworzony sezon wraz z dywizj¹, je¿eli nie zg³aszany jest wyj¹tek. Nastêpnie pobierane s¹ dane na temat dru¿yn w sezonie, przy pomocy których tworzone s¹ obiekty \textit{TeamMatch} dla obu dru¿yn. Zostaj¹ one dodane do bazy oraz zapisane. Je¿eli operacja zakoñczy siê sukcesem tworzony jest obiekt meczu. Kod znajduje siê na listingu \ref{list:req12}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req12,caption=Dodawanie nowego meczu]
@@ -354,7 +354,7 @@ Po utworzeniu meczu nale¿y go rozpocz¹æ aby móc zbieraæ z niego statystyki. S³u¿
 	\end{lstlisting}
 }
 
-Pisanie statystyk polega na wysy³aniu poszczególnych wydarzeñ. Aplikacja obs³uguje nastêpuj¹ce zdarzenia: rzuty, zbiórki, straty, przechwyty, faule, rzuty wolne i przerwy na ¿¹danie. Ka¿dy z obiektów opisuj¹cych zdarzenie ma relacjê z tabel¹ \textit{Incident}, która zawiera w sobie informacje na temat czasu i typu wydarzenia, oraz meczu i kwarty w którym mia³o miejsce. Dodawanie nowych zdarzeñ przedstawiono na przyk³adzie dodania nowego rzutu na listingu \ref{list:req14}. W pierwszej kolejnoœci sprawdzane jest czy dla zawodnika który jest przypisany jako oddaj¹cy rzut zosta³ stworzony obiekt \textit{PlayerMatch}, je¿eli nie, to jest on tworzony. Nastêpnie w zale¿noœci od tego czy rzut by³ o wartoœci dwóch lub trzech punktów oraz czy by³ celny odpowiednio aktualizuje siê pola w obiekcie \textit{TeamMatch} oraz \textit{PlayerMatch}. Je¿eli w ¿¹daniu zosta³ przekazany Id zawodnika, który asystowa³, b¹dŸ Id zbieraj¹cego to dodawane s¹ równie¿ asysta i zbiórka.
+Pisanie statystyk polega na wysy³aniu poszczególnych wydarzeñ. Aplikacja obs³uguje nastêpuj¹ce zdarzenia: rzuty, zbiórki, straty, przechwyty, faule, rzuty wolne i przerwy na ¿¹danie. Ka¿dy z obiektów opisuj¹cych zdarzenie ma relacjê z tabel¹ \textit{Incident}, która zawiera w sobie informacje na temat czasu i typu wydarzenia oraz meczu i kwarty w którym mia³o miejsce. Dodawanie nowych zdarzeñ przedstawiono na przyk³adzie dodania nowego rzutu na listingu \ref{list:req14}. W pierwszej kolejnoœci sprawdzane jest czy dla zawodnika który jest przypisany jako oddaj¹cy rzut zosta³ stworzony obiekt \textit{PlayerMatch}, je¿eli nie, to jest on tworzony. Nastêpnie w zale¿noœci od tego czy rzut by³ o wartoœci dwóch lub trzech punktów oraz czy by³ celny odpowiednio aktualizuje siê pola w obiekcie \textit{TeamMatch} oraz \textit{PlayerMatch}. Je¿eli w ¿¹daniu zosta³ przekazany Id zawodnika, który asystowa³, b¹dŸ Id zbieraj¹cego to dodawane s¹ równie¿ asysta i zbiórka.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req14,caption=Dodawanie rzutu]
@@ -421,7 +421,7 @@ Przy jej pomocy stworzono Hub o nazwie IncidentsHub, którego implementacja znajd
 	\end{lstlisting}
 }
 
-Aby dodaæ nowy rzut nale¿y go wys³aæ do endpointa ,,/incidentsHub'' który wczeœniej zosta³ skonfigurowany w klasie Startup, jak pokazuje listing \ref{list:req16}.
+Aby dodaæ nowy rzut nale¿y go wys³aæ do punktu koñcowego ,,/incidentsHub'' który wczeœniej zosta³ skonfigurowany w klasie Startup, jak pokazuje listing \ref{list:req16}.
 
 {\belowcaptionskip=-20pt
 	\begin{lstlisting}[label=list:req16,caption=Konfiguracja endpointa pozwalaj¹cego na œledzenie wyniku na ¿ywo]

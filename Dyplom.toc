@@ -5,14 +5,12 @@
 \contentsline {chapter}{\chapternumberline {2}Cel pracy}{9}{chapter.2}%
 \contentsline {chapter}{\chapternumberline {3}Za\IeC {\l }o\.zenia projektowe}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{10}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Wymagania od strony administratora}{10}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Wymagania od strony u\.zytkownika}{10}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Wymagania niefunkcjonalne}{10}{section.3.2}%
 \contentsline {chapter}{\chapternumberline {4}Narz\k edzia i Technologie}{11}{chapter.4}%
 \contentsline {section}{\numberline {4.1}.NET Core 3.1}{11}{section.4.1}%
 \contentsline {section}{\numberline {4.2}C\#}{11}{section.4.2}%
 \contentsline {section}{\numberline {4.3}React.JS}{12}{section.4.3}%
-\contentsline {section}{\numberline {4.4}TypeScript}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.4}TypeScript}{12}{section.4.4}%
 \contentsline {section}{\numberline {4.5}REST API}{13}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Microsoft SQL Server}{13}{section.4.6}%
 \contentsline {chapter}{\chapternumberline {5}Architektura systemu}{14}{chapter.5}%

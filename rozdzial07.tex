@@ -1,6 +1,6 @@
 \chapter{Opis dzia³ania aplikacji}% 
 \section{Strona startowa}
-Po wejœciu w aplikacjê oczom u¿ytkownika ukazuje siê strona startowa pozwalaj¹c¹ na zalogowanie siê lub rejestracjê po klikniêciu w odpowiednie przyciski przedstawiona na rysunku \ref{fig:homepage}, b¹dŸ je¿eli u¿ytkownik ju¿ siê zalogowa³ a token w przegl¹darce nie wygas³ przycisk pozwalaj¹cy na wejœcie do aplikacji, a dok³adnie do zak³adki z tabelami co pokazano na zrzucie ekranu (rys.~\ref{fig:homepagelogged}).
+Po wejœciu w aplikacjê wyœwietla siê strona startowa pozwalaj¹c¹ na zalogowanie siê lub rejestracjê po klikniêciu w odpowiednie przyciski przedstawiona na rysunku \ref{fig:homepage}. Je¿eli u¿ytkownik ju¿ siê zalogowa³ a token w przegl¹darce nie wygas³ widoczny jest przycisk pozwalaj¹cy na wejœcie do aplikacji, a dok³adnie do zak³adki z tabelami co pokazano na zrzucie ekranu (rys.~\ref{fig:homepagelogged}).
 
 
 \begin{figure}[h]
@@ -22,7 +22,7 @@ Po wejœciu w aplikacjê oczom u¿ytkownika ukazuje siê strona startowa pozwalaj¹c¹
 \end{figure}
 
 
-Po naciœniêciu przycisku ,,Login'' pokazuje siê formularz (rys.~\ref{fig:loginmodal}). Przycisk ,,Register'' powoduje ukazanie siê okna dialogowego (rys.~\ref{fig:registermodal}). W przypadku poprawnego wype³nienia danych u¿ytkownik w obu przypadkach zostaje zalogowany i przeniesiony na zak³adkê z tabelami.
+Po naciœniêciu przycisku ,,Login'' pokazuje siê formularz (rys.~\ref{fig:loginmodal}). Przycisk ,,Register'' powoduje wyœwietlenie okna dialogowego (rys.~\ref{fig:registermodal}). W przypadku poprawnego wype³nienia danych u¿ytkownik w obu przypadkach zostaje zalogowany i przeniesiony na zak³adkê z tabelami.
 
 \begin{figure}[h]
 	\centering
@@ -40,7 +40,8 @@ Po naciœniêciu przycisku ,,Login'' pokazuje siê formularz (rys.~\ref{fig:loginmo
 	\end{minipage}
 \end{figure}
 
-Po zalogowaniu w prawym górnym rogu w pasku nawigacyjnym pojawia siê nazwa u¿ytkownika, oraz w przypadku gdy ma wgrane zdjêcie, to pokazuje siê równie¿ jego avatar. W zale¿noœci od tego czy zalogowany u¿ytkownik ma przypisan¹ rolê admina lub usera, na pasku nawigacyjnym dostêpne s¹ inne zak³adki co jest widoczne na rysunku \ref{fig:navbar}.
+Po zalogowaniu w prawym górnym rogu w pasku nawigacyjnym pojawia siê nazwa u¿ytkownika 
+oraz w przypadku gdy ma wgrane zdjêcie, to pokazuje siê równie¿ jego avatar. W~zale¿noœci od tego czy zalogowany u¿ytkownik ma przypisan¹ rolê Admin lub User, na pasku nawigacyjnym dostêpne s¹ inne zak³adki co jest widoczne na rysunku \ref{fig:navbar}.
 
 \begin{figure}[h]
 	\centering
@@ -56,7 +57,7 @@ Po zalogowaniu w prawym górnym rogu w pasku nawigacyjnym pojawia siê nazwa u¿ytk
 		\label{fig:Ng2}
 	\end{subfigure}
 	
-	\caption[]{Pasek nawigacyjny dla u¿ytkownika z rol¹ a) user b) admin}
+	\caption[]{Pasek nawigacyjny dla u¿ytkownika z rol¹ a) User b) Admin}
 	\label{fig:navbar} 
 \end{figure}
 
@@ -78,19 +79,19 @@ Po klikniêciu w strza³kê znajduj¹c¹ siê przy nazwie u¿ytkownika na pasku nawigac
 	\label{fig:profile}
 \end{figure}
 
-Aby dodaæ nowe zdjêcie nale¿y klikn¹æ w przycisk ,,Add photo'', wtedy oczom u¿ytkownika uka¿e siê okienko do którego nale¿y przeci¹gn¹æ zdjêcie metod¹ drag\&drop. Po jego wczytaniu nale¿y je odpowiednio przyci¹æ i potwierdziæ operacje klikaj¹c na zielony ptaszek. Zdjêcie zostanie wgrane i pojawi siê w panelu zdjêæ do wyboru jako g³ówne b¹dŸ usuniêcia. Ca³y proces dodawania zosta³ przedstawiony na rysunku \ref{fig:dodawaniezdj}.
+Aby dodaæ nowe zdjêcie nale¿y klikn¹æ w przycisk ,,Add photo'', wtedy oczom u¿ytkownika uka¿e siê okienko do którego nale¿y przeci¹gn¹æ zdjêcie metod¹ przeci¹gania i upuszczania. Po jego wczytaniu nale¿y je odpowiednio przyci¹æ i potwierdziæ operacje klikaj¹c na zielony ptaszek. Zdjêcie zostanie wgrane i pojawi siê w panelu zdjêæ do wyboru jako g³ówne b¹dŸ usuniêcia. Ca³y proces dodawania zosta³ przedstawiony na rysunku \ref{fig:dodawaniezdj}.
 
 \begin{figure}[h]
 	\centering
 	\begin{subfigure}[b]{0.6\textwidth}
 		\includegraphics[width=1\linewidth]{rys07/upload1.png}
-		\caption{Panel dodawania zdjêæ przed wrzuceniem zdjêcia}
+		\caption{Panel dodawania zdjêæ przed wgraniem zdjêcia}
 		\label{fig:step1} 
 	\end{subfigure}
 	
 	\begin{subfigure}[b]{0.6\textwidth}
 		\includegraphics[width=1\linewidth]{rys07/upload2.png}
-		\caption{Panel dodawania zdjêæ po wrzuceniu zdjêcia}
+		\caption{Panel dodawania zdjêæ po wgraniu zdjêcia}
 		\label{fig:step2}
 	\end{subfigure}
 
@@ -107,7 +108,7 @@ Aby dodaæ nowe zdjêcie nale¿y klikn¹æ w przycisk ,,Add photo'', wtedy oczom u¿yt
 \newpage
 
 \section{Przegl¹danie tabel}
-W zak³adce z tabelami u¿ytkownik ma mo¿liwoœæ podgl¹du jak wygl¹da sytuacja punktowa w interesuj¹cym go sezonie oraz dywizji. Tabela zawiera informacje na temat aktualnej pozycji dru¿yny w tabeli, rozegranych meczów, wygranych, pora¿kach oraz liczbie uzbieranych przez dru¿ynê punktów. U¿ytkownik mo¿e zmieniæ tabelê wybieraj¹c inny sezon lub dywizje z pasków do filtrowania. Zak³adka widoczna jest na rysunku \ref{fig:tables}.
+W zak³adce z tabelami u¿ytkownik ma mo¿liwoœæ podgl¹du jak wygl¹da sytuacja punktowa w~interesuj¹cym go sezonie oraz dywizji. Tabela zawiera informacje na temat aktualnej pozycji dru¿yny w tabeli, rozegranych meczów, wygranych, pora¿kach oraz liczbie uzbieranych przez dru¿ynê punktów. U¿ytkownik mo¿e zmieniæ tabelê wybieraj¹c inny sezon lub dywizje z~pasków do filtrowania. Zak³adka widoczna jest na rysunku \ref{fig:tables}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\linewidth]{rys07/tables1.png}
@@ -126,8 +127,8 @@ Po przejœciu do zak³adki z terminarzem (rys.~\ref{fig:schedule}) u¿ytkownik ma m
 	\label{fig:schedule}
 \end{figure}
 
-Po klikniêciu przycisku ,,Box score'' znajduj¹cego siê pod meczem aplikacja przekierowuje u¿ytkownika do podgl¹du statystyk z meczu (rys.~\ref{fig:boxscore}). Je¿eli jest to mecz który jeszcze jest w trakcie, wynik równie¿ na bie¿¹co jest aktualizowany bez potrzeby odœwie¿ania. W dolnej czêœci strony widoczne s¹ statystyki zawodników, którzy grali w meczu. Zebrane s¹ tam informacje o liczbie zdobytych punktów, skutecznoœci rzutów za 2 i 3, rzutów wolnych, liczbie zbiórek, asyst, strat, przechwytów oraz fauli.\\
-Przechodz¹c w zak³adkê ,,Play by play'' (rys.~\ref{fig:playbyplay}) u¿ytkownik mo¿e przeœledziæ ka¿de zapisane wydarzenie w trakcie meczu, oraz ich autorów.
+Po klikniêciu przycisku ,,Box score'' znajduj¹cego siê pod meczem aplikacja przekierowuje u¿ytkownika do podgl¹du statystyk z meczu (rys.~\ref{fig:boxscore}). Je¿eli jest to mecz który jeszcze jest w~trakcie, wynik równie¿ na bie¿¹co jest aktualizowany bez potrzeby odœwie¿ania. W dolnej czêœci strony widoczne s¹ statystyki zawodników, którzy grali w meczu. Zebrane s¹ tam informacje o~liczbie zdobytych punktów, skutecznoœci rzutów za 2 i 3, rzutów wolnych, liczbie zbiórek, asyst, strat, przechwytów oraz fauli.\\
+Przechodz¹c w zak³adkê ,,Play by play'' (rys.~\ref{fig:playbyplay}) u¿ytkownik mo¿e przeœledziæ ka¿de zapisane wydarzenie w trakcie meczu oraz ich autorów.
 \newpage
 \begin{figure}[h]
 	\centering
@@ -156,8 +157,8 @@ W zak³adce ,,Stats'' u¿ytkownik ma mo¿liwoœæ podgl¹du statystyk poszczególnych z
 	\label{fig:stats}
 \end{figure}
 
-Istnieje tak¿e opcja podgl¹du statystyk poszczególnych zawodników oraz dru¿yn z wszystkich sezonów oraz dywizji w których brali udzia³. Aby sprawdziæ informacje i statystyki wybranego zawodnika nale¿y przejœæ do zak³adki ,,Players'', po klikniêciu otworzy siê strona z list¹ wszystkich zawodników wraz z paskiem do filtrowania po pierwszej literze nazwiska (rys.~\ref{fig:players}). Po klikniêciu na imiê i nazwisko interesuj¹cego u¿ytkownika zawodnika, zostanie on przekierowany na stronê (rys.~\ref{fig:playerdetails}) na której znajduj¹ siê szczegó³owe informacje na temat jego wzrostu, pozycji oraz daty urodzenia. Poni¿ej tych informacji znajduje siê tabela z informacjami o wszystkich rozegranych sezonach, klubach oraz statystykach z tych rozgrywek. Pod tabel¹ z informacjami widoczny jest pomarañczowy przycisk ,,Manage player'', który jest widoczny jedynie dla u¿ytkowników z rol¹ Admin i pozwala na edycjê zawodnika.\\
-\indent Informacje na temat dru¿yn mo¿na uzyskaæ przechodz¹c w zak³adkê ,,Teams'' (rys.~\ref{fig:teams}), a nastêpnie wybraæ dru¿ynê. Przekieruje to u¿ytkownika do strony z informacjami na temat wybranej dru¿yny (rys.~\ref{fig:teamdetails}). Tu równie¿ znajduje siê pomarañczowy przycisk do zarz¹dzania widoczny jedynie dla u¿ytkownika z rol¹ Admin, logo dru¿yny, oraz statystyki ze wszystkich sezonów w których dru¿yna bra³a udzia³.
+Istnieje tak¿e opcja podgl¹du statystyk poszczególnych zawodników oraz dru¿yn z wszystkich sezonów oraz dywizji w których brali udzia³. Aby sprawdziæ informacje i statystyki wybranego zawodnika nale¿y przejœæ do zak³adki ,,Players'', po klikniêciu otworzy siê strona z list¹ wszystkich zawodników wraz z paskiem do filtrowania po pierwszej literze nazwiska (rys.~\ref{fig:players}). Po klikniêciu na imiê i nazwisko interesuj¹cego u¿ytkownika zawodnika, zostanie on przekierowany na stronê (rys.~\ref{fig:playerdetails}) na której znajduj¹ siê szczegó³owe informacje na temat jego wzrostu, pozycji oraz daty urodzenia. Poni¿ej tych informacji znajduje siê tabela z~informacjami o wszystkich rozegranych sezonach, klubach oraz statystykach z tych rozgrywek. Pod tabel¹ z informacjami widoczny jest pomarañczowy przycisk ,,Manage player'', który jest widoczny jedynie dla u¿ytkowników z rol¹ Admin i pozwala na edycjê zawodnika.\\
+\indent Informacje na temat dru¿yn mo¿na uzyskaæ przechodz¹c w zak³adkê ,,Teams'' (rys.~\ref{fig:teams}), a~nastêpnie wybraæ dru¿ynê. Przekieruje to u¿ytkownika do strony z informacjami na temat wybranej dru¿yny (rys.~\ref{fig:teamdetails}). Tu równie¿ znajduje siê pomarañczowy przycisk do zarz¹dzania widoczny jedynie dla u¿ytkownika z rol¹ Admin, logo dru¿yny oraz statystyki ze wszystkich sezonów w których dru¿yna bra³a udzia³.
 
 \newpage
 
@@ -200,7 +201,7 @@ Istnieje tak¿e opcja podgl¹du statystyk poszczególnych zawodników oraz dru¿yn z 
 
 \section{Zarz¹dzanie lig¹}
 
-Opcje zarz¹dzania lig¹ znajduj¹ siê pod zak³adk¹ ,,Manage''. Po za³adowaniu strony oczom u¿ytkownika ukazuje siê pasek nawigacyjny (rys.~\ref{fig:managenav}).
+Opcje zarz¹dzania lig¹ znajduj¹ siê pod zak³adk¹ ,,Manage''. Po wczytaniu strony wyœwietla siê pasek nawigacyjny (rys.~\ref{fig:managenav}).
 
 \begin{figure}[h]
 	\centering
@@ -229,8 +230,8 @@ W pierwszej i drugiej zak³adce znajduj¹ siê formularze do tworzenia odpowiednio 
 	\label{fig:manageforms} 
 \end{figure}
 
-Zak³adka ,,Seasons'' widoczna jest na rysunku \ref{fig:season}. Z jej poziomu u¿ytkownik ma mo¿liwoœæ dodania nowego sezonu, edycji aktualnego, b¹dŸ usuniêcia go. Mo¿na zmieniæ sezon którym chce siê zarz¹dzaæ wybieraj¹c odpowiedni¹ opcjê z panelu po prawej stronie. Po wybraniu opcji dodawania pojawia siê okno dialogowe (rys.~\ref{fig:seasoncreate}). Wygl¹da ono tak samo jak okno do edycji. Z jego poziomu mamy mo¿liwoœæ przy tworzeniu nowego sezonu zdefiniowaæ jakie dywizje maj¹ siê w nim znajdowaæ zaznaczaj¹c odpowiednie checkboxy.\\
-Z poziomu tej zak³adki u¿ytkownik ma równie¿ mo¿liwoœæ zarz¹dzania dru¿ynami przypisanymi do danej dywizji w sezonie. Aby to zrobiæ nale¿y klikn¹æ w przycisk ,,Manage teams'' przy wybranej dywizji. Pojawia siê okno (rys.~\ref{fig:manageteams}) z którego u¿ytkownik ma mo¿liwoœæ przypisywania do wybranej dywizji w sezonie nowych zespo³ów wybieraj¹c je z dropdowna, b¹dŸ wypisania dru¿yn wybieraj¹c przycisk ,,Remove''. Do dru¿yny na zadany sezon zg³osiæ zawodników mo¿na klikaj¹c na przycisk ,,Manage players'' przy wybranej dru¿ynie. Otwiera to dialog (rys.~\ref{fig:manageplayers}) w którym korzystaj¹c z formularza z dropdownem do wyboru zawodników oraz miejscem na numer koszulki przypisuje siê zawodników. Istnieje tak¿e mo¿liwoœæ wypisania ich z dru¿yny klikaj¹c ,,Remove''.
+Zak³adka ,,Seasons'' widoczna jest na rysunku \ref{fig:season}. Z jej poziomu u¿ytkownik ma mo¿liwoœæ dodania nowego sezonu, edycji aktualnego, b¹dŸ usuniêcia go. Mo¿na zmieniæ sezon którym chce siê zarz¹dzaæ wybieraj¹c odpowiedni¹ opcjê z panelu po prawej stronie. Po wybraniu opcji dodawania pojawia siê okno dialogowe (rys.~\ref{fig:seasoncreate}). Wygl¹da ono tak samo jak okno do edycji. Z~jego poziomu mamy mo¿liwoœæ przy tworzeniu nowego sezonu zdefiniowaæ jakie dywizje maj¹ siê w nim znajdowaæ zaznaczaj¹c odpowiednie checkboxy.\\
+Z poziomu tej zak³adki u¿ytkownik ma równie¿ mo¿liwoœæ zarz¹dzania dru¿ynami przypisanymi do danej dywizji w sezonie. Aby to zrobiæ nale¿y klikn¹æ w przycisk ,,Manage teams'' przy wybranej dywizji. Pojawia siê okno (rys.~\ref{fig:manageteams}) z którego u¿ytkownik ma mo¿liwoœæ przypisywania do wybranej dywizji w sezonie nowych zespo³ów wybieraj¹c je z listy elementów do wyboru, b¹dŸ wypisania dru¿yn wybieraj¹c przycisk ,,Remove''. Do dru¿yny na zadany sezon zg³osiæ zawodników mo¿na klikaj¹c na przycisk ,,Manage players'' przy wybranej dru¿ynie. Otwiera to okno dialogowe (rys.~\ref{fig:manageplayers}) w którym korzystaj¹c z formularza z list¹ elementów do wyboru zawodników oraz miejscem na numer koszulki przypisuje siê zawodników. Istnieje tak¿e mo¿liwoœæ wypisania ich z~dru¿yny klikaj¹c ,,Remove''.
 
 \begin{figure}[h]
 	\centering
@@ -278,8 +279,8 @@ W zak³adce ,,Divisions'' widocznej na rysunku ~\ref{fig:divisions} u¿ytkownik ma
 
 \section{Zarz¹dzanie meczami i program do pisania statystyk}
 
-Po przejœciu do zak³adki ,,Match manager'' oczom u¿ytkownika ukazuje siê strona przedstawiona na rysunku \ref{fig:matchmanager}. Z tego poziomu mo¿liwe jest planowanie kolejnych meczów, usuwanie ich, a tak¿e mo¿liwoœæ pisania z nich statystyk.\\
-Aby dodaæ nowy mecz nale¿y klikn¹æ przycik ,,New game''. Otwiera siê wtedy okno (rys.~\ref{fig:newgame}). Na podstawie wybranej daty oraz dywizji aplikacja w kolejnym oknie wyboru z rysunku \ref{fig:choseteams} pozwoli na wybór jedynie dru¿yn zapisanych do sezonu oraz dywizji z wybranego punktu w czasie. Po klikniêciu ,,Add Match'' mecz zostaje dodany do listy ze wszystkimi meczami. Aby zacz¹æ pisaæ z niego statystyki nale¿y przy meczu klikn¹æ ,,Go to match''. Otworzy to okno pokazane na rysunku \ref{fig:gotomatch}. Nale¿y wybraæ tutaj kolor koszulek w których dru¿yny graj¹, oraz zawodników którzy zostaj¹ zg³oszeni do meczu. Po dokonaniu tego nale¿y klikn¹æ ,,Next''. U¿ytkownik zostaje wtedy przekierowany do programu do pisania statystyk (rys.~\ref{fig:statsprogram}).
+Po przejœciu do zak³adki ,,Match manager'' oczom u¿ytkownika wyœwietla siê strona przedstawiona na rysunku \ref{fig:matchmanager}. Z tego poziomu mo¿liwe jest planowanie kolejnych meczów, usuwanie ich, a tak¿e mo¿liwoœæ pisania z nich statystyk.\\
+Aby dodaæ nowy mecz nale¿y klikn¹æ przycik ,,New game''. Otwiera siê wtedy okno (rys.~\ref{fig:newgame}). Na podstawie wybranej daty oraz dywizji aplikacja w kolejnym oknie wyboru z rysunku \ref{fig:choseteams} pozwoli na wybór jedynie dru¿yn zapisanych do sezonu oraz dywizji z wybranego punktu w~czasie. Po klikniêciu ,,Add Match'' mecz zostaje dodany do listy ze wszystkimi meczami. Aby zacz¹æ pisaæ z niego statystyki nale¿y przy meczu klikn¹æ ,,Go to match''. Otworzy to okno pokazane na rysunku \ref{fig:gotomatch}. Nale¿y wybraæ tutaj kolor koszulek w których dru¿yny graj¹ oraz zawodników którzy zostaj¹ zg³oszeni do meczu. Po dokonaniu tego nale¿y klikn¹æ ,,Next''. U¿ytkownik zostaje wtedy przekierowany do programu do pisania statystyk (rys.~\ref{fig:statsprogram}).
 
 \begin{figure}[h]
 	\centering
@@ -325,7 +326,7 @@ Aby dodaæ nowy mecz nale¿y klikn¹æ przycik ,,New game''. Otwiera siê wtedy okno 
 
 \newpage
 
-W górnej czêœci strony znajduj¹ siê nazwy dru¿yn, iloœæ zdobytych przez nie punktów, numer kwarty, oraz czas pozosta³y do jej koñca. Zegar uruchamia siê przyciskiem ,,Start clock''. Obok przycisku znajduj¹ siê przyciski do przewijania minut i sekund do przodu lub ty³u. Poni¿ej znajduje siê pasek z kwadratami z numerami koszulek zawodników. Przy wyborze wydarzenia nale¿y w pierwszej kolejnoœci wybraæ zawodnika klikaj¹c w kwadrat, któremu to wydarzenia ma zostaæ przypisane. Ni¿ej znajduje siê pasek z czterema bia³ymi prostok¹tami które przechowuj¹ informacjê o tym ile czasu zosta³o dru¿ynie do wykorzystania do koñca po³owy, oraz ile fauli pope³ni³a dru¿yna w kwarcie.\\
+W górnej czêœci strony znajduj¹ siê nazwy dru¿yn, iloœæ zdobytych przez nie punktów, numer kwarty oraz czas pozosta³y do jej koñca. Zegar uruchamia siê przyciskiem ,,Start clock''. Obok przycisku znajduj¹ siê przyciski do przewijania minut i sekund do przodu lub ty³u. Poni¿ej znajduje siê pasek z kwadratami z numerami koszulek zawodników. Przy wyborze wydarzenia nale¿y w pierwszej kolejnoœci wybraæ zawodnika klikaj¹c w kwadrat, któremu to wydarzenia ma zostaæ przypisane. Ni¿ej znajduje siê pasek z czterema bia³ymi prostok¹tami które przechowuj¹ informacjê o tym ile czasu zosta³o dru¿ynie do wykorzystania do koñca po³owy oraz ile fauli pope³ni³a dru¿yna w kwarcie.\\
 Z lewej i prawej strony znajduj¹ siê przyciski odpowiadaj¹ce wydarzeniom. Po ich klikniêciu (oprócz przycisku ,,Timeout'') otwiera siê okno dialogowe (rys.~\ref{fig:shotmade}) w którym nale¿y wybraæ szczegó³y na temat wydarzenia, takie jak jego typ, b¹dŸ kolejne wydarzenie jak asysta i numer zawodnika któremu nale¿y j¹ przypisaæ. Po klikniêciu ,,OK'' zostaje ono dodane. Wynik meczu wtedy aktualizuje siê, a rzut pojawi¹ siê w sekcji ,,Action log'', któr¹ pokazano na rysunku \ref{fig:statsprogrampts}. W razie pomy³ki wydarzenie to mo¿na usun¹æ klikaj¹c w ikonê kosza obok wydarzenia, co spowoduje równie¿ odjêcie punktów w górnym panelu i powrót do starego wyniku. Sposób postêpowania wygl¹da analogicznie z ka¿dym wydarzeniem.
 
 
@@ -343,12 +344,12 @@ Z lewej i prawej strony znajduj¹ siê przyciski odpowiadaj¹ce wydarzeniom. Po ich
 	\label{fig:statsprogrampts}
 \end{figure}
 
-Gdy czas zegara dobiegnie koñca, przycisk startowania i zatrzymywania zegara zmienia siê w przycisk zakoñczenia meczu (rys.~\ref{fig:endmatch}). Po jego klikniêciu mecz zostaje zakoñczony, a statystyki dru¿yn i zawodników z ca³ego sezonu zaktualizowane o statystyki z tego meczu. Po dokonaniu tej operacji meczu i statystyk nie mo¿na ju¿ edytowaæ.
+Gdy czas zegara dobiegnie koñca, przycisk startowania i zatrzymywania zegara zmienia siê w~przycisk zakoñczenia meczu (rys.~\ref{fig:endmatch}). Po jego klikniêciu mecz zostaje zakoñczony, a statystyki dru¿yn i zawodników z ca³ego sezonu zaktualizowane o statystyki z tego meczu. Po~dokonaniu tej operacji meczu i statystyk nie mo¿na ju¿ edytowaæ.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{rys07/endmatch.png}
-	\captionof{figure}{Górny panel po zakoñczeniu czasu gry}
+	\captionof{figure}{Górny panel po up³ywie czasu gry}
 	\label{fig:endmatch}
 \end{figure}
 
